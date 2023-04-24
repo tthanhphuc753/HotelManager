@@ -1,0 +1,15 @@
+C:\Games\GAME\HOTELMANAGER\HOTELMANAGER\BusinessLayer\bin\Debug\BusinessLayer.dll.config
+C:\Games\GAME\HOTELMANAGER\HOTELMANAGER\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Games\GAME\HOTELMANAGER\HOTELMANAGER\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Games\GAME\HOTELMANAGER\HOTELMANAGER\BusinessLayer\bin\Debug\DataLayer.dll
+C:\Games\GAME\HOTELMANAGER\HOTELMANAGER\BusinessLayer\bin\Debug\EntityFramework.dll
+C:\Games\GAME\HOTELMANAGER\HOTELMANAGER\BusinessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Games\GAME\HOTELMANAGER\HOTELMANAGER\BusinessLayer\bin\Debug\DataLayer.pdb
+C:\Games\GAME\HOTELMANAGER\HOTELMANAGER\BusinessLayer\bin\Debug\DataLayer.dll.config
+C:\Games\GAME\HOTELMANAGER\HOTELMANAGER\BusinessLayer\bin\Debug\EntityFramework.xml
+C:\Games\GAME\HOTELMANAGER\HOTELMANAGER\BusinessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Games\GAME\HOTELMANAGER\HOTELMANAGER\BusinessLayer\obj\Debug\BusinessLayer.csproj.AssemblyReference.cache
+C:\Games\GAME\HOTELMANAGER\HOTELMANAGER\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Games\GAME\HOTELMANAGER\HOTELMANAGER\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
+C:\Games\GAME\HOTELMANAGER\HOTELMANAGER\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Games\GAME\HOTELMANAGER\HOTELMANAGER\BusinessLayer\obj\Debug\BusinessLayer.pdb

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HotelManagerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="HOADON">
+    <Key>
+      <PropertyRef Name="IDhoadon" />
+    </Key>
+    <Property Name="IDhoadon" Type="int" Nullable="false" />
+    <Property Name="Thanhtien" Type="nvarchar" MaxLength="50" />
+    <Property Name="IDkhachhang" Type="int" Nullable="false" />
+    <Property Name="IDphong" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KHACHHANG">
+    <Key>
+      <PropertyRef Name="IDKhachhang" />
+    </Key>
+    <Property Name="IDKhachhang" Type="int" Nullable="false" />
+    <Property Name="Tenkhachhang" Type="nvarchar" MaxLength="50" />
+    <Property Name="CCCD/CMND" Type="int" />
+  </EntityType>
+  <EntityType Name="NHANVIEN">
+    <Key>
+      <PropertyRef Name="IDNhanvien" />
+    </Key>
+    <Property Name="IDNhanvien" Type="int" Nullable="false" />
+    <Property Name="Tennhanvien" Type="nvarchar" MaxLength="50" />
+    <Property Name="Chucvu" Type="nvarchar" MaxLength="50" />
+    <Property Name="Sodienthoai" Type="int" />
+  </EntityType>
+  <EntityType Name="PHONG">
+    <Key>
+      <PropertyRef Name="IDphong" />
+    </Key>
+    <Property Name="IDphong" Type="int" Nullable="false" />
+    <Property Name="Loaiphong" Type="char" MaxLength="1" />
+    <Property Name="Dongia" Type="nvarchar" MaxLength="50" />
+    <Property Name="IDkhachhang" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TAIKHOAN">
+    <Key>
+      <PropertyRef Name="Username" />
+    </Key>
+    <Property Name="Username" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="int" />
+    <Property Name="Chucvu" Type="int" />
+  </EntityType>
+  <Association Name="FK_HOADON_KHACHHANG">
+    <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="1" />
+    <End Role="HOADON" Type="Self.HOADON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHACHHANG">
+        <PropertyRef Name="IDKhachhang" />
+      </Principal>
+      <Dependent Role="HOADON">
+        <PropertyRef Name="IDkhachhang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HOADON_PHONG">
+    <End Role="PHONG" Type="Self.PHONG" Multiplicity="1" />
+    <End Role="HOADON" Type="Self.HOADON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHONG">
+        <PropertyRef Name="IDphong" />
+      </Principal>
+      <Dependent Role="HOADON">
+        <PropertyRef Name="IDphong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PHONG_KHACHHANG">
+    <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="1" />
+    <End Role="PHONG" Type="Self.PHONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHACHHANG">
+        <PropertyRef Name="IDKhachhang" />
+      </Principal>
+      <Dependent Role="PHONG">
+        <PropertyRef Name="IDkhachhang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="HotelManagerModelStoreContainer">
+    <EntitySet Name="HOADON" EntityType="Self.HOADON" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KHACHHANG" EntityType="Self.KHACHHANG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NHANVIEN" EntityType="Self.NHANVIEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PHONG" EntityType="Self.PHONG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TAIKHOAN" EntityType="Self.TAIKHOAN" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_HOADON_KHACHHANG" Association="Self.FK_HOADON_KHACHHANG">
+      <End Role="KHACHHANG" EntitySet="KHACHHANG" />
+      <End Role="HOADON" EntitySet="HOADON" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HOADON_PHONG" Association="Self.FK_HOADON_PHONG">
+      <End Role="PHONG" EntitySet="PHONG" />
+      <End Role="HOADON" EntitySet="HOADON" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PHONG_KHACHHANG" Association="Self.FK_PHONG_KHACHHANG">
+      <End Role="KHACHHANG" EntitySet="KHACHHANG" />
+      <End Role="PHONG" EntitySet="PHONG" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
