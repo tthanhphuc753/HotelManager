@@ -43,19 +43,18 @@ namespace DataLayer
             set { database = value; }
         }
 
-        public connect(string _servername, string _username, string _passwd, string _database)
+        public connect(string _servername, string _database)
         {
             this.servername = _servername;
-            this.username = _username;
-            this.passwd = _passwd;
+           
             this.database = _database;
         }
 
-        public void SaveFile()
+        public void SaveFile(string FileName)
         {
             if (File.Exists("connectdb.dba"))
                 File.Delete("connectdb.dba");
-            FileStream fs = File.Open("connectdb.dba", FileMode.OpenOrCreate, FileAccess.Write);
+            FileStream fs = File.Open(FileName, FileMode.OpenOrCreate, FileAccess.Write);
             BinaryFormatter bf = new BinaryFormatter();
             bf.Serialize(fs, this);
             fs.Close();

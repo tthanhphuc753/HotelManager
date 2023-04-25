@@ -15,5 +15,11 @@ namespace Hotel
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+           // ACCOUNT _account = new ACCOUNT();
+           // gridControl1.DataSource = _account.getAll(); 
+        }
     }
 }
