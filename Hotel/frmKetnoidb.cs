@@ -6,39 +6,40 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.IO;
 using System.Linq;
-using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Hotel
 {
-    public partial class frmKetnoidb : DevExpress.XtraEditors.XtraForm
+    public partial class frmketnoidb : DevExpress.XtraEditors.XtraForm
     {
-        public frmKetnoidb()
+        public frmketnoidb()
         {
             InitializeComponent();
         }
-        SqlConnection GetCon(string server, string username, string pass, string database)
-        {
-            return new SqlConnection("Data Source=" + server + "; Initial Catalog=" + database + "; User ID=" + username + "; Password=" + pass + ";");
-        }
 
-        private void frmKetnoidb_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
+      
+        private void btnThoat_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void btnKiemtra_Click_1(object sender, EventArgs e)
+        SqlConnection GetCon(string server, string database)
         {
-            SqlConnection con = GetCon(txtservername.Text, txtusername.Text, txtpassw.Text, cboDatab.Text);
+            return new SqlConnection("Data Source=" + server + "; Initial Catalog=" + database + "; Integrated Security=true;");
+        }
+
+
+        private void groupControl1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnKiemTra_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection("Server=" + txtServer.Text + ";Database=" + cboDatabase.Text + ";Trusted_Connection=True;");
             try
             {
                 con.Open();
@@ -50,32 +51,23 @@ namespace Hotel
             }
         }
 
-
-        private void btnLuufile_Click(object sender, EventArgs e)
+        private void btnLuu_Click(object sender, EventArgs e)
         {
+            string enCryptServ = Encryptor.Encrypt(txtServer.Text, "qwertyuiop", true);
+            
+            string enCryptData = Encryptor.Encrypt(cboDatabase.Text, "qwertyuiop", true);
 
-            string enCryptServ = Encryptor.Encrypt(txtservername.Text, "qwertyuiop", true);
-            string enCryptPass = Encryptor.Encrypt(txtpassw.Text, "qwertyuiop", true);
-            string enCryptData = Encryptor.Encrypt(cboDatab.Text, "qwertyuiop", true);
-            string enCryptUser = Encryptor.Encrypt(txtusername.Text, "qwertyuiop", true);
-            connect cn = new connect(enCryptServ, enCryptUser, enCryptPass, enCryptData);
+            connect cn = new connect(enCryptServ, enCryptData);
             cn.SaveFile();
             MessageBox.Show("Lưu file thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void cboDatabase_MouseClick(object sender, MouseEventArgs e)
         {
-
-        }
-
-        private void cboDatab_MouseClick(object sender, MouseEventArgs e)
-        {
-            cboDatab.Items.Clear();
+            cboDatabase.Items.Clear();
             try
             {
-                string Conn = "server=" + txtservername.Text + ";User Id=" + txtusername.Text + ";pwd=" + txtpassw.Text + ";";
+                string Conn = "Data Source=" + txtServer.Text + "; Initial Catalog=" + cboDatabase.Text + "; Integrated Security=True;";
                 SqlConnection con = new SqlConnection(Conn);
                 con.Open();
                 string sql = "select name from sys.databases WHERE name NOT IN ('master', 'tempdb', 'model', 'msdb')";
@@ -83,13 +75,15 @@ namespace Hotel
                 IDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    cboDatab.Items.Add(dr[0].ToString());
+                    cboDatabase.Items.Add(dr[0].ToString());
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi : " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+
         }
     }
 }

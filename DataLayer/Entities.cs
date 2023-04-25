@@ -25,24 +25,11 @@ namespace DataLayer
 
             //Decrypt noi dung
             string servername = Encryptor.Decrypt(cp.servername, "qwertyuiop", true);
-            string username = Encryptor.Decrypt(cp.username, "qwertyuiop", true);
-            string pass = Encryptor.Decrypt(cp.passwd, "qwertyuiop", true);
             string database = Encryptor.Decrypt(cp.database, "qwertyuiop", true);
-
-
-            SqlConnectionStringBuilder sqlBuilder = new SqlConnectionStringBuilder();
-            SqlConnectionStringBuilder sqlConnectBuiler = new SqlConnectionStringBuilder();
-            sqlConnectBuiler.DataSource = servername;
-            sqlConnectBuiler.InitialCatalog = database;
-            sqlConnectBuiler.UserID = username;
-            sqlConnectBuiler.Password = pass;
-
-            string sqlConnectionString = sqlConnectBuiler.ConnectionString;
 
             EntityConnectionStringBuilder entityBuilder = new EntityConnectionStringBuilder();
             entityBuilder.Provider = "System.Data.SqlClient";
-            entityBuilder.ProviderConnectionString = sqlConnectionString;
-
+            entityBuilder.ProviderConnectionString = $"Data Source={servername};Initial Catalog={database};Integrated Security=true";
             entityBuilder.Metadata = @"res://*/HOTEL.csdl|res://*/HOTEL.ssdl|res://*/HOTEL.msl";
 
             EntityConnection connection = new EntityConnection(entityBuilder.ConnectionString);
@@ -50,5 +37,6 @@ namespace DataLayer
             fs.Close();
             return new Entities(connection);
         }
+
     }
 }
