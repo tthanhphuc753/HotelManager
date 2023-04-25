@@ -19,22 +19,7 @@ namespace DataLayer
             set { servername = value; }
         }
 
-        public string username;
-
-        public string Username
-        {
-            get { return username; }
-            set { username = value; }
-        }
-
-        public string passwd;
-
-        public string Passwd
-        {
-            get { return passwd; }
-            set { passwd = value; }
-        }
-
+       
         public string database;
 
         public string Database
@@ -43,11 +28,10 @@ namespace DataLayer
             set { database = value; }
         }
 
-        public connect(string _servername, string _username, string _passwd, string _database)
+        public connect(string _servername, string _database)
         {
             this.servername = _servername;
-            this.username = _username;
-            this.passwd = _passwd;
+          
             this.database = _database;
         }
 
