@@ -21,8 +21,19 @@ namespace DataLayer
 
         public string username;
 
+        public string Username
+        {
+            get { return username; }
+            set { username = value; }
+        }
 
+        public string passwd;
 
+        public string Passwd
+        {
+            get { return passwd; }
+            set { passwd = value; }
+        }
 
         public string database;
 
@@ -32,18 +43,19 @@ namespace DataLayer
             set { database = value; }
         }
 
-        public connect(string _servername, string _database)
+        public connect(string _servername, string _username, string _passwd, string _database)
         {
             this.servername = _servername;
-           
+            this.username = _username;
+            this.passwd = _passwd;
             this.database = _database;
         }
 
-        public void SaveFile(string FileName)
+        public void SaveFile()
         {
             if (File.Exists("connectdb.dba"))
                 File.Delete("connectdb.dba");
-            FileStream fs = File.Open(FileName, FileMode.OpenOrCreate, FileAccess.Write);
+            FileStream fs = File.Open("connectdb.dba", FileMode.OpenOrCreate, FileAccess.Write);
             BinaryFormatter bf = new BinaryFormatter();
             bf.Serialize(fs, this);
             fs.Close();

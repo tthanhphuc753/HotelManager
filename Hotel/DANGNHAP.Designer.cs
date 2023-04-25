@@ -123,6 +123,7 @@ namespace Hotel
             this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("DANGNHAP.IconOptions.SvgImage")));
             this.Name = "DANGNHAP";
             this.Text = "DANGNHAP";
+            this.Load += new System.EventHandler(this.DANGNHAP_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txt_username.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_password.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_check.Properties)).EndInit();

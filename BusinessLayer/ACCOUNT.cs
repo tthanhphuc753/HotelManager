@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    class ACCOUNT
+    public  class Account
     {
         Entities db;
-        public ACCOUNT ()
+        public Account ()
         {
             db = Entities.CreateEntities();
         }
