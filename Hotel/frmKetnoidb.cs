@@ -21,85 +21,74 @@ namespace Hotel
         {
             InitializeComponent();
         }
-        SqlConnection Getcon(string server, string database)
+        SqlConnection GetCon(string server, string username, string pass, string database)
         {
-            return new SqlConnection("Data Source=" + server + ";Initial Catalog=master;Integrated Security=True");
-        }
-        private void label4_Click(object sender, EventArgs e)
-        {
-
+            return new SqlConnection("Data Source=" + server + "; Initial Catalog=" + database + "; User ID=" + username + "; Password=" + pass + ";");
         }
 
-        private void frmKetnoidb_Load(object sender, EventArgs e)
+        private void frmKetnoidb_Load_1(object sender, EventArgs e)
         {
 
         }
 
-        private void btnkiemtraketnoi_Click(object sender, EventArgs e)
-        {
-            SqlConnection conn = Getcon(txtServer.Text, cbodatabase.Text);
-            try
-            {
-                conn.Open();
-                MessageBox.Show("kết nối thành công "); 
-
-
-            }catch(Exception )
-            {
-                MessageBox.Show("Kết nối thất bại "); 
-            }
-        }
-
-        private void btnDocfile_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog op = new OpenFileDialog();
-            op.Title = "Chọn tập tin ";
-            op.Filter = "Text File (*.dba)|*.dba| ALLFiles(*.*)|*.*";
-            if(op.ShowDialog()== DialogResult.OK)
-            {
-                BinaryFormatter bf = new BinaryFormatter();
-                FileStream fs = File.Open(op.FileName, FileMode.Open, FileAccess.Read);
-                connect conn = (connect)bf.Deserialize(fs);
-                string srv = Encryptor.Decrypt(conn.servername, "fsfuoufsd8935@!", true);
-                string db = Encryptor.Decrypt(conn.database, "fsfuoufsd8935@!", true);
-                txtServer.Text = srv;
-                cbodatabase.Text = db; 
-            }
-        }
-
-        private void btnThoat_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void cbodatabase_MouseClick(object sender, MouseEventArgs e)
+        private void btnKiemtra_Click_1(object sender, EventArgs e)
         {
-            cbodatabase.Items.Clear();
-            string conn = "Data Source=" + txtServer.Text + ";Initial Catalog=master;Integrated Security=True";
-            SqlConnection con = new SqlConnection(conn);
-            con.Open();
-            string gr = "SELECT NAME FROM SYS.DATABASES";
-            SqlCommand cmd = new SqlCommand(gr, con);
-            IDataReader dr = cmd.ExecuteReader();
-            while (dr.Read())
+            SqlConnection con = GetCon(txtservername.Text, txtusername.Text, txtpassw.Text, cboDatab.Text);
+            try
             {
-                cbodatabase.Items.Add(dr[0].ToString());
+                con.Open();
+                MessageBox.Show("Kết nối thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            catch
+            {
+                MessageBox.Show("Kết nối thất bại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        private void btnLuufile_Click(object sender, EventArgs e)
+        {
+
+            string enCryptServ = Encryptor.Encrypt(txtservername.Text, "qwertyuiop", true);
+            string enCryptPass = Encryptor.Encrypt(txtpassw.Text, "qwertyuiop", true);
+            string enCryptData = Encryptor.Encrypt(cboDatab.Text, "qwertyuiop", true);
+            string enCryptUser = Encryptor.Encrypt(txtusername.Text, "qwertyuiop", true);
+            connect cn = new connect(enCryptServ, enCryptUser, enCryptPass, enCryptData);
+            cn.SaveFile();
+            MessageBox.Show("Lưu file thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
 
         }
 
-        private void btnluu_Click(object sender, EventArgs e)
+        private void cboDatab_MouseClick(object sender, MouseEventArgs e)
         {
-            string svEncrypt = Encryptor.Encrypt(txtServer.Text, "fsfuoufsd8935@!", true);
-            string dtEncrypt = Encryptor.Encrypt(cbodatabase.Text, "fsfuoufsd8935@!", true);
-            SaveFileDialog sf = new SaveFileDialog();
-            sf.Title = "Chọn nơi lưu trữ";
-            sf.Filter = "Text File (*.dba)|*.dba| ALLFiles(*.*)|*.*";
-            if(sf.ShowDialog() ==DialogResult.OK)
+            cboDatab.Items.Clear();
+            try
             {
-                connect cn = new connect(svEncrypt,dtEncrypt);
-                cn.SaveFile(sf.FileName);
-                MessageBox.Show("Lưu file thành công! ");
+                string Conn = "server=" + txtservername.Text + ";User Id=" + txtusername.Text + ";pwd=" + txtpassw.Text + ";";
+                SqlConnection con = new SqlConnection(Conn);
+                con.Open();
+                string sql = "select name from sys.databases WHERE name NOT IN ('master', 'tempdb', 'model', 'msdb')";
+                SqlCommand cmd = new SqlCommand(sql, con);
+                IDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    cboDatab.Items.Add(dr[0].ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi : " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

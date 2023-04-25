@@ -71,5 +71,10 @@ namespace Hotel
         {
            
         }
+
+        private void DANGNHAP_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -29,127 +29,131 @@ namespace Hotel
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtServer = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cbodatabase = new System.Windows.Forms.ComboBox();
-            this.btnkiemtraketnoi = new System.Windows.Forms.Button();
-            this.btnThoat = new System.Windows.Forms.Button();
-            this.btnluu = new System.Windows.Forms.Button();
-            this.btnDocfile = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.txtservername = new System.Windows.Forms.TextBox();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.cboDatab = new System.Windows.Forms.ComboBox();
+            this.btnKiemtra = new System.Windows.Forms.Button();
+            this.btnLuufile = new System.Windows.Forms.Button();
+            this.btnexit = new System.Windows.Forms.Button();
+            this.txtusername = new System.Windows.Forms.TextBox();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.txtpassw = new System.Windows.Forms.TextBox();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.SuspendLayout();
             // 
-            // groupControl1
+            // labelControl1
             // 
-            this.groupControl1.Controls.Add(this.btnDocfile);
-            this.groupControl1.Controls.Add(this.btnkiemtraketnoi);
-            this.groupControl1.Controls.Add(this.btnluu);
-            this.groupControl1.Controls.Add(this.btnThoat);
-            this.groupControl1.Controls.Add(this.cbodatabase);
-            this.groupControl1.Controls.Add(this.label4);
-            this.groupControl1.Controls.Add(this.txtServer);
-            this.groupControl1.Controls.Add(this.label1);
-            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl1.Location = new System.Drawing.Point(0, 0);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(598, 245);
-            this.groupControl1.TabIndex = 0;
-            this.groupControl1.Text = "THÔNG TIN KẾT NỐI";
+            this.labelControl1.Location = new System.Drawing.Point(96, 66);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(78, 19);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "Severname";
             // 
-            // label1
+            // txtservername
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(86, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Server";
+            this.txtservername.Location = new System.Drawing.Point(238, 62);
+            this.txtservername.Name = "txtservername";
+            this.txtservername.Size = new System.Drawing.Size(251, 27);
+            this.txtservername.TabIndex = 1;
             // 
-            // txtServer
+            // labelControl4
             // 
-            this.txtServer.Location = new System.Drawing.Point(194, 48);
-            this.txtServer.Name = "txtServer";
-            this.txtServer.Size = new System.Drawing.Size(220, 27);
-            this.txtServer.TabIndex = 1;
+            this.labelControl4.Location = new System.Drawing.Point(96, 223);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(64, 19);
+            this.labelControl4.TabIndex = 6;
+            this.labelControl4.Text = "Database";
             // 
-            // label4
+            // cboDatab
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(84, 95);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 19);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Database";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.cboDatab.FormattingEnabled = true;
+            this.cboDatab.Location = new System.Drawing.Point(238, 219);
+            this.cboDatab.Name = "cboDatab";
+            this.cboDatab.Size = new System.Drawing.Size(249, 27);
+            this.cboDatab.TabIndex = 7;
+            this.cboDatab.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cboDatab_MouseClick);
             // 
-            // cbodatabase
+            // btnKiemtra
             // 
-            this.cbodatabase.FormattingEnabled = true;
-            this.cbodatabase.Location = new System.Drawing.Point(194, 91);
-            this.cbodatabase.Name = "cbodatabase";
-            this.cbodatabase.Size = new System.Drawing.Size(217, 27);
-            this.cbodatabase.TabIndex = 7;
-            this.cbodatabase.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cbodatabase_MouseClick);
+            this.btnKiemtra.Location = new System.Drawing.Point(138, 282);
+            this.btnKiemtra.Name = "btnKiemtra";
+            this.btnKiemtra.Size = new System.Drawing.Size(110, 40);
+            this.btnKiemtra.TabIndex = 8;
+            this.btnKiemtra.Text = "Kiểm tra ";
+            this.btnKiemtra.UseVisualStyleBackColor = true;
+            this.btnKiemtra.Click += new System.EventHandler(this.btnKiemtra_Click_1);
             // 
-            // btnkiemtraketnoi
+            // btnLuufile
             // 
-            this.btnkiemtraketnoi.Location = new System.Drawing.Point(68, 160);
-            this.btnkiemtraketnoi.Name = "btnkiemtraketnoi";
-            this.btnkiemtraketnoi.Size = new System.Drawing.Size(96, 40);
-            this.btnkiemtraketnoi.TabIndex = 8;
-            this.btnkiemtraketnoi.Text = "Kiểm tra ";
-            this.btnkiemtraketnoi.UseVisualStyleBackColor = true;
-            this.btnkiemtraketnoi.Click += new System.EventHandler(this.btnkiemtraketnoi_Click);
+            this.btnLuufile.Location = new System.Drawing.Point(288, 282);
+            this.btnLuufile.Name = "btnLuufile";
+            this.btnLuufile.Size = new System.Drawing.Size(110, 40);
+            this.btnLuufile.TabIndex = 10;
+            this.btnLuufile.Text = "Lưu";
+            this.btnLuufile.UseVisualStyleBackColor = true;
+            this.btnLuufile.Click += new System.EventHandler(this.btnLuufile_Click);
             // 
-            // btnThoat
+            // btnexit
             // 
-            this.btnThoat.Location = new System.Drawing.Point(435, 160);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(96, 40);
-            this.btnThoat.TabIndex = 9;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = true;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            this.btnexit.Location = new System.Drawing.Point(423, 282);
+            this.btnexit.Name = "btnexit";
+            this.btnexit.Size = new System.Drawing.Size(110, 40);
+            this.btnexit.TabIndex = 11;
+            this.btnexit.Text = "Thoát";
+            this.btnexit.UseVisualStyleBackColor = true;
+            this.btnexit.Click += new System.EventHandler(this.button4_Click);
             // 
-            // btnluu
+            // txtusername
             // 
-            this.btnluu.Location = new System.Drawing.Point(315, 160);
-            this.btnluu.Name = "btnluu";
-            this.btnluu.Size = new System.Drawing.Size(96, 40);
-            this.btnluu.TabIndex = 10;
-            this.btnluu.Text = "Lưu File";
-            this.btnluu.UseVisualStyleBackColor = true;
-            this.btnluu.Click += new System.EventHandler(this.btnluu_Click);
+            this.txtusername.Location = new System.Drawing.Point(238, 116);
+            this.txtusername.Name = "txtusername";
+            this.txtusername.Size = new System.Drawing.Size(251, 27);
+            this.txtusername.TabIndex = 13;
             // 
-            // btnDocfile
+            // labelControl2
             // 
-            this.btnDocfile.Location = new System.Drawing.Point(194, 160);
-            this.btnDocfile.Name = "btnDocfile";
-            this.btnDocfile.Size = new System.Drawing.Size(96, 40);
-            this.btnDocfile.TabIndex = 11;
-            this.btnDocfile.Text = "Đọc File";
-            this.btnDocfile.UseVisualStyleBackColor = true;
-            this.btnDocfile.Click += new System.EventHandler(this.btnDocfile_Click);
+            this.labelControl2.Location = new System.Drawing.Point(96, 169);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(67, 19);
+            this.labelControl2.TabIndex = 12;
+            this.labelControl2.Text = "Password";
+            // 
+            // txtpassw
+            // 
+            this.txtpassw.Location = new System.Drawing.Point(238, 165);
+            this.txtpassw.Name = "txtpassw";
+            this.txtpassw.Size = new System.Drawing.Size(251, 27);
+            this.txtpassw.TabIndex = 15;
+            this.txtpassw.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(94, 120);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(71, 19);
+            this.labelControl3.TabIndex = 14;
+            this.labelControl3.Text = "Username";
             // 
             // frmKetnoidb
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(598, 245);
-            this.Controls.Add(this.groupControl1);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.ClientSize = new System.Drawing.Size(678, 386);
+            this.Controls.Add(this.txtpassw);
+            this.Controls.Add(this.labelControl3);
+            this.Controls.Add(this.txtusername);
+            this.Controls.Add(this.labelControl2);
+            this.Controls.Add(this.btnexit);
+            this.Controls.Add(this.btnLuufile);
+            this.Controls.Add(this.btnKiemtra);
+            this.Controls.Add(this.cboDatab);
+            this.Controls.Add(this.labelControl4);
+            this.Controls.Add(this.txtservername);
+            this.Controls.Add(this.labelControl1);
             this.Name = "frmKetnoidb";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "KẾT NỐI CƠ SỞ DỮ LIỆU";
-            this.Load += new System.EventHandler(this.frmKetnoidb_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
-            this.groupControl1.PerformLayout();
+            this.Load += new System.EventHandler(this.frmKetnoidb_Load_1);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -164,5 +168,16 @@ namespace Hotel
         private System.Windows.Forms.Button btnkiemtraketnoi;
         private System.Windows.Forms.Button btnluu;
         private System.Windows.Forms.Button btnThoat;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private System.Windows.Forms.TextBox txtservername;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private System.Windows.Forms.ComboBox cboDatab;
+        private System.Windows.Forms.Button btnKiemtra;
+        private System.Windows.Forms.Button btnLuufile;
+        private System.Windows.Forms.Button btnexit;
+        private System.Windows.Forms.TextBox txtusername;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private System.Windows.Forms.TextBox txtpassw;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
     }
 }

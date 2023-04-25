@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,6 +7,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+
+
 
 namespace Hotel
 {
@@ -18,8 +21,8 @@ namespace Hotel
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           // ACCOUNT _account = new ACCOUNT();
-           // gridControl1.DataSource = _account.getAll(); 
+            Account account = new Account();
+            gridControl1.DataSource = account.getAll();
         }
     }
 }
