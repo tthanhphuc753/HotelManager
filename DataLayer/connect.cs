@@ -21,19 +21,8 @@ namespace DataLayer
 
         public string username;
 
-        public string Username
-        {
-            get { return username; }
-            set { username = value; }
-        }
 
-        public string passwd;
 
-        public string Passwd
-        {
-            get { return passwd; }
-            set { passwd = value; }
-        }
 
         public string database;
 
