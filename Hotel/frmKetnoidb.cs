@@ -60,7 +60,7 @@ namespace Hotel
             try
             {
                 string Conn = "Data Source=" + txtServer.Text + "; Initial Catalog=" + cboDatabase.Text + "; Integrated Security=True;";
-                SqlConnection con = new SqlConnection(Conn);
+                SqlConnection con = new SqlConnection(Conn);                                                                            
                 con.Open();
                 string sql = "select name from sys.databases WHERE name NOT IN ('master', 'tempdb', 'model', 'msdb')";
                 SqlCommand cmd = new SqlCommand(sql, con);

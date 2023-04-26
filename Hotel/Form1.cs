@@ -17,5 +17,10 @@ namespace Hotel
             Account account = new Account();
             gridControl1.DataSource = account.getAll();
         }
+
+        private void gridControl1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

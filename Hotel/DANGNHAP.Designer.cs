@@ -147,7 +147,7 @@ namespace Hotel
             this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("DANGNHAP.IconOptions.SvgImage")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "DANGNHAP";
-            this.Text = "DANGNHAP";
+            this.Text = "ĐĂNG NHẬP";
             this.Load += new System.EventHandler(this.DANGNHAP_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txt_username.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_password.Properties)).EndInit();
