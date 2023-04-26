@@ -1,13 +1,5 @@
-﻿using DevExpress.XtraEditors;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Hotel
@@ -44,9 +36,9 @@ namespace Hotel
                 string passw = txt_password.Text;
                 string sql = "select *from TAIKHOAN where username ='" + username + "' and Password='" + passw + "'";
                 SqlCommand cmd = new SqlCommand(sql, conn);
-                SqlDataReader dta = cmd.ExecuteReader(); 
-                
-                if(dta.Read() )
+                SqlDataReader dta = cmd.ExecuteReader();
+
+                if (dta.Read())
                 {
                     MessageBox.Show("Đăng nhập thành công");
                     Application.Exit();
@@ -56,9 +48,10 @@ namespace Hotel
                     MessageBox.Show("Đăng nhập thất bại. Sai mật khẩu hoặc tài khoản !!");
                 }
 
-            }catch(Exception ex)
+            }
+            catch (Exception )
             {
-                MessageBox.Show("ĐĂng nhập thất bại ");
+                MessageBox.Show("Đăng nhập thất bại ");
             }
         }
 
@@ -67,10 +60,10 @@ namespace Hotel
 
         }
 
-      
+
         private void checkEdit1_CheckedChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void DANGNHAP_Load(object sender, EventArgs e)
