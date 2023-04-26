@@ -48,10 +48,10 @@ namespace Hotel
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(181, 100);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.labelControl1.Location = new System.Drawing.Point(233, 119);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(67, 18);
+            this.labelControl1.Size = new System.Drawing.Size(78, 22);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Username";
             // 
@@ -59,38 +59,40 @@ namespace Hotel
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(181, 167);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.labelControl2.Location = new System.Drawing.Point(233, 198);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(61, 18);
+            this.labelControl2.Size = new System.Drawing.Size(74, 22);
             this.labelControl2.TabIndex = 1;
             this.labelControl2.Text = "Password";
             // 
             // txt_username
             // 
-            this.txt_username.Location = new System.Drawing.Point(270, 97);
-            this.txt_username.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_username.Location = new System.Drawing.Point(347, 115);
+            this.txt_username.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_username.Name = "txt_username";
-            this.txt_username.Size = new System.Drawing.Size(201, 22);
+            this.txt_username.Size = new System.Drawing.Size(258, 26);
             this.txt_username.TabIndex = 2;
             this.txt_username.EditValueChanged += new System.EventHandler(this.textEdit1_EditValueChanged);
             // 
             // txt_password
             // 
-            this.txt_password.Location = new System.Drawing.Point(270, 163);
-            this.txt_password.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_password.Location = new System.Drawing.Point(347, 194);
+            this.txt_password.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_password.Name = "txt_password";
-            this.txt_password.Size = new System.Drawing.Size(201, 22);
+            this.txt_password.Properties.UseSystemPasswordChar = true;
+            this.txt_password.Size = new System.Drawing.Size(258, 26);
             this.txt_password.TabIndex = 3;
             // 
             // btn_login
             // 
             this.btn_login.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_login.Appearance.Options.UseFont = true;
-            this.btn_login.Location = new System.Drawing.Point(270, 237);
-            this.btn_login.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btn_login.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_login.ImageOptions.SvgImage")));
+            this.btn_login.Location = new System.Drawing.Point(347, 281);
+            this.btn_login.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_login.Name = "btn_login";
-            this.btn_login.Size = new System.Drawing.Size(88, 35);
+            this.btn_login.Size = new System.Drawing.Size(113, 42);
             this.btn_login.TabIndex = 4;
             this.btn_login.Text = "Log in";
             this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
@@ -99,39 +101,41 @@ namespace Hotel
             // 
             this.btn_exit.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_exit.Appearance.Options.UseFont = true;
-            this.btn_exit.Location = new System.Drawing.Point(383, 237);
-            this.btn_exit.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btn_exit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_exit.ImageOptions.SvgImage")));
+            this.btn_exit.Location = new System.Drawing.Point(492, 281);
+            this.btn_exit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(88, 35);
+            this.btn_exit.Size = new System.Drawing.Size(113, 42);
             this.btn_exit.TabIndex = 5;
             this.btn_exit.Text = "Exit";
             this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // btn_check
             // 
-            this.btn_check.Location = new System.Drawing.Point(270, 304);
-            this.btn_check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btn_check.Location = new System.Drawing.Point(347, 361);
+            this.btn_check.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_check.Name = "btn_check";
             this.btn_check.Properties.Caption = "Remember";
-            this.btn_check.Size = new System.Drawing.Size(201, 24);
+            this.btn_check.Size = new System.Drawing.Size(258, 27);
             this.btn_check.TabIndex = 6;
             this.btn_check.CheckedChanged += new System.EventHandler(this.checkEdit1_CheckedChanged);
             // 
             // pictureEdit2
             // 
             this.pictureEdit2.EditValue = global::Hotel.Properties.Resources.tải_xuống__1_;
-            this.pictureEdit2.Location = new System.Drawing.Point(62, 65);
+            this.pictureEdit2.Location = new System.Drawing.Point(80, 118);
+            this.pictureEdit2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureEdit2.Name = "pictureEdit2";
             this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
-            this.pictureEdit2.Size = new System.Drawing.Size(100, 96);
+            this.pictureEdit2.Size = new System.Drawing.Size(129, 102);
             this.pictureEdit2.TabIndex = 8;
             // 
             // DANGNHAP
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(571, 372);
+            this.ClientSize = new System.Drawing.Size(734, 442);
             this.Controls.Add(this.pictureEdit2);
             this.Controls.Add(this.btn_check);
             this.Controls.Add(this.btn_exit);
@@ -141,7 +145,7 @@ namespace Hotel
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
             this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("DANGNHAP.IconOptions.SvgImage")));
-            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "DANGNHAP";
             this.Text = "DANGNHAP";
             this.Load += new System.EventHandler(this.DANGNHAP_Load);

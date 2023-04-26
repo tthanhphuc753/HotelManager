@@ -49,6 +49,7 @@ namespace Hotel
                 if(dta.Read() )
                 {
                     MessageBox.Show("Đăng nhập thành công");
+                    Application.Exit();
                 }
                 else
                 {

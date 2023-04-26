@@ -56,7 +56,7 @@ namespace Hotel
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(536, 428);
+            this.groupControl1.Size = new System.Drawing.Size(536, 324);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "KẾT NỐI CƠ SỞ DỮ LIỆU";
             this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
@@ -129,7 +129,7 @@ namespace Hotel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(536, 428);
+            this.ClientSize = new System.Drawing.Size(536, 324);
             this.Controls.Add(this.groupControl1);
             this.Name = "frmketnoidb";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
