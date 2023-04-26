@@ -181,3 +181,4 @@ C:\Users\Asus\source\repos\HotelManager\Hotel\obj\Debug\Hotel.csproj.CoreCompile
 C:\Users\Asus\source\repos\HotelManager\Hotel\obj\Debug\Hotel.csproj.CopyComplete
 C:\Users\Asus\source\repos\HotelManager\Hotel\obj\Debug\Hotel.exe
 C:\Users\Asus\source\repos\HotelManager\Hotel\obj\Debug\Hotel.pdb
+C:\Users\Asus\source\repos\HotelManager\Hotel\obj\Debug\Hotel.MainMenu.resources
