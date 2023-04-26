@@ -151,6 +151,7 @@ namespace Hotel
             this.Name = "DANGNHAP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DANGNHAP";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DANGNHAP_FormClosing);
             this.Load += new System.EventHandler(this.DANGNHAP_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txt_username.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_password.Properties)).EndInit();
