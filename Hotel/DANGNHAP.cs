@@ -27,7 +27,7 @@ namespace Hotel
         }
         private void btn_login_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-LAUNSSS;Initial Catalog=HotelManager;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-N744942\SQLANH;Initial Catalog=HotelManager;Integrated Security=True");
             try
             {
                 conn.Open();
@@ -40,8 +40,8 @@ namespace Hotel
                 if (dta.Read())
                 { 
                     MainMenu menu = new MainMenu();
+                    this.Hide() ;
                     menu.ShowDialog();
-                    this.Hide();
                 }
                 else
                 {

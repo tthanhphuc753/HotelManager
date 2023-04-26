@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessLayer;
 
 namespace Hotel
 {
@@ -22,10 +23,10 @@ namespace Hotel
         private void btnDangXuat_ItemClick(object sender, ItemClickEventArgs e)
         {
             thoat = false;
-            this.Close();
             DANGNHAP login = new DANGNHAP();
+            this.Hide();
+            this.Close();
             login.ShowDialog();
-
         }
 
         private void MainMenu_FormClosing(object sender, FormClosingEventArgs e)
@@ -40,7 +41,9 @@ namespace Hotel
 
         private void btnAvailable_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            gridphong.Visible = true; 
+            Account account = new Account();
+            gridphong.DataSource = account.getAll();
         }
 
         private void btnUnAvailable_ItemClick(object sender, ItemClickEventArgs e)

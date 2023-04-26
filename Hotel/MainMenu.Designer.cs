@@ -31,6 +31,8 @@ namespace Hotel
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.srcPhong = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemSearchControl1 = new DevExpress.XtraEditors.Repository.RepositoryItemSearchControl();
             this.btnHome = new DevExpress.XtraBars.BarButtonItem();
             this.btnDangXuat = new DevExpress.XtraBars.BarButtonItem();
             this.barMenu = new DevExpress.XtraBars.BarSubItem();
@@ -42,17 +44,21 @@ namespace Hotel
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.srcPhong = new DevExpress.XtraBars.BarEditItem();
-            this.repositoryItemSearchControl1 = new DevExpress.XtraEditors.Repository.RepositoryItemSearchControl();
+            this.gridphong = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridphong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
             // 
             this.ribbon.CaptionBarItemLinks.Add(this.srcPhong);
+            this.ribbon.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(35, 37, 35, 37);
             this.ribbon.ExpandCollapseItem.Id = 0;
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.srcPhong,
             this.ribbon.ExpandCollapseItem,
             this.ribbon.SearchEditItem,
             this.btnHome,
@@ -61,11 +67,12 @@ namespace Hotel
             this.barButtonItem1,
             this.barButtonItem2,
             this.btnUnAvailable,
-            this.btnAvailable,
-            this.srcPhong});
+            this.btnAvailable});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 10;
+            this.ribbon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribbon.MaxItemId = 14;
             this.ribbon.Name = "ribbon";
+            this.ribbon.OptionsMenuMinWidth = 385;
             this.ribbon.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -73,8 +80,23 @@ namespace Hotel
             this.ribbon.QuickToolbarItemLinks.Add(this.btnHome);
             this.ribbon.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemSearchControl1});
-            this.ribbon.Size = new System.Drawing.Size(735, 158);
+            this.ribbon.Size = new System.Drawing.Size(857, 193);
             this.ribbon.StatusBar = this.ribbonStatusBar;
+            // 
+            // srcPhong
+            // 
+            this.srcPhong.Caption = "Tiềm kiếm phòng";
+            this.srcPhong.Edit = this.repositoryItemSearchControl1;
+            this.srcPhong.Id = 9;
+            this.srcPhong.Name = "srcPhong";
+            // 
+            // repositoryItemSearchControl1
+            // 
+            this.repositoryItemSearchControl1.AutoHeight = false;
+            this.repositoryItemSearchControl1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Repository.ClearButton(),
+            new DevExpress.XtraEditors.Repository.SearchButton()});
+            this.repositoryItemSearchControl1.Name = "repositoryItemSearchControl1";
             // 
             // btnHome
             // 
@@ -96,7 +118,7 @@ namespace Hotel
             // 
             this.barMenu.Caption = "Menu";
             this.barMenu.Id = 3;
-            this.barMenu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barSubItem1.ImageOptions.Image")));
+            this.barMenu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barMenu.ImageOptions.Image")));
             this.barMenu.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnAvailable),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnUnAvailable),
@@ -149,40 +171,48 @@ namespace Hotel
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 458);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 563);
+            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(735, 24);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(857, 30);
             // 
-            // srcPhong
+            // gridphong
             // 
-            this.srcPhong.Caption = "Tiềm kiếm phòng";
-            this.srcPhong.Edit = this.repositoryItemSearchControl1;
-            this.srcPhong.Id = 9;
-            this.srcPhong.Name = "srcPhong";
+            this.gridphong.Location = new System.Drawing.Point(95, 200);
+            this.gridphong.MainView = this.gridView1;
+            this.gridphong.MenuManager = this.ribbon;
+            this.gridphong.Name = "gridphong";
+            this.gridphong.Size = new System.Drawing.Size(750, 328);
+            this.gridphong.TabIndex = 2;
+            this.gridphong.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            this.gridphong.Visible = false;
             // 
-            // repositoryItemSearchControl1
+            // gridView1
             // 
-            this.repositoryItemSearchControl1.AutoHeight = false;
-            this.repositoryItemSearchControl1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Repository.ClearButton(),
-            new DevExpress.XtraEditors.Repository.SearchButton()});
-            this.repositoryItemSearchControl1.Name = "repositoryItemSearchControl1";
+            this.gridView1.GridControl = this.gridphong;
+            this.gridView1.Name = "gridView1";
             // 
             // MainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(735, 482);
+            this.ClientSize = new System.Drawing.Size(857, 593);
+            this.Controls.Add(this.gridphong);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MainMenu";
             this.Ribbon = this.ribbon;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "Main Menu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainMenu_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridphong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,5 +234,7 @@ namespace Hotel
         private DevExpress.XtraBars.BarButtonItem btnAvailable;
         private DevExpress.XtraBars.BarEditItem srcPhong;
         private DevExpress.XtraEditors.Repository.RepositoryItemSearchControl repositoryItemSearchControl1;
+        private DevExpress.XtraGrid.GridControl gridphong;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
     }
 }

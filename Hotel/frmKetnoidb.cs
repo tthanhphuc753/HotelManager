@@ -77,5 +77,10 @@ namespace Hotel
 
 
         }
+
+        private void frmketnoidb_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
