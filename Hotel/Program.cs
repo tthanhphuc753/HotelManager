@@ -1,9 +1,4 @@
-﻿using DevExpress.LookAndFeel;
-using DevExpress.Skins;
-using DevExpress.UserSkins;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System;
 using System.Windows.Forms;
 
 namespace Hotel
@@ -18,7 +13,11 @@ namespace Hotel
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new frmketnoidb());
+=======
+            Application.Run(new Form1());
+>>>>>>> fd64e1f92f36c940dc3e5040131bacefd2de865e
         }
     }
 }

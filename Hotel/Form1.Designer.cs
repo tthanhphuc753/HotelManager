@@ -39,10 +39,10 @@ namespace Hotel
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(41, 42);
+            this.gridControl1.Location = new System.Drawing.Point(69, 42);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(878, 338);
+            this.gridControl1.Size = new System.Drawing.Size(850, 338);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -63,7 +63,7 @@ namespace Hotel
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(948, 406);
             this.Controls.Add(this.gridControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

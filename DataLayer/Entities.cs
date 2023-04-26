@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.Common;
 using System.Data.Entity.Core.EntityClient;
-using System.Data.SqlClient;
 using System.IO;
-using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataLayer
 {
@@ -33,7 +28,6 @@ namespace DataLayer
             entityBuilder.Metadata = @"res://*/HOTEL.csdl|res://*/HOTEL.ssdl|res://*/HOTEL.msl";
 
             EntityConnection connection = new EntityConnection(entityBuilder.ConnectionString);
-
             fs.Close();
             return new Entities(connection);
         }

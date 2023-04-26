@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataLayer
 {
@@ -12,16 +8,13 @@ namespace DataLayer
     public class connect
     {
         public string servername;
-
         public string Servername
         {
             get { return servername; }
             set { servername = value; }
         }
 
-       
         public string database;
-
         public string Database
         {
             get { return database; }
@@ -31,7 +24,6 @@ namespace DataLayer
         public connect(string _servername, string _database)
         {
             this.servername = _servername;
-          
             this.database = _database;
         }
 
@@ -39,6 +31,7 @@ namespace DataLayer
         {
             if (File.Exists("connectdb.dba"))
                 File.Delete("connectdb.dba");
+
             FileStream fs = File.Open("connectdb.dba", FileMode.OpenOrCreate, FileAccess.Write);
             BinaryFormatter bf = new BinaryFormatter();
             bf.Serialize(fs, this);
