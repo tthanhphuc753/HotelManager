@@ -154,7 +154,11 @@ namespace Hotel
 =======
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DANGNHAP";
+<<<<<<< HEAD
 >>>>>>> f1876c4dbbe331c5e65ad1e3edcb193a9289c1fa
+=======
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DANGNHAP_FormClosing);
+>>>>>>> 2738ad73b875aa809d5ccc2c5756c60727bc8bce
             this.Load += new System.EventHandler(this.DANGNHAP_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txt_username.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_password.Properties)).EndInit();

@@ -11,6 +11,8 @@ namespace Hotel
             InitializeComponent();
         }
 
+        bool thoat = true;
+
         private void textEdit1_EditValueChanged(object sender, EventArgs e)
         {
 
@@ -38,7 +40,8 @@ namespace Hotel
                 SqlDataReader dta = cmd.ExecuteReader();
 
                 if (dta.Read())
-                { 
+                {
+                    thoat = false;
                     MainMenu menu = new MainMenu();
                     this.Hide() ;
                     menu.ShowDialog();
@@ -72,10 +75,17 @@ namespace Hotel
         {
 
         }
+    
 
         private void pictureEdit2_EditValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void DANGNHAP_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (thoat)
+                Application.Exit();
         }
     }
 }
