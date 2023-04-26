@@ -163,6 +163,53 @@
         L2c+DQo8L3N2Zz4L
 </value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureEdit2.EditValue" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        RK5CYII=
+</value>
+  </data>
   <data name="DANGNHAP.IconOptions.SvgImage" type="DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFlEZXZFeHByZXNzLkRhdGEudjIyLjIsIFZlcnNpb249MjIuMi41

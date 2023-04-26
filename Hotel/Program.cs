@@ -13,7 +13,10 @@ namespace Hotel
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+// Application
+            Application.Run(new DANGNHAP());
+
         }
     }
 }
