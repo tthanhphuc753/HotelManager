@@ -87,3 +87,4 @@ D:\Hotel\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
 D:\Hotel\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
 D:\Hotel\DataLayer\obj\Debug\DataLayer.dll
 D:\Hotel\DataLayer\obj\Debug\DataLayer.pdb
+C:\Games\GAME\HOTELMANAGER\HOTELMANAGER\DataLayer\obj\Debug\DataLayer.csproj.AssemblyReference.cache

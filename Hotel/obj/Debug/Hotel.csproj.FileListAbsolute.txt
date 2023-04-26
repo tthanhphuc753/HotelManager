@@ -183,3 +183,4 @@ C:\Users\Asus\source\repos\HotelManager\Hotel\obj\Debug\Hotel.exe
 C:\Users\Asus\source\repos\HotelManager\Hotel\obj\Debug\Hotel.pdb
 C:\Users\Asus\source\repos\HotelManager\Hotel\obj\Debug\Hotel.MainMenu.resources
 D:\Hotel\Hotel\obj\Debug\Hotel.MainMenu.resources
+C:\Games\GAME\HOTELMANAGER\HOTELMANAGER\Hotel\obj\Debug\Hotel.MainMenu.resources

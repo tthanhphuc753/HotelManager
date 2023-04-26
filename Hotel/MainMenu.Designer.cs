@@ -55,7 +55,7 @@ namespace Hotel
             // ribbon
             // 
             this.ribbon.CaptionBarItemLinks.Add(this.srcPhong);
-            this.ribbon.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(35, 37, 35, 37);
+            this.ribbon.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(45, 44, 45, 44);
             this.ribbon.ExpandCollapseItem.Id = 0;
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.srcPhong,
@@ -69,10 +69,10 @@ namespace Hotel
             this.btnUnAvailable,
             this.btnAvailable});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribbon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ribbon.MaxItemId = 14;
             this.ribbon.Name = "ribbon";
-            this.ribbon.OptionsMenuMinWidth = 385;
+            this.ribbon.OptionsMenuMinWidth = 495;
             this.ribbon.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -80,12 +80,12 @@ namespace Hotel
             this.ribbon.QuickToolbarItemLinks.Add(this.btnHome);
             this.ribbon.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemSearchControl1});
-            this.ribbon.Size = new System.Drawing.Size(857, 193);
+            this.ribbon.Size = new System.Drawing.Size(1174, 231);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // srcPhong
             // 
-            this.srcPhong.Caption = "Tiềm kiếm phòng";
+            this.srcPhong.Caption = "Tìm kiếm phòng";
             this.srcPhong.Edit = this.repositoryItemSearchControl1;
             this.srcPhong.Id = 9;
             this.srcPhong.Name = "srcPhong";
@@ -171,19 +171,21 @@ namespace Hotel
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 563);
-            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 650);
+            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(857, 30);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1174, 36);
             // 
             // gridphong
             // 
-            this.gridphong.Location = new System.Drawing.Point(95, 200);
+            this.gridphong.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.gridphong.Location = new System.Drawing.Point(122, 238);
             this.gridphong.MainView = this.gridView1;
+            this.gridphong.Margin = new System.Windows.Forms.Padding(4);
             this.gridphong.MenuManager = this.ribbon;
             this.gridphong.Name = "gridphong";
-            this.gridphong.Size = new System.Drawing.Size(750, 328);
+            this.gridphong.Size = new System.Drawing.Size(964, 390);
             this.gridphong.TabIndex = 2;
             this.gridphong.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -191,18 +193,19 @@ namespace Hotel
             // 
             // gridView1
             // 
+            this.gridView1.DetailHeight = 416;
             this.gridView1.GridControl = this.gridphong;
             this.gridView1.Name = "gridView1";
             // 
             // MainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(857, 593);
+            this.ClientSize = new System.Drawing.Size(1174, 686);
             this.Controls.Add(this.gridphong);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MainMenu";
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
