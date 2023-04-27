@@ -51,5 +51,10 @@ namespace Hotel
 
         }
 
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+            Tang tang = new BusinessLayer.Tang();
+
+        }
     }
 }

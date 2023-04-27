@@ -25,13 +25,13 @@ namespace DataLayer
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<DatPhong> DatPhongs { get; set; }
+        public virtual DbSet<DICHVU> DICHVUs { get; set; }
         public virtual DbSet<HOADON> HOADONs { get; set; }
         public virtual DbSet<KHACHHANG> KHACHHANGs { get; set; }
         public virtual DbSet<NHANVIEN> NHANVIENs { get; set; }
         public virtual DbSet<PHONG> PHONGs { get; set; }
         public virtual DbSet<TAIKHOAN> TAIKHOANs { get; set; }
-        public virtual DbSet<DatPhong> DatPhongs { get; set; }
-        public virtual DbSet<DICHVU> DICHVUs { get; set; }
         public virtual DbSet<TANG> TANGs { get; set; }
     }
 }

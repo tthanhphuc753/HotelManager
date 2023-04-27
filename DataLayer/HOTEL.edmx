@@ -4,7 +4,28 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="HotelManagerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="HotelManagerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DatPhong">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="IDKH" Type="int" Nullable="false" />
+          <Property Name="IDPhong" Type="int" Nullable="false" />
+          <Property Name="NGAYDAT" Type="datetime" />
+          <Property Name="NGAYTRA" Type="datetime" />
+          <Property Name="SONGAYO" Type="int" />
+          <Property Name="IDDVu" Type="int" />
+          <Property Name="IDU" Type="int" />
+        </EntityType>
+        <EntityType Name="DICHVU">
+          <Key>
+            <PropertyRef Name="IDDichVu" />
+          </Key>
+          <Property Name="IDDichVu" Type="int" Nullable="false" />
+          <Property Name="TenDichVu" Type="nvarchar" MaxLength="50" />
+          <Property Name="DonGia" Type="float" />
+        </EntityType>
         <EntityType Name="HOADON">
           <Key>
             <PropertyRef Name="IDhoadon" />
@@ -39,6 +60,7 @@
           <Property Name="Loaiphong" Type="char" MaxLength="1" />
           <Property Name="Dongia" Type="nvarchar" MaxLength="50" />
           <Property Name="IDkhachhang" Type="int" Nullable="false" />
+          <Property Name="IDTang" Type="int" />
         </EntityType>
         <EntityType Name="TAIKHOAN">
           <Key>
@@ -47,6 +69,13 @@
           <Property Name="Username" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Password" Type="int" />
           <Property Name="Chucvu" Type="int" />
+        </EntityType>
+        <EntityType Name="TANG">
+          <Key>
+            <PropertyRef Name="IDTang" />
+          </Key>
+          <Property Name="IDTang" Type="int" Nullable="false" />
+          <Property Name="TenTang" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <Association Name="FK_HOADON_KHACHHANG">
           <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="1" />
@@ -85,11 +114,14 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="HotelManagerModelStoreContainer">
+          <EntitySet Name="DatPhong" EntityType="Self.DatPhong" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DICHVU" EntityType="Self.DICHVU" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HOADON" EntityType="Self.HOADON" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="KHACHHANG" EntityType="Self.KHACHHANG" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="NHANVIEN" EntityType="Self.NHANVIEN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PHONG" EntityType="Self.PHONG" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TAIKHOAN" EntityType="Self.TAIKHOAN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TANG" EntityType="Self.TANG" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_HOADON_KHACHHANG" Association="Self.FK_HOADON_KHACHHANG">
             <End Role="KHACHHANG" EntitySet="KHACHHANG" />
             <End Role="HOADON" EntitySet="HOADON" />
@@ -103,8 +135,7 @@
             <End Role="PHONG" EntitySet="PHONG" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="HotelManagerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -148,6 +179,7 @@
           <Property Name="IDkhachhang" Type="Int32" Nullable="false" />
           <NavigationProperty Name="HOADONs" Relationship="Self.FK_HOADON_PHONG" FromRole="PHONG" ToRole="HOADON" />
           <NavigationProperty Name="KHACHHANG" Relationship="Self.FK_PHONG_KHACHHANG" FromRole="PHONG" ToRole="KHACHHANG" />
+          <Property Name="IDTang" Type="Int32" />
         </EntityType>
         <EntityType Name="TAIKHOAN">
           <Key>
@@ -211,7 +243,38 @@
             <End Role="KHACHHANG" EntitySet="KHACHHANGs" />
             <End Role="PHONG" EntitySet="PHONGs" />
           </AssociationSet>
+          <EntitySet Name="DatPhongs" EntityType="HotelManagerModel.DatPhong" />
+          <EntitySet Name="DICHVUs" EntityType="HotelManagerModel.DICHVU" />
+          <EntitySet Name="TANGs" EntityType="HotelManagerModel.TANG" />
         </EntityContainer>
+        <EntityType Name="DatPhong">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="IDKH" Type="Int32" Nullable="false" />
+          <Property Name="IDPhong" Type="Int32" Nullable="false" />
+          <Property Name="NGAYDAT" Type="DateTime" Precision="3" />
+          <Property Name="NGAYTRA" Type="DateTime" Precision="3" />
+          <Property Name="SONGAYO" Type="Int32" />
+          <Property Name="IDDVu" Type="Int32" />
+          <Property Name="IDU" Type="Int32" />
+        </EntityType>
+        <EntityType Name="DICHVU">
+          <Key>
+            <PropertyRef Name="IDDichVu" />
+          </Key>
+          <Property Name="IDDichVu" Type="Int32" Nullable="false" />
+          <Property Name="TenDichVu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DonGia" Type="Double" />
+        </EntityType>
+        <EntityType Name="TANG">
+          <Key>
+            <PropertyRef Name="IDTang" />
+          </Key>
+          <Property Name="IDTang" Type="Int32" Nullable="false" />
+          <Property Name="TenTang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -250,6 +313,7 @@
           <EntitySetMapping Name="PHONGs">
             <EntityTypeMapping TypeName="HotelManagerModel.PHONG">
               <MappingFragment StoreEntitySet="PHONG">
+                <ScalarProperty Name="IDTang" ColumnName="IDTang" />
                 <ScalarProperty Name="IDphong" ColumnName="IDphong" />
                 <ScalarProperty Name="Loaiphong" ColumnName="Loaiphong" />
                 <ScalarProperty Name="Dongia" ColumnName="Dongia" />
@@ -263,6 +327,37 @@
                 <ScalarProperty Name="Username" ColumnName="Username" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="Chucvu" ColumnName="Chucvu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DatPhongs">
+            <EntityTypeMapping TypeName="HotelManagerModel.DatPhong">
+              <MappingFragment StoreEntitySet="DatPhong">
+                <ScalarProperty Name="IDU" ColumnName="IDU" />
+                <ScalarProperty Name="IDDVu" ColumnName="IDDVu" />
+                <ScalarProperty Name="SONGAYO" ColumnName="SONGAYO" />
+                <ScalarProperty Name="NGAYTRA" ColumnName="NGAYTRA" />
+                <ScalarProperty Name="NGAYDAT" ColumnName="NGAYDAT" />
+                <ScalarProperty Name="IDPhong" ColumnName="IDPhong" />
+                <ScalarProperty Name="IDKH" ColumnName="IDKH" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DICHVUs">
+            <EntityTypeMapping TypeName="HotelManagerModel.DICHVU">
+              <MappingFragment StoreEntitySet="DICHVU">
+                <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+                <ScalarProperty Name="TenDichVu" ColumnName="TenDichVu" />
+                <ScalarProperty Name="IDDichVu" ColumnName="IDDichVu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TANGs">
+            <EntityTypeMapping TypeName="HotelManagerModel.TANG">
+              <MappingFragment StoreEntitySet="TANG">
+                <ScalarProperty Name="TenTang" ColumnName="TenTang" />
+                <ScalarProperty Name="IDTang" ColumnName="IDTang" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

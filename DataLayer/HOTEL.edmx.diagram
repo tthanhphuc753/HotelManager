@@ -13,6 +13,9 @@
         <AssociationConnector Association="HotelManagerModel.FK_HOADON_KHACHHANG" ManuallyRouted="false" />
         <AssociationConnector Association="HotelManagerModel.FK_HOADON_PHONG" ManuallyRouted="false" />
         <AssociationConnector Association="HotelManagerModel.FK_PHONG_KHACHHANG" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="HotelManagerModel.DatPhong" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="HotelManagerModel.DICHVU" Width="1.5" PointX="7.375" PointY="4.75" />
+        <EntityTypeShape EntityType="HotelManagerModel.TANG" Width="1.5" PointX="5.375" PointY="7.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

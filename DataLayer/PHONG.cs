@@ -24,6 +24,7 @@ namespace DataLayer
         public string Loaiphong { get; set; }
         public string Dongia { get; set; }
         public int IDkhachhang { get; set; }
+        public Nullable<int> IDTang { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HOADON> HOADONs { get; set; }
