@@ -1,12 +1,5 @@
 ﻿using BusinessLayer;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
 
 
 
@@ -23,6 +16,11 @@ namespace Hotel
         {
             Account account = new Account();
             gridControl1.DataSource = account.getAll();
+        }
+
+        private void gridControl1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

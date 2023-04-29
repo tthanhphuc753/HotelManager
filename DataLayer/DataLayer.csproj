@@ -55,65 +55,77 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="connect.cs" />
+    <Compile Include="DatPhong.cs">
+      <DependentUpon>Hotel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DICHVU.cs">
+      <DependentUpon>Hotel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Encryptor.cs" />
     <Compile Include="Entities.cs" />
     <Compile Include="HOADON.cs">
-      <DependentUpon>HOTEL.tt</DependentUpon>
+      <DependentUpon>Hotel.tt</DependentUpon>
     </Compile>
-    <Compile Include="HOTEL.Context.cs">
+    <Compile Include="Hotel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>HOTEL.Context.tt</DependentUpon>
+      <DependentUpon>Hotel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="HOTEL.cs">
+    <Compile Include="Hotel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>HOTEL.tt</DependentUpon>
+      <DependentUpon>Hotel.tt</DependentUpon>
     </Compile>
-    <Compile Include="HOTEL.Designer.cs">
+    <Compile Include="Hotel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>HOTEL.edmx</DependentUpon>
+      <DependentUpon>Hotel.edmx</DependentUpon>
     </Compile>
     <Compile Include="KHACHHANG.cs">
-      <DependentUpon>HOTEL.tt</DependentUpon>
+      <DependentUpon>Hotel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoaiPhong.cs">
+      <DependentUpon>Hotel.tt</DependentUpon>
     </Compile>
     <Compile Include="NHANVIEN.cs">
-      <DependentUpon>HOTEL.tt</DependentUpon>
+      <DependentUpon>Hotel.tt</DependentUpon>
     </Compile>
     <Compile Include="PHONG.cs">
-      <DependentUpon>HOTEL.tt</DependentUpon>
+      <DependentUpon>Hotel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TAIKHOAN.cs">
-      <DependentUpon>HOTEL.tt</DependentUpon>
+      <DependentUpon>Hotel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TANG.cs">
+      <DependentUpon>Hotel.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="HOTEL.edmx">
+    <EntityDeploy Include="Hotel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>HOTEL.Designer.cs</LastGenOutput>
+      <LastGenOutput>Hotel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="HOTEL.edmx.diagram">
-      <DependentUpon>HOTEL.edmx</DependentUpon>
+    <None Include="Hotel.edmx.diagram">
+      <DependentUpon>Hotel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="HOTEL.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>HOTEL.edmx</DependentUpon>
-      <LastGenOutput>HOTEL.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="HOTEL.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>HOTEL.edmx</DependentUpon>
-      <LastGenOutput>HOTEL.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="Hotel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Hotel.edmx</DependentUpon>
+      <LastGenOutput>Hotel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Hotel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Hotel.edmx</DependentUpon>
+      <LastGenOutput>Hotel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

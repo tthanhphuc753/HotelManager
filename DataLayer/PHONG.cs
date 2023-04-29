@@ -20,13 +20,13 @@ namespace DataLayer
             this.HOADONs = new HashSet<HOADON>();
         }
     
-        public int IDphong { get; set; }
-        public string Loaiphong { get; set; }
-        public string Dongia { get; set; }
-        public int IDkhachhang { get; set; }
+        public int IDPhong { get; set; }
+        public int IDTang { get; set; }
+        public string TenPhong { get; set; }
+        public string TrangThai { get; set; }
+        public int IDLoaiPhong { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HOADON> HOADONs { get; set; }
-        public virtual KHACHHANG KHACHHANG { get; set; }
     }
 }

@@ -14,10 +14,10 @@ namespace DataLayer
     
     public partial class HOADON
     {
-        public int IDhoadon { get; set; }
+        public int IDHoadon { get; set; }
         public string Thanhtien { get; set; }
-        public int IDkhachhang { get; set; }
-        public int IDphong { get; set; }
+        public int IDKhachhang { get; set; }
+        public int IDPhong { get; set; }
     
         public virtual KHACHHANG KHACHHANG { get; set; }
         public virtual PHONG PHONG { get; set; }
