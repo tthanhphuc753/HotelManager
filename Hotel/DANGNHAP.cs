@@ -13,15 +13,7 @@ namespace Hotel
 
         bool thoat = true;
 
-        private void textEdit1_EditValueChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void buttonEdit1_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void btn_exit_Click(object sender, EventArgs e)
         {
@@ -29,7 +21,7 @@ namespace Hotel
         }
         private void btn_login_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=SORA\PHUCTT;Initial Catalog=HotelManager;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-LAUNSSS;Initial Catalog=HotelManager;Integrated Security=True");
             try
             {
                 conn.Open();
@@ -58,28 +50,6 @@ namespace Hotel
             }
 
             
-        }
-
-        private void labelControl3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void checkEdit1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DANGNHAP_Load(object sender, EventArgs e)
-        {
-
-        }
-    
-
-        private void pictureEdit2_EditValueChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void DANGNHAP_FormClosing(object sender, FormClosingEventArgs e)

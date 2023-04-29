@@ -12,14 +12,14 @@ namespace DataLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class HOADON
+    public partial class FUNC
     {
-        public int IDHoadon { get; set; }
-        public string Thanhtien { get; set; }
-        public int IDKhachhang { get; set; }
-        public int IDPhong { get; set; }
-    
-        public virtual KHACHHANG KHACHHANG { get; set; }
-        public virtual PHONG PHONG { get; set; }
+        public string FUNC_CODE { get; set; }
+        public int SORT { get; set; }
+        public string DESCRIPTION { get; set; }
+        public Nullable<bool> ISGROUP { get; set; }
+        public string PARENT { get; set; }
+        public Nullable<bool> MENU { get; set; }
+        public string TIPS { get; set; }
     }
 }

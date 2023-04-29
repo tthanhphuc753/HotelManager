@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="HotelManagerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="HotelManagerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="DatPhong">
           <Key>
             <PropertyRef Name="ID" />
@@ -28,12 +28,12 @@
         </EntityType>
         <EntityType Name="HOADON">
           <Key>
-            <PropertyRef Name="IDhoadon" />
+            <PropertyRef Name="IDHoadon" />
           </Key>
-          <Property Name="IDhoadon" Type="int" Nullable="false" />
-          <Property Name="Thanhtien" Type="nvarchar" MaxLength="50" />
-          <Property Name="IDkhachhang" Type="int" Nullable="false" />
-          <Property Name="IDphong" Type="int" Nullable="false" />
+          <Property Name="IDHoadon" Type="int" Nullable="false" />
+          <Property Name="Thanhtien" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IDKhachhang" Type="int" Nullable="false" />
+          <Property Name="IDPhong" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="KHACHHANG">
           <Key>
@@ -42,6 +42,14 @@
           <Property Name="IDKhachhang" Type="int" Nullable="false" />
           <Property Name="Tenkhachhang" Type="nvarchar" MaxLength="50" />
           <Property Name="CCCD/CMND" Type="int" />
+        </EntityType>
+        <EntityType Name="LoaiPhong">
+          <Key>
+            <PropertyRef Name="IDLoaiPhong" />
+          </Key>
+          <Property Name="IDLoaiPhong" Type="int" Nullable="false" />
+          <Property Name="TenLoaiPhong" Type="nvarchar" MaxLength="50" />
+          <Property Name="Gia" Type="float" />
         </EntityType>
         <EntityType Name="NHANVIEN">
           <Key>
@@ -54,13 +62,13 @@
         </EntityType>
         <EntityType Name="PHONG">
           <Key>
-            <PropertyRef Name="IDphong" />
+            <PropertyRef Name="IDPhong" />
           </Key>
-          <Property Name="IDphong" Type="int" Nullable="false" />
-          <Property Name="Loaiphong" Type="char" MaxLength="1" />
-          <Property Name="Dongia" Type="nvarchar" MaxLength="50" />
-          <Property Name="IDkhachhang" Type="int" Nullable="false" />
-          <Property Name="IDTang" Type="int" />
+          <Property Name="IDPhong" Type="int" Nullable="false" />
+          <Property Name="IDTang" Type="int" Nullable="false" />
+          <Property Name="TenPhong" Type="nvarchar" MaxLength="50" />
+          <Property Name="TrangThai" Type="nvarchar" MaxLength="50" />
+          <Property Name="IDLoaiPhong" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="TAIKHOAN">
           <Key>
@@ -85,7 +93,7 @@
               <PropertyRef Name="IDKhachhang" />
             </Principal>
             <Dependent Role="HOADON">
-              <PropertyRef Name="IDkhachhang" />
+              <PropertyRef Name="IDKhachhang" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -94,22 +102,10 @@
           <End Role="HOADON" Type="Self.HOADON" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="PHONG">
-              <PropertyRef Name="IDphong" />
+              <PropertyRef Name="IDPhong" />
             </Principal>
             <Dependent Role="HOADON">
-              <PropertyRef Name="IDphong" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_PHONG_KHACHHANG">
-          <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="1" />
-          <End Role="PHONG" Type="Self.PHONG" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="KHACHHANG">
-              <PropertyRef Name="IDKhachhang" />
-            </Principal>
-            <Dependent Role="PHONG">
-              <PropertyRef Name="IDkhachhang" />
+              <PropertyRef Name="IDPhong" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -118,6 +114,7 @@
           <EntitySet Name="DICHVU" EntityType="Self.DICHVU" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HOADON" EntityType="Self.HOADON" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="KHACHHANG" EntityType="Self.KHACHHANG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LoaiPhong" EntityType="Self.LoaiPhong" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="NHANVIEN" EntityType="Self.NHANVIEN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PHONG" EntityType="Self.PHONG" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TAIKHOAN" EntityType="Self.TAIKHOAN" Schema="dbo" store:Type="Tables" />
@@ -130,123 +127,12 @@
             <End Role="PHONG" EntitySet="PHONG" />
             <End Role="HOADON" EntitySet="HOADON" />
           </AssociationSet>
-          <AssociationSet Name="FK_PHONG_KHACHHANG" Association="Self.FK_PHONG_KHACHHANG">
-            <End Role="KHACHHANG" EntitySet="KHACHHANG" />
-            <End Role="PHONG" EntitySet="PHONG" />
-          </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="HotelManagerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="HOADON">
-          <Key>
-            <PropertyRef Name="IDhoadon" />
-          </Key>
-          <Property Name="IDhoadon" Type="Int32" Nullable="false" />
-          <Property Name="Thanhtien" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="IDkhachhang" Type="Int32" Nullable="false" />
-          <Property Name="IDphong" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="KHACHHANG" Relationship="Self.FK_HOADON_KHACHHANG" FromRole="HOADON" ToRole="KHACHHANG" />
-          <NavigationProperty Name="PHONG" Relationship="Self.FK_HOADON_PHONG" FromRole="HOADON" ToRole="PHONG" />
-        </EntityType>
-        <EntityType Name="KHACHHANG">
-          <Key>
-            <PropertyRef Name="IDKhachhang" />
-          </Key>
-          <Property Name="IDKhachhang" Type="Int32" Nullable="false" />
-          <Property Name="Tenkhachhang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="CCCD_CMND" Type="Int32" />
-          <NavigationProperty Name="HOADONs" Relationship="Self.FK_HOADON_KHACHHANG" FromRole="KHACHHANG" ToRole="HOADON" />
-          <NavigationProperty Name="PHONGs" Relationship="Self.FK_PHONG_KHACHHANG" FromRole="KHACHHANG" ToRole="PHONG" />
-        </EntityType>
-        <EntityType Name="NHANVIEN">
-          <Key>
-            <PropertyRef Name="IDNhanvien" />
-          </Key>
-          <Property Name="IDNhanvien" Type="Int32" Nullable="false" />
-          <Property Name="Tennhanvien" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Chucvu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Sodienthoai" Type="Int32" />
-        </EntityType>
-        <EntityType Name="PHONG">
-          <Key>
-            <PropertyRef Name="IDphong" />
-          </Key>
-          <Property Name="IDphong" Type="Int32" Nullable="false" />
-          <Property Name="Loaiphong" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
-          <Property Name="Dongia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="IDkhachhang" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="HOADONs" Relationship="Self.FK_HOADON_PHONG" FromRole="PHONG" ToRole="HOADON" />
-          <NavigationProperty Name="KHACHHANG" Relationship="Self.FK_PHONG_KHACHHANG" FromRole="PHONG" ToRole="KHACHHANG" />
-          <Property Name="IDTang" Type="Int32" />
-        </EntityType>
-        <EntityType Name="TAIKHOAN">
-          <Key>
-            <PropertyRef Name="Username" />
-          </Key>
-          <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Password" Type="Int32" />
-          <Property Name="Chucvu" Type="Int32" />
-        </EntityType>
-        <Association Name="FK_HOADON_KHACHHANG">
-          <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="1" />
-          <End Role="HOADON" Type="Self.HOADON" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="KHACHHANG">
-              <PropertyRef Name="IDKhachhang" />
-            </Principal>
-            <Dependent Role="HOADON">
-              <PropertyRef Name="IDkhachhang" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_HOADON_PHONG">
-          <End Role="PHONG" Type="Self.PHONG" Multiplicity="1" />
-          <End Role="HOADON" Type="Self.HOADON" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PHONG">
-              <PropertyRef Name="IDphong" />
-            </Principal>
-            <Dependent Role="HOADON">
-              <PropertyRef Name="IDphong" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_PHONG_KHACHHANG">
-          <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="1" />
-          <End Role="PHONG" Type="Self.PHONG" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="KHACHHANG">
-              <PropertyRef Name="IDKhachhang" />
-            </Principal>
-            <Dependent Role="PHONG">
-              <PropertyRef Name="IDkhachhang" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="HOADONs" EntityType="Self.HOADON" />
-          <EntitySet Name="KHACHHANGs" EntityType="Self.KHACHHANG" />
-          <EntitySet Name="NHANVIENs" EntityType="Self.NHANVIEN" />
-          <EntitySet Name="PHONGs" EntityType="Self.PHONG" />
-          <EntitySet Name="TAIKHOANs" EntityType="Self.TAIKHOAN" />
-          <AssociationSet Name="FK_HOADON_KHACHHANG" Association="Self.FK_HOADON_KHACHHANG">
-            <End Role="KHACHHANG" EntitySet="KHACHHANGs" />
-            <End Role="HOADON" EntitySet="HOADONs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_HOADON_PHONG" Association="Self.FK_HOADON_PHONG">
-            <End Role="PHONG" EntitySet="PHONGs" />
-            <End Role="HOADON" EntitySet="HOADONs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PHONG_KHACHHANG" Association="Self.FK_PHONG_KHACHHANG">
-            <End Role="KHACHHANG" EntitySet="KHACHHANGs" />
-            <End Role="PHONG" EntitySet="PHONGs" />
-          </AssociationSet>
-          <EntitySet Name="DatPhongs" EntityType="HotelManagerModel.DatPhong" />
-          <EntitySet Name="DICHVUs" EntityType="HotelManagerModel.DICHVU" />
-          <EntitySet Name="TANGs" EntityType="HotelManagerModel.TANG" />
-        </EntityContainer>
         <EntityType Name="DatPhong">
           <Key>
             <PropertyRef Name="ID" />
@@ -268,6 +154,62 @@
           <Property Name="TenDichVu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="DonGia" Type="Double" />
         </EntityType>
+        <EntityType Name="HOADON">
+          <Key>
+            <PropertyRef Name="IDHoadon" />
+          </Key>
+          <Property Name="IDHoadon" Type="Int32" Nullable="false" />
+          <Property Name="Thanhtien" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IDKhachhang" Type="Int32" Nullable="false" />
+          <Property Name="IDPhong" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="KHACHHANG" Relationship="Self.FK_HOADON_KHACHHANG" FromRole="HOADON" ToRole="KHACHHANG" />
+          <NavigationProperty Name="PHONG" Relationship="Self.FK_HOADON_PHONG" FromRole="HOADON" ToRole="PHONG" />
+        </EntityType>
+        <EntityType Name="KHACHHANG">
+          <Key>
+            <PropertyRef Name="IDKhachhang" />
+          </Key>
+          <Property Name="IDKhachhang" Type="Int32" Nullable="false" />
+          <Property Name="Tenkhachhang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CCCD_CMND" Type="Int32" />
+          <NavigationProperty Name="HOADONs" Relationship="Self.FK_HOADON_KHACHHANG" FromRole="KHACHHANG" ToRole="HOADON" />
+        </EntityType>
+        <EntityType Name="LoaiPhong">
+          <Key>
+            <PropertyRef Name="IDLoaiPhong" />
+          </Key>
+          <Property Name="IDLoaiPhong" Type="Int32" Nullable="false" />
+          <Property Name="TenLoaiPhong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Gia" Type="Double" />
+        </EntityType>
+        <EntityType Name="NHANVIEN">
+          <Key>
+            <PropertyRef Name="IDNhanvien" />
+          </Key>
+          <Property Name="IDNhanvien" Type="Int32" Nullable="false" />
+          <Property Name="Tennhanvien" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Chucvu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sodienthoai" Type="Int32" />
+        </EntityType>
+        <EntityType Name="PHONG">
+          <Key>
+            <PropertyRef Name="IDPhong" />
+          </Key>
+          <Property Name="IDPhong" Type="Int32" Nullable="false" />
+          <Property Name="IDTang" Type="Int32" Nullable="false" />
+          <Property Name="TenPhong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TrangThai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IDLoaiPhong" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="HOADONs" Relationship="Self.FK_HOADON_PHONG" FromRole="PHONG" ToRole="HOADON" />
+        </EntityType>
+        <EntityType Name="TAIKHOAN">
+          <Key>
+            <PropertyRef Name="Username" />
+          </Key>
+          <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="Int32" />
+          <Property Name="Chucvu" Type="Int32" />
+        </EntityType>
         <EntityType Name="TANG">
           <Key>
             <PropertyRef Name="IDTang" />
@@ -275,19 +217,85 @@
           <Property Name="IDTang" Type="Int32" Nullable="false" />
           <Property Name="TenTang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
+        <Association Name="FK_HOADON_KHACHHANG">
+          <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="1" />
+          <End Role="HOADON" Type="Self.HOADON" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KHACHHANG">
+              <PropertyRef Name="IDKhachhang" />
+            </Principal>
+            <Dependent Role="HOADON">
+              <PropertyRef Name="IDKhachhang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HOADON_PHONG">
+          <End Role="PHONG" Type="Self.PHONG" Multiplicity="1" />
+          <End Role="HOADON" Type="Self.HOADON" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PHONG">
+              <PropertyRef Name="IDPhong" />
+            </Principal>
+            <Dependent Role="HOADON">
+              <PropertyRef Name="IDPhong" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DatPhongs" EntityType="Self.DatPhong" />
+          <EntitySet Name="DICHVUs" EntityType="Self.DICHVU" />
+          <EntitySet Name="HOADONs" EntityType="Self.HOADON" />
+          <EntitySet Name="KHACHHANGs" EntityType="Self.KHACHHANG" />
+          <EntitySet Name="LoaiPhongs" EntityType="Self.LoaiPhong" />
+          <EntitySet Name="NHANVIENs" EntityType="Self.NHANVIEN" />
+          <EntitySet Name="PHONGs" EntityType="Self.PHONG" />
+          <EntitySet Name="TAIKHOANs" EntityType="Self.TAIKHOAN" />
+          <EntitySet Name="TANGs" EntityType="Self.TANG" />
+          <AssociationSet Name="FK_HOADON_KHACHHANG" Association="Self.FK_HOADON_KHACHHANG">
+            <End Role="KHACHHANG" EntitySet="KHACHHANGs" />
+            <End Role="HOADON" EntitySet="HOADONs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HOADON_PHONG" Association="Self.FK_HOADON_PHONG">
+            <End Role="PHONG" EntitySet="PHONGs" />
+            <End Role="HOADON" EntitySet="HOADONs" />
+          </AssociationSet>
+        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="HotelManagerModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="DatPhongs">
+            <EntityTypeMapping TypeName="HotelManagerModel.DatPhong">
+              <MappingFragment StoreEntitySet="DatPhong">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IDKH" ColumnName="IDKH" />
+                <ScalarProperty Name="IDPhong" ColumnName="IDPhong" />
+                <ScalarProperty Name="NGAYDAT" ColumnName="NGAYDAT" />
+                <ScalarProperty Name="NGAYTRA" ColumnName="NGAYTRA" />
+                <ScalarProperty Name="SONGAYO" ColumnName="SONGAYO" />
+                <ScalarProperty Name="IDDVu" ColumnName="IDDVu" />
+                <ScalarProperty Name="IDU" ColumnName="IDU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DICHVUs">
+            <EntityTypeMapping TypeName="HotelManagerModel.DICHVU">
+              <MappingFragment StoreEntitySet="DICHVU">
+                <ScalarProperty Name="IDDichVu" ColumnName="IDDichVu" />
+                <ScalarProperty Name="TenDichVu" ColumnName="TenDichVu" />
+                <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="HOADONs">
             <EntityTypeMapping TypeName="HotelManagerModel.HOADON">
               <MappingFragment StoreEntitySet="HOADON">
-                <ScalarProperty Name="IDhoadon" ColumnName="IDhoadon" />
+                <ScalarProperty Name="IDHoadon" ColumnName="IDHoadon" />
                 <ScalarProperty Name="Thanhtien" ColumnName="Thanhtien" />
-                <ScalarProperty Name="IDkhachhang" ColumnName="IDkhachhang" />
-                <ScalarProperty Name="IDphong" ColumnName="IDphong" />
+                <ScalarProperty Name="IDKhachhang" ColumnName="IDKhachhang" />
+                <ScalarProperty Name="IDPhong" ColumnName="IDPhong" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -297,6 +305,15 @@
                 <ScalarProperty Name="IDKhachhang" ColumnName="IDKhachhang" />
                 <ScalarProperty Name="Tenkhachhang" ColumnName="Tenkhachhang" />
                 <ScalarProperty Name="CCCD_CMND" ColumnName="CCCD/CMND" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LoaiPhongs">
+            <EntityTypeMapping TypeName="HotelManagerModel.LoaiPhong">
+              <MappingFragment StoreEntitySet="LoaiPhong">
+                <ScalarProperty Name="IDLoaiPhong" ColumnName="IDLoaiPhong" />
+                <ScalarProperty Name="TenLoaiPhong" ColumnName="TenLoaiPhong" />
+                <ScalarProperty Name="Gia" ColumnName="Gia" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -313,11 +330,11 @@
           <EntitySetMapping Name="PHONGs">
             <EntityTypeMapping TypeName="HotelManagerModel.PHONG">
               <MappingFragment StoreEntitySet="PHONG">
+                <ScalarProperty Name="IDPhong" ColumnName="IDPhong" />
                 <ScalarProperty Name="IDTang" ColumnName="IDTang" />
-                <ScalarProperty Name="IDphong" ColumnName="IDphong" />
-                <ScalarProperty Name="Loaiphong" ColumnName="Loaiphong" />
-                <ScalarProperty Name="Dongia" ColumnName="Dongia" />
-                <ScalarProperty Name="IDkhachhang" ColumnName="IDkhachhang" />
+                <ScalarProperty Name="TenPhong" ColumnName="TenPhong" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+                <ScalarProperty Name="IDLoaiPhong" ColumnName="IDLoaiPhong" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -330,34 +347,11 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="DatPhongs">
-            <EntityTypeMapping TypeName="HotelManagerModel.DatPhong">
-              <MappingFragment StoreEntitySet="DatPhong">
-                <ScalarProperty Name="IDU" ColumnName="IDU" />
-                <ScalarProperty Name="IDDVu" ColumnName="IDDVu" />
-                <ScalarProperty Name="SONGAYO" ColumnName="SONGAYO" />
-                <ScalarProperty Name="NGAYTRA" ColumnName="NGAYTRA" />
-                <ScalarProperty Name="NGAYDAT" ColumnName="NGAYDAT" />
-                <ScalarProperty Name="IDPhong" ColumnName="IDPhong" />
-                <ScalarProperty Name="IDKH" ColumnName="IDKH" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="DICHVUs">
-            <EntityTypeMapping TypeName="HotelManagerModel.DICHVU">
-              <MappingFragment StoreEntitySet="DICHVU">
-                <ScalarProperty Name="DonGia" ColumnName="DonGia" />
-                <ScalarProperty Name="TenDichVu" ColumnName="TenDichVu" />
-                <ScalarProperty Name="IDDichVu" ColumnName="IDDichVu" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="TANGs">
             <EntityTypeMapping TypeName="HotelManagerModel.TANG">
               <MappingFragment StoreEntitySet="TANG">
-                <ScalarProperty Name="TenTang" ColumnName="TenTang" />
                 <ScalarProperty Name="IDTang" ColumnName="IDTang" />
+                <ScalarProperty Name="TenTang" ColumnName="TenTang" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

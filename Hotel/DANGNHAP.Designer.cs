@@ -73,7 +73,6 @@ namespace Hotel
             this.txt_username.Name = "txt_username";
             this.txt_username.Size = new System.Drawing.Size(201, 22);
             this.txt_username.TabIndex = 2;
-            this.txt_username.EditValueChanged += new System.EventHandler(this.textEdit1_EditValueChanged);
             // 
             // txt_password
             // 
@@ -118,7 +117,6 @@ namespace Hotel
             this.btn_check.Properties.Caption = "Remember";
             this.btn_check.Size = new System.Drawing.Size(201, 24);
             this.btn_check.TabIndex = 6;
-            this.btn_check.CheckedChanged += new System.EventHandler(this.checkEdit1_CheckedChanged);
             // 
             // pictureEdit2
             // 
@@ -131,7 +129,6 @@ namespace Hotel
             this.pictureEdit2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             this.pictureEdit2.Size = new System.Drawing.Size(100, 86);
             this.pictureEdit2.TabIndex = 8;
-            this.pictureEdit2.EditValueChanged += new System.EventHandler(this.pictureEdit2_EditValueChanged);
             // 
             // DANGNHAP
             // 
@@ -155,7 +152,7 @@ namespace Hotel
 
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DANGNHAP_FormClosing);
 
-            this.Load += new System.EventHandler(this.DANGNHAP_Load);
+
             ((System.ComponentModel.ISupportInitialize)(this.txt_username.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_password.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_check.Properties)).EndInit();

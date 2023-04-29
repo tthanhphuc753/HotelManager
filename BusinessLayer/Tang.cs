@@ -7,7 +7,7 @@ using DataLayer;
 
 namespace BusinessLayer
 {
-    class Tang
+    public class Tang
     {
         Entities db;
 

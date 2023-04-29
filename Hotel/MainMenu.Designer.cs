@@ -29,6 +29,7 @@ namespace Hotel
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.srcPhong = new DevExpress.XtraBars.BarEditItem();
@@ -44,12 +45,23 @@ namespace Hotel
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.gridphong = new DevExpress.XtraGrid.GridControl();
+            this.btnDatPhong = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.virtualServerModeSource1 = new DevExpress.Data.VirtualServerModeSource(this.components);
+            this.gridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.Control = new DevExpress.XtraBars.Ribbon.GalleryControl();
+            this.galleryControlClient1 = new DevExpress.XtraBars.Ribbon.GalleryControlClient();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridphong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.virtualServerModeSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Control)).BeginInit();
+            this.Control.SuspendLayout();
             this.SuspendLayout();
             // 
             // ribbon
@@ -77,7 +89,7 @@ namespace Hotel
             this.ribbon.QuickToolbarItemLinks.Add(this.btnHome);
             this.ribbon.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemSearchControl1});
-            this.ribbon.Size = new System.Drawing.Size(820, 158);
+            this.ribbon.Size = new System.Drawing.Size(910, 158);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // srcPhong
@@ -121,6 +133,7 @@ namespace Hotel
             new DevExpress.XtraBars.LinkPersistInfo(this.btnUnAvailable),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnDangXuat)});
             this.barMenu.Name = "barMenu";
+            this.barMenu.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // btnAvailable
             // 
@@ -168,36 +181,94 @@ namespace Hotel
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 510);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 546);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(820, 24);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(910, 24);
             // 
-            // gridphong
+            // btnDatPhong
             // 
-            this.gridphong.Dock = System.Windows.Forms.DockStyle.Right;
-            this.gridphong.Location = new System.Drawing.Point(177, 158);
-            this.gridphong.MainView = this.gridView1;
-            this.gridphong.MenuManager = this.ribbon;
-            this.gridphong.Name = "gridphong";
-            this.gridphong.Size = new System.Drawing.Size(643, 352);
-            this.gridphong.TabIndex = 2;
-            this.gridphong.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.btnDatPhong.Location = new System.Drawing.Point(25, 198);
+            this.btnDatPhong.Name = "btnDatPhong";
+            this.btnDatPhong.Size = new System.Drawing.Size(93, 23);
+            this.btnDatPhong.TabIndex = 5;
+            this.btnDatPhong.Text = "Đặt phòng";
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Location = new System.Drawing.Point(25, 273);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(93, 23);
+            this.simpleButton1.TabIndex = 8;
+            this.simpleButton1.Text = "Xuất hóa đơn";
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Location = new System.Drawing.Point(25, 348);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(93, 23);
+            this.simpleButton2.TabIndex = 9;
+            this.simpleButton2.Text = "Báo cáo tháng";
+            // 
+            // simpleButton3
+            // 
+            this.simpleButton3.Location = new System.Drawing.Point(25, 423);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(93, 23);
+            this.simpleButton3.TabIndex = 10;
+            this.simpleButton3.Text = "Thay đổi quy định";
+            // 
+            // gridControl
+            // 
+            this.gridControl.Dock = System.Windows.Forms.DockStyle.Left;
+            this.gridControl.Location = new System.Drawing.Point(230, 158);
+            this.gridControl.MainView = this.gridView1;
+            this.gridControl.MenuManager = this.ribbon;
+            this.gridControl.Name = "gridControl";
+            this.gridControl.Size = new System.Drawing.Size(680, 352);
+            this.gridControl.TabIndex = 13;
+            this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            this.gridphong.Visible = false;
+            this.gridControl.Visible = false;
             // 
             // gridView1
             // 
-            this.gridView1.DetailHeight = 285;
-            this.gridView1.GridControl = this.gridphong;
+            this.gridView1.GridControl = this.gridControl;
             this.gridView1.Name = "gridView1";
+            // 
+            // Control
+            // 
+            this.Control.Controls.Add(this.galleryControlClient1);
+            this.Control.Dock = System.Windows.Forms.DockStyle.Right;
+            this.Control.Location = new System.Drawing.Point(230, 158);
+            this.Control.Name = "Control";
+            this.Control.Size = new System.Drawing.Size(680, 388);
+            this.Control.TabIndex = 16;
+            this.Control.Text = "Control";
+            // 
+            // galleryControlClient1
+            // 
+            this.galleryControlClient1.GalleryControl = this.Control;
+            this.galleryControlClient1.Location = new System.Drawing.Point(2, 2);
+            this.galleryControlClient1.Size = new System.Drawing.Size(659, 384);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "Available.png");
+            this.imageList1.Images.SetKeyName(1, "UnAvailable.png");
             // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(820, 534);
-            this.Controls.Add(this.gridphong);
+            this.ClientSize = new System.Drawing.Size(910, 570);
+            this.Controls.Add(this.Control);
+            this.Controls.Add(this.simpleButton3);
+            this.Controls.Add(this.simpleButton2);
+            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.btnDatPhong);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.Name = "MainMenu";
@@ -209,8 +280,11 @@ namespace Hotel
             this.Load += new System.EventHandler(this.MainMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridphong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.virtualServerModeSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Control)).EndInit();
+            this.Control.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,7 +306,15 @@ namespace Hotel
         private DevExpress.XtraBars.BarButtonItem btnAvailable;
         private DevExpress.XtraBars.BarEditItem srcPhong;
         private DevExpress.XtraEditors.Repository.RepositoryItemSearchControl repositoryItemSearchControl1;
-        private DevExpress.XtraGrid.GridControl gridphong;
+        private DevExpress.XtraEditors.SimpleButton btnDatPhong;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.Data.VirtualServerModeSource virtualServerModeSource1;
+        private DevExpress.XtraGrid.GridControl gridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraBars.Ribbon.GalleryControl Control;
+        private DevExpress.XtraBars.Ribbon.GalleryControlClient galleryControlClient1;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }

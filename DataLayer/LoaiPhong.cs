@@ -12,14 +12,10 @@ namespace DataLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class HOADON
+    public partial class LoaiPhong
     {
-        public int IDHoadon { get; set; }
-        public string Thanhtien { get; set; }
-        public int IDKhachhang { get; set; }
-        public int IDPhong { get; set; }
-    
-        public virtual KHACHHANG KHACHHANG { get; set; }
-        public virtual PHONG PHONG { get; set; }
+        public int IDLoaiPhong { get; set; }
+        public string TenLoaiPhong { get; set; }
+        public Nullable<double> Gia { get; set; }
     }
 }

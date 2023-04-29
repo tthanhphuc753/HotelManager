@@ -18,7 +18,6 @@ namespace DataLayer
         public KHACHHANG()
         {
             this.HOADONs = new HashSet<HOADON>();
-            this.PHONGs = new HashSet<PHONG>();
         }
     
         public int IDKhachhang { get; set; }
@@ -27,7 +26,5 @@ namespace DataLayer
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HOADON> HOADONs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PHONG> PHONGs { get; set; }
     }
 }
