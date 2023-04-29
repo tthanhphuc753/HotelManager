@@ -36,11 +36,7 @@ namespace Hotel
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnKiemTra = new System.Windows.Forms.Button();
             this.cboDatabase = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtServer = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.virtualServerModeSource1)).BeginInit();
@@ -54,11 +50,7 @@ namespace Hotel
             this.groupControl1.Controls.Add(this.btnThoat);
             this.groupControl1.Controls.Add(this.btnKiemTra);
             this.groupControl1.Controls.Add(this.cboDatabase);
-            this.groupControl1.Controls.Add(this.label3);
-            this.groupControl1.Controls.Add(this.label2);
             this.groupControl1.Controls.Add(this.label4);
-            this.groupControl1.Controls.Add(this.txtPassword);
-            this.groupControl1.Controls.Add(this.txtUsername);
             this.groupControl1.Controls.Add(this.txtServer);
             this.groupControl1.Controls.Add(this.label1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -71,7 +63,7 @@ namespace Hotel
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(213, 295);
+            this.btnLuu.Location = new System.Drawing.Point(212, 207);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(87, 29);
             this.btnLuu.TabIndex = 13;
@@ -81,7 +73,7 @@ namespace Hotel
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(359, 295);
+            this.btnThoat.Location = new System.Drawing.Point(358, 207);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(87, 29);
             this.btnThoat.TabIndex = 12;
@@ -91,7 +83,7 @@ namespace Hotel
             // 
             // btnKiemTra
             // 
-            this.btnKiemTra.Location = new System.Drawing.Point(73, 295);
+            this.btnKiemTra.Location = new System.Drawing.Point(72, 207);
             this.btnKiemTra.Name = "btnKiemTra";
             this.btnKiemTra.Size = new System.Drawing.Size(87, 29);
             this.btnKiemTra.TabIndex = 11;
@@ -102,52 +94,20 @@ namespace Hotel
             // cboDatabase
             // 
             this.cboDatabase.FormattingEnabled = true;
-            this.cboDatabase.Location = new System.Drawing.Point(160, 239);
+            this.cboDatabase.Location = new System.Drawing.Point(159, 151);
             this.cboDatabase.Name = "cboDatabase";
             this.cboDatabase.Size = new System.Drawing.Size(250, 27);
             this.cboDatabase.TabIndex = 10;
             this.cboDatabase.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cboDatabase_MouseClick);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(62, 196);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 19);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Password";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(62, 151);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 19);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Username";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(62, 243);
+            this.label4.Location = new System.Drawing.Point(61, 155);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 19);
             this.label4.TabIndex = 6;
             this.label4.Text = "Database";
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(159, 192);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(252, 27);
-            this.txtPassword.TabIndex = 5;
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.Location = new System.Drawing.Point(159, 147);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(252, 27);
-            this.txtUsername.TabIndex = 3;
             // 
             // txtServer
             // 
@@ -187,15 +147,11 @@ namespace Hotel
         private DevExpress.Data.VirtualServerModeSource virtualServerModeSource1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtServer;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnKiemTra;
         private System.Windows.Forms.ComboBox cboDatabase;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
     }
 }
