@@ -41,10 +41,16 @@ namespace Hotel
             this.btnUnAvailable = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnTraPhong = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCapNhatPhong = new DevExpress.XtraBars.BarButtonItem();
+            this.btnThanhToan = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.gControl = new DevExpress.XtraBars.Ribbon.GalleryControl();
+            this.galleryControlClient1 = new DevExpress.XtraBars.Ribbon.GalleryControlClient();
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.btnDatPhong = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
@@ -52,16 +58,15 @@ namespace Hotel
             this.virtualServerModeSource1 = new DevExpress.Data.VirtualServerModeSource(this.components);
             this.gridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.Control = new DevExpress.XtraBars.Ribbon.GalleryControl();
-            this.galleryControlClient1 = new DevExpress.XtraBars.Ribbon.GalleryControlClient();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gControl)).BeginInit();
+            this.gControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.virtualServerModeSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Control)).BeginInit();
-            this.Control.SuspendLayout();
             this.SuspendLayout();
             // 
             // ribbon
@@ -78,9 +83,12 @@ namespace Hotel
             this.barButtonItem1,
             this.barButtonItem2,
             this.btnUnAvailable,
-            this.btnAvailable});
+            this.btnAvailable,
+            this.btnTraPhong,
+            this.btnCapNhatPhong,
+            this.btnThanhToan});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 14;
+            this.ribbon.MaxItemId = 18;
             this.ribbon.Name = "ribbon";
             this.ribbon.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -162,6 +170,24 @@ namespace Hotel
             this.barButtonItem2.Id = 5;
             this.barButtonItem2.Name = "barButtonItem2";
             // 
+            // btnTraPhong
+            // 
+            this.btnTraPhong.Caption = "Trả phòng";
+            this.btnTraPhong.Id = 14;
+            this.btnTraPhong.Name = "btnTraPhong";
+            // 
+            // btnCapNhatPhong
+            // 
+            this.btnCapNhatPhong.Caption = "Cập nhật phòng";
+            this.btnCapNhatPhong.Id = 15;
+            this.btnCapNhatPhong.Name = "btnCapNhatPhong";
+            // 
+            // btnThanhToan
+            // 
+            this.btnThanhToan.Caption = "Thanh toán";
+            this.btnThanhToan.Id = 16;
+            this.btnThanhToan.Name = "btnThanhToan";
+            // 
             // ribbonPageCategory1
             // 
             this.ribbonPageCategory1.Name = "ribbonPageCategory1";
@@ -186,6 +212,31 @@ namespace Hotel
             this.ribbonStatusBar.Ribbon = this.ribbon;
             this.ribbonStatusBar.Size = new System.Drawing.Size(910, 24);
             // 
+            // gControl
+            // 
+            this.gControl.Controls.Add(this.galleryControlClient1);
+            this.gControl.Dock = System.Windows.Forms.DockStyle.Right;
+            this.gControl.Location = new System.Drawing.Point(230, 158);
+            this.gControl.Name = "gControl";
+            this.ribbon.SetPopupContextMenu(this.gControl, this.popupMenu1);
+            this.gControl.Size = new System.Drawing.Size(680, 388);
+            this.gControl.TabIndex = 16;
+            this.gControl.Text = "Control";
+            // 
+            // galleryControlClient1
+            // 
+            this.galleryControlClient1.GalleryControl = this.gControl;
+            this.galleryControlClient1.Location = new System.Drawing.Point(2, 2);
+            this.galleryControlClient1.Size = new System.Drawing.Size(659, 384);
+            // 
+            // popupMenu1
+            // 
+            this.popupMenu1.ItemLinks.Add(this.btnTraPhong);
+            this.popupMenu1.ItemLinks.Add(this.btnCapNhatPhong);
+            this.popupMenu1.ItemLinks.Add(this.btnThanhToan);
+            this.popupMenu1.Name = "popupMenu1";
+            this.popupMenu1.Ribbon = this.ribbon;
+            // 
             // btnDatPhong
             // 
             this.btnDatPhong.Location = new System.Drawing.Point(25, 198);
@@ -193,6 +244,7 @@ namespace Hotel
             this.btnDatPhong.Size = new System.Drawing.Size(93, 23);
             this.btnDatPhong.TabIndex = 5;
             this.btnDatPhong.Text = "Đặt phòng";
+            this.btnDatPhong.Click += new System.EventHandler(this.btnDatPhong_Click);
             // 
             // simpleButton1
             // 
@@ -236,22 +288,6 @@ namespace Hotel
             this.gridView1.GridControl = this.gridControl;
             this.gridView1.Name = "gridView1";
             // 
-            // Control
-            // 
-            this.Control.Controls.Add(this.galleryControlClient1);
-            this.Control.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Control.Location = new System.Drawing.Point(230, 158);
-            this.Control.Name = "Control";
-            this.Control.Size = new System.Drawing.Size(680, 388);
-            this.Control.TabIndex = 16;
-            this.Control.Text = "Control";
-            // 
-            // galleryControlClient1
-            // 
-            this.galleryControlClient1.GalleryControl = this.Control;
-            this.galleryControlClient1.Location = new System.Drawing.Point(2, 2);
-            this.galleryControlClient1.Size = new System.Drawing.Size(659, 384);
-            // 
             // imageList1
             // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
@@ -264,7 +300,7 @@ namespace Hotel
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(910, 570);
-            this.Controls.Add(this.Control);
+            this.Controls.Add(this.gControl);
             this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);
@@ -280,11 +316,12 @@ namespace Hotel
             this.Load += new System.EventHandler(this.MainMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gControl)).EndInit();
+            this.gControl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.virtualServerModeSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Control)).EndInit();
-            this.Control.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,8 +350,12 @@ namespace Hotel
         private DevExpress.Data.VirtualServerModeSource virtualServerModeSource1;
         private DevExpress.XtraGrid.GridControl gridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraBars.Ribbon.GalleryControl Control;
+        private DevExpress.XtraBars.Ribbon.GalleryControl gControl;
         private DevExpress.XtraBars.Ribbon.GalleryControlClient galleryControlClient1;
         private System.Windows.Forms.ImageList imageList1;
+        private DevExpress.XtraBars.PopupMenu popupMenu1;
+        private DevExpress.XtraBars.BarButtonItem btnTraPhong;
+        private DevExpress.XtraBars.BarButtonItem btnCapNhatPhong;
+        private DevExpress.XtraBars.BarButtonItem btnThanhToan;
     }
 }

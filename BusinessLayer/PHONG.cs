@@ -21,7 +21,7 @@ namespace BusinessLayer
         }
         public List<PHONG> getByTang(int idTang)
         {
-            return db.PHONGs.Where(x => x.IDTang == idTang).ToList();
+            return db.PHONGs.Where(x => x.IDtang == idTang).ToList();
         }  
     }
 }

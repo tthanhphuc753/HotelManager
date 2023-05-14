@@ -184,3 +184,6 @@ C:\Users\Asus\source\repos\HotelManager\Hotel\obj\Debug\Hotel.pdb
 C:\Users\Asus\source\repos\HotelManager\Hotel\obj\Debug\Hotel.MainMenu.resources
 D:\Hotel\Hotel\obj\Debug\Hotel.MainMenu.resources
 C:\Games\GAME\HOTELMANAGER\HOTELMANAGER\Hotel\obj\Debug\Hotel.MainMenu.resources
+C:\Users\Asus\source\repos\HotelManager\Hotel\obj\Debug\Hotel.DatPhong.resources
+C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.XtraVerticalGrid.v22.2.dll
+C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.XtraVerticalGrid.v22.2.xml

@@ -55,10 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="connect.cs" />
-    <Compile Include="DatPhong.cs">
-      <DependentUpon>Hotel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DICHVU.cs">
+    <Compile Include="DATPHONG.cs">
       <DependentUpon>Hotel.tt</DependentUpon>
     </Compile>
     <Compile Include="Encryptor.cs" />
@@ -84,7 +81,7 @@
     <Compile Include="KHACHHANG.cs">
       <DependentUpon>Hotel.tt</DependentUpon>
     </Compile>
-    <Compile Include="LoaiPhong.cs">
+    <Compile Include="LOAIPHONG.cs">
       <DependentUpon>Hotel.tt</DependentUpon>
     </Compile>
     <Compile Include="NHANVIEN.cs">

@@ -4,18 +4,22 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="df631d205dbe49be8fd00ce34f550485" Name="Diagram1">
-        <EntityTypeShape EntityType="HotelManagerModel.DatPhong" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="HotelManagerModel.DICHVU" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="HotelManagerModel.HOADON" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="HotelManagerModel.KHACHHANG" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="HotelManagerModel.LoaiPhong" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="HotelManagerModel.NHANVIEN" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="HotelManagerModel.PHONG" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="HotelManagerModel.TAIKHOAN" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="HotelManagerModel.TANG" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="33a71ee006df4c4298516170e8dc9fb0" Name="Diagram1">
+        <EntityTypeShape EntityType="HotelManagerModel.DATPHONG" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagerModel.HOADON" Width="1.5" PointX="6" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagerModel.KHACHHANG" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagerModel.LOAIPHONG" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagerModel.NHANVIEN" Width="1.5" PointX="5.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagerModel.PHONG" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagerModel.TAIKHOAN" Width="1.5" PointX="7.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagerModel.TANG" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
+        <AssociationConnector Association="HotelManagerModel.FK_DATPHONG_KHACHHANG" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagerModel.FK_DATPHONG_PHONG" ManuallyRouted="false" />
         <AssociationConnector Association="HotelManagerModel.FK_HOADON_KHACHHANG" ManuallyRouted="false" />
         <AssociationConnector Association="HotelManagerModel.FK_HOADON_PHONG" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagerModel.FK_PHONG_KHACHHANG" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagerModel.FK_PHONG_LOAIPHONG" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagerModel.FK_PHONG_TANG" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

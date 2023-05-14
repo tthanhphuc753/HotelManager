@@ -15,7 +15,7 @@ namespace Hotel
             Application.SetCompatibleTextRenderingDefault(false);
 
 // Application
-            Application.Run(new MainMenu());
+            Application.Run(new DatPhong());
 
         }
     }

@@ -17,16 +17,23 @@ namespace DataLayer
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public PHONG()
         {
+            this.DATPHONGs = new HashSet<DATPHONG>();
             this.HOADONs = new HashSet<HOADON>();
         }
     
-        public int IDPhong { get; set; }
-        public int IDTang { get; set; }
-        public string TenPhong { get; set; }
-        public string TrangThai { get; set; }
-        public int IDLoaiPhong { get; set; }
+        public int IDphong { get; set; }
+        public Nullable<int> IDtang { get; set; }
+        public string Tenphong { get; set; }
+        public string Trangthai { get; set; }
+        public string IDloaiphong { get; set; }
+        public int IDkhachhang { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DATPHONG> DATPHONGs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HOADON> HOADONs { get; set; }
+        public virtual KHACHHANG KHACHHANG { get; set; }
+        public virtual LOAIPHONG LOAIPHONG { get; set; }
+        public virtual TANG TANG { get; set; }
     }
 }
