@@ -52,7 +52,7 @@ namespace Hotel
             this.galleryControlClient1 = new DevExpress.XtraBars.Ribbon.GalleryControlClient();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.btnDatPhong = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnxuathoadon = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.virtualServerModeSource1 = new DevExpress.Data.VirtualServerModeSource(this.components);
@@ -72,6 +72,7 @@ namespace Hotel
             // ribbon
             // 
             this.ribbon.CaptionBarItemLinks.Add(this.srcPhong);
+            this.ribbon.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(45, 44, 45, 44);
             this.ribbon.ExpandCollapseItem.Id = 0;
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.srcPhong,
@@ -88,8 +89,10 @@ namespace Hotel
             this.btnCapNhatPhong,
             this.btnThanhToan});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
+            this.ribbon.Margin = new System.Windows.Forms.Padding(4);
             this.ribbon.MaxItemId = 18;
             this.ribbon.Name = "ribbon";
+            this.ribbon.OptionsMenuMinWidth = 495;
             this.ribbon.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -97,7 +100,7 @@ namespace Hotel
             this.ribbon.QuickToolbarItemLinks.Add(this.btnHome);
             this.ribbon.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemSearchControl1});
-            this.ribbon.Size = new System.Drawing.Size(910, 158);
+            this.ribbon.Size = new System.Drawing.Size(1365, 231);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // srcPhong
@@ -207,27 +210,31 @@ namespace Hotel
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 546);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 797);
+            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(910, 24);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1365, 36);
             // 
             // gControl
             // 
             this.gControl.Controls.Add(this.galleryControlClient1);
             this.gControl.Dock = System.Windows.Forms.DockStyle.Right;
-            this.gControl.Location = new System.Drawing.Point(230, 158);
+            this.gControl.Location = new System.Drawing.Point(345, 231);
+            this.gControl.Margin = new System.Windows.Forms.Padding(4);
             this.gControl.Name = "gControl";
             this.ribbon.SetPopupContextMenu(this.gControl, this.popupMenu1);
-            this.gControl.Size = new System.Drawing.Size(680, 388);
+            this.gControl.Size = new System.Drawing.Size(1020, 566);
             this.gControl.TabIndex = 16;
             this.gControl.Text = "Control";
+            this.gControl.Click += new System.EventHandler(this.gControl_Click);
             // 
             // galleryControlClient1
             // 
             this.galleryControlClient1.GalleryControl = this.gControl;
             this.galleryControlClient1.Location = new System.Drawing.Point(2, 2);
-            this.galleryControlClient1.Size = new System.Drawing.Size(659, 384);
+            this.galleryControlClient1.Margin = new System.Windows.Forms.Padding(4);
+            this.galleryControlClient1.Size = new System.Drawing.Size(990, 562);
             // 
             // popupMenu1
             // 
@@ -239,34 +246,39 @@ namespace Hotel
             // 
             // btnDatPhong
             // 
-            this.btnDatPhong.Location = new System.Drawing.Point(25, 198);
+            this.btnDatPhong.Location = new System.Drawing.Point(38, 289);
+            this.btnDatPhong.Margin = new System.Windows.Forms.Padding(4);
             this.btnDatPhong.Name = "btnDatPhong";
-            this.btnDatPhong.Size = new System.Drawing.Size(93, 23);
+            this.btnDatPhong.Size = new System.Drawing.Size(140, 34);
             this.btnDatPhong.TabIndex = 5;
             this.btnDatPhong.Text = "Đặt phòng";
             this.btnDatPhong.Click += new System.EventHandler(this.btnDatPhong_Click);
             // 
-            // simpleButton1
+            // btnxuathoadon
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(25, 273);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(93, 23);
-            this.simpleButton1.TabIndex = 8;
-            this.simpleButton1.Text = "Xuất hóa đơn";
+            this.btnxuathoadon.Location = new System.Drawing.Point(38, 399);
+            this.btnxuathoadon.Margin = new System.Windows.Forms.Padding(4);
+            this.btnxuathoadon.Name = "btnxuathoadon";
+            this.btnxuathoadon.Size = new System.Drawing.Size(140, 34);
+            this.btnxuathoadon.TabIndex = 8;
+            this.btnxuathoadon.Text = "Xuất hóa đơn";
+            this.btnxuathoadon.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(25, 348);
+            this.simpleButton2.Location = new System.Drawing.Point(38, 509);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(93, 23);
+            this.simpleButton2.Size = new System.Drawing.Size(140, 34);
             this.simpleButton2.TabIndex = 9;
             this.simpleButton2.Text = "Báo cáo tháng";
             // 
             // simpleButton3
             // 
-            this.simpleButton3.Location = new System.Drawing.Point(25, 423);
+            this.simpleButton3.Location = new System.Drawing.Point(38, 618);
+            this.simpleButton3.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(93, 23);
+            this.simpleButton3.Size = new System.Drawing.Size(140, 34);
             this.simpleButton3.TabIndex = 10;
             this.simpleButton3.Text = "Thay đổi quy định";
             // 
@@ -297,16 +309,17 @@ namespace Hotel
             // 
             // MainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(910, 570);
+            this.ClientSize = new System.Drawing.Size(1365, 833);
             this.Controls.Add(this.gControl);
             this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.simpleButton2);
-            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.btnxuathoadon);
             this.Controls.Add(this.btnDatPhong);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainMenu";
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -344,7 +357,7 @@ namespace Hotel
         private DevExpress.XtraBars.BarEditItem srcPhong;
         private DevExpress.XtraEditors.Repository.RepositoryItemSearchControl repositoryItemSearchControl1;
         private DevExpress.XtraEditors.SimpleButton btnDatPhong;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnxuathoadon;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.Data.VirtualServerModeSource virtualServerModeSource1;

@@ -82,5 +82,10 @@ namespace Hotel
         {
 
         }
+
+        private void cboDatabase_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
