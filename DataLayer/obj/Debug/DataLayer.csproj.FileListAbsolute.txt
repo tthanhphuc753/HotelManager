@@ -88,3 +88,33 @@ D:\Hotel\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
 D:\Hotel\DataLayer\obj\Debug\DataLayer.dll
 D:\Hotel\DataLayer\obj\Debug\DataLayer.pdb
 C:\Games\GAME\HOTELMANAGER\HOTELMANAGER\DataLayer\obj\Debug\DataLayer.csproj.AssemblyReference.cache
+C:\Users\admin\OneDrive\Máy tính\DataLayer\bin\Debug\DataLayer.dll.config
+C:\Users\admin\OneDrive\Máy tính\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\admin\OneDrive\Máy tính\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\admin\OneDrive\Máy tính\DataLayer\bin\Debug\DevExpress.DataAccess.v22.2.dll
+C:\Users\admin\OneDrive\Máy tính\DataLayer\bin\Debug\EntityFramework.dll
+C:\Users\admin\OneDrive\Máy tính\DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\admin\OneDrive\Máy tính\DataLayer\bin\Debug\DevExpress.Data.v22.2.dll
+C:\Users\admin\OneDrive\Máy tính\DataLayer\bin\Debug\DevExpress.Xpo.v22.2.dll
+C:\Users\admin\OneDrive\Máy tính\DataLayer\bin\Debug\DevExpress.Printing.v22.2.Core.dll
+C:\Users\admin\OneDrive\Máy tính\DataLayer\bin\Debug\DevExpress.CodeParser.v22.2.dll
+C:\Users\admin\OneDrive\Máy tính\DataLayer\bin\Debug\DevExpress.RichEdit.v22.2.Core.dll
+C:\Users\admin\OneDrive\Máy tính\DataLayer\bin\Debug\DevExpress.Office.v22.2.Core.dll
+C:\Users\admin\OneDrive\Máy tính\DataLayer\bin\Debug\DevExpress.Drawing.v22.2.dll
+C:\Users\admin\OneDrive\Máy tính\DataLayer\bin\Debug\DevExpress.Pdf.v22.2.Core.dll
+C:\Users\admin\OneDrive\Máy tính\DataLayer\bin\Debug\DevExpress.Pdf.v22.2.Drawing.dll
+C:\Users\admin\OneDrive\Máy tính\DataLayer\bin\Debug\DevExpress.DataAccess.v22.2.xml
+C:\Users\admin\OneDrive\Máy tính\DataLayer\bin\Debug\EntityFramework.xml
+C:\Users\admin\OneDrive\Máy tính\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\admin\OneDrive\Máy tính\DataLayer\bin\Debug\DevExpress.Data.v22.2.xml
+C:\Users\admin\OneDrive\Máy tính\DataLayer\bin\Debug\DevExpress.Xpo.v22.2.xml
+C:\Users\admin\OneDrive\Máy tính\DataLayer\bin\Debug\DevExpress.Printing.v22.2.Core.xml
+C:\Users\admin\OneDrive\Máy tính\DataLayer\bin\Debug\DevExpress.RichEdit.v22.2.Core.xml
+C:\Users\admin\OneDrive\Máy tính\DataLayer\bin\Debug\DevExpress.Office.v22.2.Core.xml
+C:\Users\admin\OneDrive\Máy tính\DataLayer\bin\Debug\DevExpress.Pdf.v22.2.Core.xml
+C:\Users\admin\OneDrive\Máy tính\DataLayer\bin\Debug\DevExpress.Pdf.v22.2.Drawing.xml
+C:\Users\admin\OneDrive\Máy tính\DataLayer\obj\Debug\DataLayer.csproj.AssemblyReference.cache
+C:\Users\admin\OneDrive\Máy tính\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\admin\OneDrive\Máy tính\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
+C:\Users\admin\OneDrive\Máy tính\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\admin\OneDrive\Máy tính\DataLayer\obj\Debug\DataLayer.pdb

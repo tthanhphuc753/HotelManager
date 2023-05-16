@@ -1,84 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="HotelManagerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityType Name="DatPhong">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="int" Nullable="false" />
-    <Property Name="IDKH" Type="int" Nullable="false" />
-    <Property Name="IDPhong" Type="int" Nullable="false" />
-    <Property Name="NGAYDAT" Type="datetime" />
-    <Property Name="NGAYTRA" Type="datetime" />
-    <Property Name="SONGAYO" Type="int" />
-    <Property Name="IDDVu" Type="int" />
-    <Property Name="IDU" Type="int" />
-  </EntityType>
-  <EntityType Name="DICHVU">
-    <Key>
-      <PropertyRef Name="IDDichVu" />
-    </Key>
-    <Property Name="IDDichVu" Type="int" Nullable="false" />
-    <Property Name="TenDichVu" Type="nvarchar" MaxLength="50" />
-    <Property Name="DonGia" Type="float" />
-  </EntityType>
   <EntityType Name="HOADON">
     <Key>
-      <PropertyRef Name="IDHoadon" />
+      <PropertyRef Name="IDhoadon" />
     </Key>
-    <Property Name="IDHoadon" Type="int" Nullable="false" />
-    <Property Name="Thanhtien" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="IDKhachhang" Type="int" Nullable="false" />
-    <Property Name="IDPhong" Type="int" Nullable="false" />
+    <Property Name="IDhoadon" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Thanhtien" Type="float" />
+    <Property Name="IDkhachhang" Type="int" Nullable="false" />
+    <Property Name="IDphong" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="KHACHHANG">
     <Key>
       <PropertyRef Name="IDKhachhang" />
     </Key>
-    <Property Name="IDKhachhang" Type="int" Nullable="false" />
-    <Property Name="Tenkhachhang" Type="nvarchar" MaxLength="50" />
-    <Property Name="CCCD/CMND" Type="int" />
-  </EntityType>
-  <EntityType Name="LoaiPhong">
-    <Key>
-      <PropertyRef Name="IDLoaiPhong" />
-    </Key>
-    <Property Name="IDLoaiPhong" Type="int" Nullable="false" />
-    <Property Name="TenLoaiPhong" Type="nvarchar" MaxLength="50" />
-    <Property Name="Gia" Type="float" />
-  </EntityType>
-  <EntityType Name="NHANVIEN">
-    <Key>
-      <PropertyRef Name="IDNhanvien" />
-    </Key>
-    <Property Name="IDNhanvien" Type="int" Nullable="false" />
-    <Property Name="Tennhanvien" Type="nvarchar" MaxLength="50" />
-    <Property Name="Chucvu" Type="nvarchar" MaxLength="50" />
-    <Property Name="Sodienthoai" Type="int" />
+    <Property Name="IDKhachhang" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tenkhachhang" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CCCD/CMND" Type="nchar" MaxLength="12" Nullable="false" />
+    <Property Name="Loaikhach" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="PHONG">
     <Key>
-      <PropertyRef Name="IDPhong" />
+      <PropertyRef Name="IDphong" />
     </Key>
-    <Property Name="IDPhong" Type="int" Nullable="false" />
-    <Property Name="IDTang" Type="int" Nullable="false" />
-    <Property Name="TenPhong" Type="nvarchar" MaxLength="50" />
-    <Property Name="TrangThai" Type="nvarchar" MaxLength="50" />
-    <Property Name="IDLoaiPhong" Type="int" Nullable="false" />
+    <Property Name="IDtang" Type="int" Nullable="false" />
+    <Property Name="IDphong" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tenphong" Type="nvarchar" MaxLength="50" />
+    <Property Name="Trangthai" Type="bit" />
+    <Property Name="IDloaiphong" Type="nchar" MaxLength="10" Nullable="false" />
   </EntityType>
   <EntityType Name="TAIKHOAN">
     <Key>
       <PropertyRef Name="Username" />
     </Key>
     <Property Name="Username" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="Password" Type="int" />
+    <Property Name="Password" Type="int" Nullable="false" />
     <Property Name="Chucvu" Type="int" />
   </EntityType>
   <EntityType Name="TANG">
     <Key>
-      <PropertyRef Name="IDTang" />
+      <PropertyRef Name="IDtang" />
     </Key>
-    <Property Name="IDTang" Type="int" Nullable="false" />
-    <Property Name="TenTang" Type="nvarchar" MaxLength="50" />
+    <Property Name="IDtang" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tentang" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <Association Name="FK_HOADON_KHACHHANG">
     <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="1" />
@@ -88,7 +51,7 @@
         <PropertyRef Name="IDKhachhang" />
       </Principal>
       <Dependent Role="HOADON">
-        <PropertyRef Name="IDKhachhang" />
+        <PropertyRef Name="IDkhachhang" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -97,20 +60,28 @@
     <End Role="HOADON" Type="Self.HOADON" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="PHONG">
-        <PropertyRef Name="IDPhong" />
+        <PropertyRef Name="IDphong" />
       </Principal>
       <Dependent Role="HOADON">
-        <PropertyRef Name="IDPhong" />
+        <PropertyRef Name="IDphong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PHONG_TANG">
+    <End Role="TANG" Type="Self.TANG" Multiplicity="1" />
+    <End Role="PHONG" Type="Self.PHONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TANG">
+        <PropertyRef Name="IDtang" />
+      </Principal>
+      <Dependent Role="PHONG">
+        <PropertyRef Name="IDtang" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="HotelManagerModelStoreContainer">
-    <EntitySet Name="DatPhong" EntityType="Self.DatPhong" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="DICHVU" EntityType="Self.DICHVU" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HOADON" EntityType="Self.HOADON" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="KHACHHANG" EntityType="Self.KHACHHANG" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="LoaiPhong" EntityType="Self.LoaiPhong" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="NHANVIEN" EntityType="Self.NHANVIEN" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PHONG" EntityType="Self.PHONG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TAIKHOAN" EntityType="Self.TAIKHOAN" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TANG" EntityType="Self.TANG" Schema="dbo" store:Type="Tables" />
@@ -121,6 +92,10 @@
     <AssociationSet Name="FK_HOADON_PHONG" Association="Self.FK_HOADON_PHONG">
       <End Role="PHONG" EntitySet="PHONG" />
       <End Role="HOADON" EntitySet="HOADON" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PHONG_TANG" Association="Self.FK_PHONG_TANG">
+      <End Role="TANG" EntitySet="TANG" />
+      <End Role="PHONG" EntitySet="PHONG" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

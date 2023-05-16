@@ -1,75 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="HotelManagerModelStoreContainer" CdmEntityContainer="Entities">
-    <EntitySetMapping Name="DatPhongs">
-      <EntityTypeMapping TypeName="HotelManagerModel.DatPhong">
-        <MappingFragment StoreEntitySet="DatPhong">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="IDKH" ColumnName="IDKH" />
-          <ScalarProperty Name="IDPhong" ColumnName="IDPhong" />
-          <ScalarProperty Name="NGAYDAT" ColumnName="NGAYDAT" />
-          <ScalarProperty Name="NGAYTRA" ColumnName="NGAYTRA" />
-          <ScalarProperty Name="SONGAYO" ColumnName="SONGAYO" />
-          <ScalarProperty Name="IDDVu" ColumnName="IDDVu" />
-          <ScalarProperty Name="IDU" ColumnName="IDU" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="DICHVUs">
-      <EntityTypeMapping TypeName="HotelManagerModel.DICHVU">
-        <MappingFragment StoreEntitySet="DICHVU">
-          <ScalarProperty Name="IDDichVu" ColumnName="IDDichVu" />
-          <ScalarProperty Name="TenDichVu" ColumnName="TenDichVu" />
-          <ScalarProperty Name="DonGia" ColumnName="DonGia" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="HOADONs">
       <EntityTypeMapping TypeName="HotelManagerModel.HOADON">
         <MappingFragment StoreEntitySet="HOADON">
-          <ScalarProperty Name="IDHoadon" ColumnName="IDHoadon" />
+          <ScalarProperty Name="IDphong" ColumnName="IDphong" />
+          <ScalarProperty Name="IDkhachhang" ColumnName="IDkhachhang" />
+          <ScalarProperty Name="IDhoadon" ColumnName="IDhoadon" />
           <ScalarProperty Name="Thanhtien" ColumnName="Thanhtien" />
-          <ScalarProperty Name="IDKhachhang" ColumnName="IDKhachhang" />
-          <ScalarProperty Name="IDPhong" ColumnName="IDPhong" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="KHACHHANGs">
       <EntityTypeMapping TypeName="HotelManagerModel.KHACHHANG">
         <MappingFragment StoreEntitySet="KHACHHANG">
+          <ScalarProperty Name="Loaikhach" ColumnName="Loaikhach" />
           <ScalarProperty Name="IDKhachhang" ColumnName="IDKhachhang" />
           <ScalarProperty Name="Tenkhachhang" ColumnName="Tenkhachhang" />
           <ScalarProperty Name="CCCD_CMND" ColumnName="CCCD/CMND" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="LoaiPhongs">
-      <EntityTypeMapping TypeName="HotelManagerModel.LoaiPhong">
-        <MappingFragment StoreEntitySet="LoaiPhong">
-          <ScalarProperty Name="IDLoaiPhong" ColumnName="IDLoaiPhong" />
-          <ScalarProperty Name="TenLoaiPhong" ColumnName="TenLoaiPhong" />
-          <ScalarProperty Name="Gia" ColumnName="Gia" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="NHANVIENs">
-      <EntityTypeMapping TypeName="HotelManagerModel.NHANVIEN">
-        <MappingFragment StoreEntitySet="NHANVIEN">
-          <ScalarProperty Name="IDNhanvien" ColumnName="IDNhanvien" />
-          <ScalarProperty Name="Tennhanvien" ColumnName="Tennhanvien" />
-          <ScalarProperty Name="Chucvu" ColumnName="Chucvu" />
-          <ScalarProperty Name="Sodienthoai" ColumnName="Sodienthoai" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="PHONGs">
       <EntityTypeMapping TypeName="HotelManagerModel.PHONG">
         <MappingFragment StoreEntitySet="PHONG">
-          <ScalarProperty Name="IDPhong" ColumnName="IDPhong" />
-          <ScalarProperty Name="IDTang" ColumnName="IDTang" />
-          <ScalarProperty Name="TenPhong" ColumnName="TenPhong" />
-          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
-          <ScalarProperty Name="IDLoaiPhong" ColumnName="IDLoaiPhong" />
+          <ScalarProperty Name="IDloaiphong" ColumnName="IDloaiphong" />
+          <ScalarProperty Name="Trangthai" ColumnName="Trangthai" />
+          <ScalarProperty Name="Tenphong" ColumnName="Tenphong" />
+          <ScalarProperty Name="IDphong" ColumnName="IDphong" />
+          <ScalarProperty Name="IDtang" ColumnName="IDtang" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -85,8 +44,8 @@
     <EntitySetMapping Name="TANGs">
       <EntityTypeMapping TypeName="HotelManagerModel.TANG">
         <MappingFragment StoreEntitySet="TANG">
-          <ScalarProperty Name="IDTang" ColumnName="IDTang" />
-          <ScalarProperty Name="TenTang" ColumnName="TenTang" />
+          <ScalarProperty Name="Tentang" ColumnName="Tentang" />
+          <ScalarProperty Name="IDtang" ColumnName="IDtang" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

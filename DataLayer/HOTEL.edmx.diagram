@@ -16,6 +16,9 @@
         <EntityTypeShape EntityType="HotelManagerModel.TANG" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
         <AssociationConnector Association="HotelManagerModel.FK_HOADON_KHACHHANG" ManuallyRouted="false" />
         <AssociationConnector Association="HotelManagerModel.FK_HOADON_PHONG" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagerModel.FK_HOADON_KHACHHANG1" />
+        <AssociationConnector Association="HotelManagerModel.FK_HOADON_PHONG1" />
+        <AssociationConnector Association="HotelManagerModel.FK_PHONG_TANG" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
