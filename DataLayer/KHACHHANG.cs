@@ -24,7 +24,12 @@ namespace DataLayer
         public int IDKhachhang { get; set; }
         public string Tenkhachhang { get; set; }
         public string CCCD_CMND { get; set; }
+<<<<<<< HEAD
         public bool Loaikhach { get; set; }
+=======
+        public Nullable<bool> Loaikhach { get; set; }
+        public Nullable<int> IDphong { get; set; }
+>>>>>>> 55918c785da78b08d9a14e8d143381dc98894200
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DATPHONG> DATPHONGs { get; set; }

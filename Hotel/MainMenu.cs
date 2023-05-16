@@ -50,16 +50,16 @@ namespace Hotel
 
         private void btnAvailable_ItemClick(object sender, ItemClickEventArgs e)
         {
-            HienThiPhong("Trống");
+            HienThiPhong(false);
         }
 
         private void btnUnAvailable_ItemClick(object sender, ItemClickEventArgs e)
         {
-            HienThiPhong("Đang thuê");
+            HienThiPhong(true );
         }
-        private void HienThiPhong(string status)
+        private void HienThiPhong(bool status)
         {
-            string connectionString = "Data Source=DESKTOP-LAUNSSS;Initial Catalog=HotelManager;Integrated Security=True;";
+            string connectionString = "Data Source=SORA\\PHUCTT;Initial Catalog=HotelManager;Integrated Security=True;";
             try
             {
                 gridControl.Visible = true;
@@ -126,6 +126,21 @@ namespace Hotel
         {
             DatPhong datphong = new DatPhong();
             datphong.ShowDialog();
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            HienThiPhong(true);
+        }
+
+        private void gControl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
