@@ -4,14 +4,12 @@
     <Key>
       <PropertyRef Name="IDdatphong" />
     </Key>
-    <Property Name="IDdatphong" Type="Int32" Nullable="false" />
+    <Property Name="IDdatphong" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="IDkhachhang" Type="Int32" />
     <Property Name="IDphong" Type="Int32" />
     <Property Name="Ngaydat" Type="DateTime" Precision="3" />
     <Property Name="Ngaytra" Type="DateTime" Precision="3" />
     <Property Name="Songayo" Type="Int32" />
-    <Property Name="IDdichvu" Type="Int32" />
-    <Property Name="IDnhanvien" Type="Int32" />
     <NavigationProperty Name="KHACHHANG" Relationship="Self.FK_DATPHONG_KHACHHANG" FromRole="DATPHONG" ToRole="KHACHHANG" />
     <NavigationProperty Name="PHONG" Relationship="Self.FK_DATPHONG_PHONG" FromRole="DATPHONG" ToRole="PHONG" />
   </EntityType>
@@ -19,8 +17,8 @@
     <Key>
       <PropertyRef Name="IDhoadon" />
     </Key>
-    <Property Name="IDhoadon" Type="Int32" Nullable="false" />
-    <Property Name="Thanhtien" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IDhoadon" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Thanhtien" Type="Double" />
     <Property Name="IDkhachhang" Type="Int32" Nullable="false" />
     <Property Name="IDphong" Type="Int32" Nullable="false" />
     <NavigationProperty Name="KHACHHANG" Relationship="Self.FK_HOADON_KHACHHANG" FromRole="HOADON" ToRole="KHACHHANG" />
@@ -30,14 +28,12 @@
     <Key>
       <PropertyRef Name="IDKhachhang" />
     </Key>
-    <Property Name="IDKhachhang" Type="Int32" Nullable="false" />
-    <Property Name="Tenkhachhang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="CCCD_CMND" Type="Int32" />
-    <Property Name="Loaikhach" Type="Boolean" />
-    <Property Name="IDphong" Type="Int32" />
+    <Property Name="IDKhachhang" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tenkhachhang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CCCD_CMND" Type="String" MaxLength="12" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Loaikhach" Type="Boolean" Nullable="false" />
     <NavigationProperty Name="DATPHONGs" Relationship="Self.FK_DATPHONG_KHACHHANG" FromRole="KHACHHANG" ToRole="DATPHONG" />
     <NavigationProperty Name="HOADONs" Relationship="Self.FK_HOADON_KHACHHANG" FromRole="KHACHHANG" ToRole="HOADON" />
-    <NavigationProperty Name="PHONGs" Relationship="Self.FK_PHONG_KHACHHANG" FromRole="KHACHHANG" ToRole="PHONG" />
   </EntityType>
   <EntityType Name="LOAIPHONG">
     <Key>
@@ -47,28 +43,17 @@
     <Property Name="Giatien" Type="Double" Nullable="false" />
     <NavigationProperty Name="PHONGs" Relationship="Self.FK_PHONG_LOAIPHONG" FromRole="LOAIPHONG" ToRole="PHONG" />
   </EntityType>
-  <EntityType Name="NHANVIEN">
-    <Key>
-      <PropertyRef Name="IDNhanvien" />
-    </Key>
-    <Property Name="IDNhanvien" Type="Int32" Nullable="false" />
-    <Property Name="Tennhanvien" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Chucvu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Sodienthoai" Type="Int32" />
-  </EntityType>
   <EntityType Name="PHONG">
     <Key>
       <PropertyRef Name="IDphong" />
     </Key>
-    <Property Name="IDphong" Type="Int32" Nullable="false" />
-    <Property Name="IDtang" Type="Int32" />
+    <Property Name="IDtang" Type="Int32" Nullable="false" />
+    <Property Name="IDphong" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Tenphong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Trangthai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="IDloaiphong" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-    <Property Name="IDkhachhang" Type="Int32" Nullable="false" />
+    <Property Name="Trangthai" Type="Boolean" />
+    <Property Name="IDloaiphong" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
     <NavigationProperty Name="DATPHONGs" Relationship="Self.FK_DATPHONG_PHONG" FromRole="PHONG" ToRole="DATPHONG" />
     <NavigationProperty Name="HOADONs" Relationship="Self.FK_HOADON_PHONG" FromRole="PHONG" ToRole="HOADON" />
-    <NavigationProperty Name="KHACHHANG" Relationship="Self.FK_PHONG_KHACHHANG" FromRole="PHONG" ToRole="KHACHHANG" />
     <NavigationProperty Name="LOAIPHONG" Relationship="Self.FK_PHONG_LOAIPHONG" FromRole="PHONG" ToRole="LOAIPHONG" />
     <NavigationProperty Name="TANG" Relationship="Self.FK_PHONG_TANG" FromRole="PHONG" ToRole="TANG" />
   </EntityType>
@@ -77,14 +62,14 @@
       <PropertyRef Name="Username" />
     </Key>
     <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Password" Type="Int32" />
+    <Property Name="Password" Type="Int32" Nullable="false" />
     <Property Name="Chucvu" Type="Int32" />
   </EntityType>
   <EntityType Name="TANG">
     <Key>
       <PropertyRef Name="IDtang" />
     </Key>
-    <Property Name="IDtang" Type="Int32" Nullable="false" />
+    <Property Name="IDtang" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Tentang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="PHONGs" Relationship="Self.FK_PHONG_TANG" FromRole="TANG" ToRole="PHONG" />
   </EntityType>
@@ -136,20 +121,8 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_PHONG_KHACHHANG">
-    <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="1" />
-    <End Role="PHONG" Type="Self.PHONG" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="KHACHHANG">
-        <PropertyRef Name="IDKhachhang" />
-      </Principal>
-      <Dependent Role="PHONG">
-        <PropertyRef Name="IDkhachhang" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_PHONG_LOAIPHONG">
-    <End Role="LOAIPHONG" Type="Self.LOAIPHONG" Multiplicity="0..1" />
+    <End Role="LOAIPHONG" Type="Self.LOAIPHONG" Multiplicity="1" />
     <End Role="PHONG" Type="Self.PHONG" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="LOAIPHONG">
@@ -161,7 +134,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_PHONG_TANG">
-    <End Role="TANG" Type="Self.TANG" Multiplicity="0..1" />
+    <End Role="TANG" Type="Self.TANG" Multiplicity="1" />
     <End Role="PHONG" Type="Self.PHONG" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TANG">
@@ -177,7 +150,6 @@
     <EntitySet Name="HOADONs" EntityType="Self.HOADON" />
     <EntitySet Name="KHACHHANGs" EntityType="Self.KHACHHANG" />
     <EntitySet Name="LOAIPHONGs" EntityType="Self.LOAIPHONG" />
-    <EntitySet Name="NHANVIENs" EntityType="Self.NHANVIEN" />
     <EntitySet Name="PHONGs" EntityType="Self.PHONG" />
     <EntitySet Name="TAIKHOANs" EntityType="Self.TAIKHOAN" />
     <EntitySet Name="TANGs" EntityType="Self.TANG" />
@@ -196,10 +168,6 @@
     <AssociationSet Name="FK_HOADON_PHONG" Association="Self.FK_HOADON_PHONG">
       <End Role="PHONG" EntitySet="PHONGs" />
       <End Role="HOADON" EntitySet="HOADONs" />
-    </AssociationSet>
-    <AssociationSet Name="FK_PHONG_KHACHHANG" Association="Self.FK_PHONG_KHACHHANG">
-      <End Role="KHACHHANG" EntitySet="KHACHHANGs" />
-      <End Role="PHONG" EntitySet="PHONGs" />
     </AssociationSet>
     <AssociationSet Name="FK_PHONG_LOAIPHONG" Association="Self.FK_PHONG_LOAIPHONG">
       <End Role="LOAIPHONG" EntitySet="LOAIPHONGs" />

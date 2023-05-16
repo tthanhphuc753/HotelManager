@@ -20,8 +20,6 @@ namespace DataLayer
         public Nullable<System.DateTime> Ngaydat { get; set; }
         public Nullable<System.DateTime> Ngaytra { get; set; }
         public Nullable<int> Songayo { get; set; }
-        public Nullable<int> IDdichvu { get; set; }
-        public Nullable<int> IDnhanvien { get; set; }
     
         public virtual KHACHHANG KHACHHANG { get; set; }
         public virtual PHONG PHONG { get; set; }

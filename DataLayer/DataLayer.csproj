@@ -84,9 +84,6 @@
     <Compile Include="LOAIPHONG.cs">
       <DependentUpon>Hotel.tt</DependentUpon>
     </Compile>
-    <Compile Include="NHANVIEN.cs">
-      <DependentUpon>Hotel.tt</DependentUpon>
-    </Compile>
     <Compile Include="PHONG.cs">
       <DependentUpon>Hotel.tt</DependentUpon>
     </Compile>

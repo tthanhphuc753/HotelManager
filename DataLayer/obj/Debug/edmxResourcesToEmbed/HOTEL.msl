@@ -10,8 +10,6 @@
           <ScalarProperty Name="Ngaydat" ColumnName="Ngaydat" />
           <ScalarProperty Name="Ngaytra" ColumnName="Ngaytra" />
           <ScalarProperty Name="Songayo" ColumnName="Songayo" />
-          <ScalarProperty Name="IDdichvu" ColumnName="IDdichvu" />
-          <ScalarProperty Name="IDnhanvien" ColumnName="IDnhanvien" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -32,7 +30,6 @@
           <ScalarProperty Name="Tenkhachhang" ColumnName="Tenkhachhang" />
           <ScalarProperty Name="CCCD_CMND" ColumnName="CCCD/CMND" />
           <ScalarProperty Name="Loaikhach" ColumnName="Loaikhach" />
-          <ScalarProperty Name="IDphong" ColumnName="IDphong" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -44,25 +41,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="NHANVIENs">
-      <EntityTypeMapping TypeName="HotelManagerModel.NHANVIEN">
-        <MappingFragment StoreEntitySet="NHANVIEN">
-          <ScalarProperty Name="IDNhanvien" ColumnName="IDNhanvien" />
-          <ScalarProperty Name="Tennhanvien" ColumnName="Tennhanvien" />
-          <ScalarProperty Name="Chucvu" ColumnName="Chucvu" />
-          <ScalarProperty Name="Sodienthoai" ColumnName="Sodienthoai" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="PHONGs">
       <EntityTypeMapping TypeName="HotelManagerModel.PHONG">
         <MappingFragment StoreEntitySet="PHONG">
-          <ScalarProperty Name="IDphong" ColumnName="IDphong" />
           <ScalarProperty Name="IDtang" ColumnName="IDtang" />
+          <ScalarProperty Name="IDphong" ColumnName="IDphong" />
           <ScalarProperty Name="Tenphong" ColumnName="Tenphong" />
           <ScalarProperty Name="Trangthai" ColumnName="Trangthai" />
           <ScalarProperty Name="IDloaiphong" ColumnName="IDloaiphong" />
-          <ScalarProperty Name="IDkhachhang" ColumnName="IDkhachhang" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

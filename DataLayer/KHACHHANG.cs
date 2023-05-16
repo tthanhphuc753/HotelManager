@@ -19,20 +19,16 @@ namespace DataLayer
         {
             this.DATPHONGs = new HashSet<DATPHONG>();
             this.HOADONs = new HashSet<HOADON>();
-            this.PHONGs = new HashSet<PHONG>();
         }
     
         public int IDKhachhang { get; set; }
         public string Tenkhachhang { get; set; }
-        public Nullable<int> CCCD_CMND { get; set; }
-        public Nullable<bool> Loaikhach { get; set; }
-        public Nullable<int> IDphong { get; set; }
+        public string CCCD_CMND { get; set; }
+        public bool Loaikhach { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DATPHONG> DATPHONGs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HOADON> HOADONs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PHONG> PHONGs { get; set; }
     }
 }

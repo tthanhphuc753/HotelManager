@@ -15,7 +15,7 @@ namespace DataLayer
     public partial class TAIKHOAN
     {
         public string Username { get; set; }
-        public Nullable<int> Password { get; set; }
+        public int Password { get; set; }
         public Nullable<int> Chucvu { get; set; }
     }
 }

@@ -52,7 +52,7 @@ namespace Hotel
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    string query = "SELECT * FROM PHONG WHERE IDloaiphong = @loaiPhong ";//TrangThai = 'Trống' AND không biết tại sao thêm Trạng Thái trống thì lỗi nên ai biết thì sửa hộ nha
+                    string query = "SELECT * FROM PHONG WHERE IDloaiphong = @loaiPhong AND Trangthai = 0";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@loaiPhong", loaiPhong);
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -77,17 +77,17 @@ namespace Hotel
             DateTime NgayTra = dtNgayTra.Value;
             int songay = (int)(NgayTra - NgayDat).TotalDays;
 
-            // thu thập dữ liệu từ gridControl
             int phong = gridView1.FocusedRowHandle;
-            char[] loaiphong = gridView1.GetRowCellValue(phong, "Loại Phòng").ToString().ToCharArray();
+            string loaiphong = gridView1.GetRowCellValue(phong, "IDloaiphong").ToString();
             string quoctich = cbQuocTich.SelectedItem.ToString();
             int songuoi = int.Parse(cbSoNguoi.SelectedItem.ToString());
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT Giatien FROM LOAIPHONG WHERE IDloaiphong = @loaiphong";
+                connection.Open();
+                string query = "SELECT Giatien FROM LOAIPHONG WHERE IDloaiphong = @loaiphong ";
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@loaiphong", loaiphong); ;
+                command.Parameters.AddWithValue("@loaiphong", loaiphong);
                 decimal giaphong = (decimal)command.ExecuteScalar();
                 decimal tong = giaphong * songay ;
 
@@ -103,5 +103,54 @@ namespace Hotel
             }
         }
 
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            string hoten = txtHoTen.Text;
+            string cccd = txtCCCD.Text;
+            string quoctich = cbQuocTich.SelectedItem.ToString();
+            bool Isnuocngoai = (cbQuocTich.SelectedItem.ToString() == "Nước ngoài");
+
+            DateTime NgayDat = dtNgayDat.Value;
+            DateTime NgayTra = dtNgayTra.Value;
+            int songay = (int)(NgayTra - NgayDat).TotalDays;
+
+            int idphong = 0;
+            int phong = gridView1.FocusedRowHandle;
+            string tenphong = gridView1.GetRowCellValue(phong, "Tenphong").ToString();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string insertKhachHangQuery = "INSERT INTO KHACHHANG (Tenkhachhang, [CCCD/CMND], Loaikhach) VALUES (@hoten, @cccd, @Isnuocngoai); SELECT SCOPE_IDENTITY();";
+                SqlCommand insertKhachHangCommand = new SqlCommand(insertKhachHangQuery, connection);
+                insertKhachHangCommand.Parameters.AddWithValue("@hoten", hoten);
+                insertKhachHangCommand.Parameters.AddWithValue("@cccd", cccd);
+                insertKhachHangCommand.Parameters.AddWithValue("@Isnuocngoai", Isnuocngoai);
+                int idkhachhang = Convert.ToInt32(insertKhachHangCommand.ExecuteScalar());
+
+                string getPhongIdQuery = "SELECT IDphong FROM PHONG WHERE Tenphong = @tenphong;";
+                SqlCommand getPhongIdCommand = new SqlCommand(getPhongIdQuery, connection);
+                getPhongIdCommand.Parameters.AddWithValue("@tenphong", tenphong);
+                idphong = Convert.ToInt32(getPhongIdCommand.ExecuteScalar());
+
+                string insertDatPhongQuery = "INSERT INTO DATPHONG (IDkhachhang, IDphong, Ngaydat, Ngaytra, Songayo) VALUES (@idkhachhang, @idphong, @NgayDat, @NgayTra, @songay);";
+                SqlCommand insertDatPhongCommand = new SqlCommand(insertDatPhongQuery, connection);
+                insertDatPhongCommand.Parameters.AddWithValue("@idkhachhang", idkhachhang);
+                insertDatPhongCommand.Parameters.AddWithValue("@idphong", idphong);
+                insertDatPhongCommand.Parameters.AddWithValue("@NgayDat", NgayDat);
+                insertDatPhongCommand.Parameters.AddWithValue("@NgayTra", NgayTra);
+                insertDatPhongCommand.Parameters.AddWithValue("@songay", songay);
+                insertDatPhongCommand.ExecuteNonQuery();
+
+                string updatePhongQuery = "UPDATE PHONG SET Trangthai = 1 WHERE Tenphong = @tenphong;";
+                SqlCommand updatePhongCommand = new SqlCommand(updatePhongQuery, connection);
+                updatePhongCommand.Parameters.AddWithValue("@tenphong", tenphong);
+                updatePhongCommand.ExecuteNonQuery();
+
+                connection.Close();
+            }
+            MessageBox.Show("Lưu thành công");
+
+           
+        }
     }
 }
