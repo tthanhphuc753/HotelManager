@@ -24,7 +24,7 @@ namespace DataLayer
     
         public int IDKhachhang { get; set; }
         public string Tenkhachhang { get; set; }
-        public Nullable<int> CCCD_CMND { get; set; }
+        public string CCCD_CMND { get; set; }
         public Nullable<bool> Loaikhach { get; set; }
         public Nullable<int> IDphong { get; set; }
     

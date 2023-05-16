@@ -24,9 +24,9 @@ namespace DataLayer
         public int IDphong { get; set; }
         public Nullable<int> IDtang { get; set; }
         public string Tenphong { get; set; }
-        public string Trangthai { get; set; }
+        public Nullable<Boolean> Trangthai { get; set; }
         public string IDloaiphong { get; set; }
-        public int IDkhachhang { get; set; }
+       
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DATPHONG> DATPHONGs { get; set; }

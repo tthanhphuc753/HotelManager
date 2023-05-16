@@ -52,7 +52,6 @@ namespace Hotel
             this.galleryControlClient1 = new DevExpress.XtraBars.Ribbon.GalleryControlClient();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.btnDatPhong = new DevExpress.XtraEditors.SimpleButton();
-            this.btnxuathoadon = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.virtualServerModeSource1 = new DevExpress.Data.VirtualServerModeSource(this.components);
@@ -254,19 +253,9 @@ namespace Hotel
             this.btnDatPhong.Text = "Đặt phòng";
             this.btnDatPhong.Click += new System.EventHandler(this.btnDatPhong_Click);
             // 
-            // btnxuathoadon
-            // 
-            this.btnxuathoadon.Location = new System.Drawing.Point(38, 399);
-            this.btnxuathoadon.Margin = new System.Windows.Forms.Padding(4);
-            this.btnxuathoadon.Name = "btnxuathoadon";
-            this.btnxuathoadon.Size = new System.Drawing.Size(140, 34);
-            this.btnxuathoadon.TabIndex = 8;
-            this.btnxuathoadon.Text = "Xuất hóa đơn";
-            this.btnxuathoadon.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(38, 509);
+            this.simpleButton2.Location = new System.Drawing.Point(38, 395);
             this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(140, 34);
@@ -275,12 +264,13 @@ namespace Hotel
             // 
             // simpleButton3
             // 
-            this.simpleButton3.Location = new System.Drawing.Point(38, 618);
+            this.simpleButton3.Location = new System.Drawing.Point(38, 488);
             this.simpleButton3.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(140, 34);
             this.simpleButton3.TabIndex = 10;
             this.simpleButton3.Text = "Thay đổi quy định";
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // gridControl
             // 
@@ -315,7 +305,6 @@ namespace Hotel
             this.Controls.Add(this.gControl);
             this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.simpleButton2);
-            this.Controls.Add(this.btnxuathoadon);
             this.Controls.Add(this.btnDatPhong);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
@@ -357,7 +346,6 @@ namespace Hotel
         private DevExpress.XtraBars.BarEditItem srcPhong;
         private DevExpress.XtraEditors.Repository.RepositoryItemSearchControl repositoryItemSearchControl1;
         private DevExpress.XtraEditors.SimpleButton btnDatPhong;
-        private DevExpress.XtraEditors.SimpleButton btnxuathoadon;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.Data.VirtualServerModeSource virtualServerModeSource1;

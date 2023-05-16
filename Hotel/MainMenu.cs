@@ -97,9 +97,9 @@ namespace Hotel
                     var gc_item = new GalleryItem();
                     gc_item.Caption = p.Tenphong;
                     gc_item.Value = p.IDphong;
-                    if (p.Trangthai == "Trống")
+                    if (p.Trangthai == false)
                         gc_item.ImageOptions.Image = imageList1.Images[0];
-                    else if(p.Trangthai == "Đang thuê")
+                    else if(p.Trangthai == true)
                         gc_item.ImageOptions.Image = imageList1.Images[1];
                     galleryItem.Items.Add(gc_item);
                 }
@@ -134,6 +134,11 @@ namespace Hotel
         }
 
         private void gControl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
         {
 
         }
