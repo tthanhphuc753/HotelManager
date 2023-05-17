@@ -45,8 +45,6 @@
     <Property Name="Tenphong" Type="nvarchar" MaxLength="50" />
     <Property Name="Trangthai" Type="bit" />
     <Property Name="IDloaiphong" Type="nchar" MaxLength="10" Nullable="false" />
-<<<<<<< HEAD
-=======
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -57,7 +55,6 @@
     <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="version" Type="int" />
     <Property Name="definition" Type="varbinary(max)" />
->>>>>>> 55918c785da78b08d9a14e8d143381dc98894200
   </EntityType>
   <EntityType Name="TAIKHOAN">
     <Key>

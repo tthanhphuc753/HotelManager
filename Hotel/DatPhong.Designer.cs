@@ -357,7 +357,7 @@ namespace Hotel
             this.gControl.TabIndex = 8;
             this.gControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            this.gControl.Click += new System.EventHandler(this.gControl_Click);
+          
             // 
             // gridView1
             // 
@@ -443,7 +443,7 @@ namespace Hotel
             this.dtNgayDat.Name = "dtNgayDat";
             this.dtNgayDat.Size = new System.Drawing.Size(286, 27);
             this.dtNgayDat.TabIndex = 4;
-            this.dtNgayDat.ValueChanged += new System.EventHandler(this.dtNgayDat_ValueChanged);
+            //this.dtNgayDat.ValueChanged += new System.EventHandler(this.dtNgayDat_ValueChanged);
             // 
             // label10
             // 

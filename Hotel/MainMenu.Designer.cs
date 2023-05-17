@@ -139,8 +139,6 @@ namespace Hotel
             this.barMenu.Id = 3;
             this.barMenu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barMenu.ImageOptions.Image")));
             this.barMenu.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnAvailable),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnUnAvailable),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnDangXuat)});
             this.barMenu.Name = "barMenu";
             this.barMenu.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;

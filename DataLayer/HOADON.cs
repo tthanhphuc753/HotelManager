@@ -15,11 +15,8 @@ namespace DataLayer
     public partial class HOADON
     {
         public int IDhoadon { get; set; }
-<<<<<<< HEAD
-        public Nullable<double> Thanhtien { get; set; }
-=======
+
         public Double Thanhtien { get; set; }
->>>>>>> 55918c785da78b08d9a14e8d143381dc98894200
         public int IDkhachhang { get; set; }
         public int IDphong { get; set; }
     
