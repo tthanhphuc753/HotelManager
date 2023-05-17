@@ -19,7 +19,7 @@ namespace Hotel
 
         private void DatPhong_Load(object sender, EventArgs e)
         {
-            txtTongTien.Text = "3000";
+         
         }
 
         private void radioButtonA_CheckedChanged(object sender, EventArgs e)
@@ -66,10 +66,7 @@ namespace Hotel
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
-        private void cbSoNguoi_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            TinhTongTien();
-        }
+       
 
         private void TinhTongTien()
         {   // tính số ngày đặt phòng
@@ -157,7 +154,17 @@ namespace Hotel
 
         private void txtTongTien_TextChanged(object sender, EventArgs e)
         {
-            txtTongTien.Text = "3000";
+           
+        }
+
+        private void cbQuocTich_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbSoNguoi_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            TinhTongTien();
         }
     }
 }

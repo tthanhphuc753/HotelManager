@@ -154,6 +154,7 @@ namespace Hotel
             this.cbQuocTich.Name = "cbQuocTich";
             this.cbQuocTich.Size = new System.Drawing.Size(175, 27);
             this.cbQuocTich.TabIndex = 3;
+            this.cbQuocTich.SelectedIndexChanged += new System.EventHandler(this.cbQuocTich_SelectedIndexChanged);
             // 
             // txtCCCD
             // 
@@ -311,6 +312,7 @@ namespace Hotel
             this.cbSoNguoi.Name = "cbSoNguoi";
             this.cbSoNguoi.Size = new System.Drawing.Size(175, 27);
             this.cbSoNguoi.TabIndex = 10;
+            this.cbSoNguoi.SelectedIndexChanged += new System.EventHandler(this.cbSoNguoi_SelectedIndexChanged_1);
             // 
             // btnHuy
             // 
