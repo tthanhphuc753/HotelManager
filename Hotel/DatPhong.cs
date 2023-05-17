@@ -72,7 +72,7 @@ namespace Hotel
         {   // tính số ngày đặt phòng
             DateTime NgayDat = dtNgayDat.Value;
             DateTime NgayTra = dtNgayTra.Value;
-            int songay = (int)(NgayTra - NgayDat).TotalDays;
+            int songay = (int)(NgayTra - NgayDat).TotalDays +1;
 
             int phong = gridView1.FocusedRowHandle;
             string loaiphong = gridView1.GetRowCellValue(phong, "IDloaiphong").ToString();
@@ -152,6 +152,7 @@ namespace Hotel
            
         }
 
+
         private void txtTongTien_TextChanged(object sender, EventArgs e)
         {
            
@@ -161,7 +162,6 @@ namespace Hotel
         {
 
         }
-
         private void cbSoNguoi_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             TinhTongTien();
