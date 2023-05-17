@@ -5,13 +5,13 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
 <<<<<<< HEAD
-      <Diagram DiagramId="81ac01538f1e40a995e75244c5f93308" Name="Diagram1">
+      <Diagram DiagramId="81ac01538f1e40a995e75244c5f93308" Name="Diagram1" ZoomLevel="75">
         <EntityTypeShape EntityType="HotelManagerModel.DATPHONG" Width="1.5" PointX="5.25" PointY="3.25" IsExpanded="true" />
         <EntityTypeShape EntityType="HotelManagerModel.HOADON" Width="1.5" PointX="8.25" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="HotelManagerModel.KHACHHANG" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
         <EntityTypeShape EntityType="HotelManagerModel.LOAIPHONG" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="HotelManagerModel.PHONG" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="HotelManagerModel.TAIKHOAN" Width="1.5" PointX="5.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagerModel.TAIKHOAN" Width="1.5" PointX="6.25" PointY="7.5" IsExpanded="true" />
         <EntityTypeShape EntityType="HotelManagerModel.TANG" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <AssociationConnector Association="HotelManagerModel.FK_DATPHONG_KHACHHANG" ManuallyRouted="false" />
         <AssociationConnector Association="HotelManagerModel.FK_DATPHONG_PHONG" ManuallyRouted="false" />

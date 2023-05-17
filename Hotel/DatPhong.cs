@@ -19,7 +19,7 @@ namespace Hotel
 
         private void DatPhong_Load(object sender, EventArgs e)
         {
-    
+            txtTongTien.Text = "3000";
         }
 
         private void radioButtonA_CheckedChanged(object sender, EventArgs e)
@@ -101,6 +101,8 @@ namespace Hotel
                 }
                 txtTongTien.Text = tong.ToString();
             }
+            
+
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -151,6 +153,11 @@ namespace Hotel
             MessageBox.Show("Lưu thành công");
 
            
+        }
+
+        private void txtTongTien_TextChanged(object sender, EventArgs e)
+        {
+            txtTongTien.Text = "3000";
         }
     }
 }
