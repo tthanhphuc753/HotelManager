@@ -1,18 +1,13 @@
-﻿using DevExpress.XtraBars;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using BusinessLayer;
-using System.Data.SqlClient;
+﻿using BusinessLayer;
 using DevExpress.Utils.Drawing;
+using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraBars.Ribbon.ViewInfo;
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace Hotel
 {
@@ -22,6 +17,8 @@ namespace Hotel
         {
             InitializeComponent();
         }
+        private Hoadon hoadonForm;
+        public string tenphong;
         Tang _tang;
         Phong _phong;
         bool thoat = true;
@@ -37,15 +34,15 @@ namespace Hotel
 
         private void MainMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if( thoat)
-            Application.Exit();
+            if (thoat)
+                Application.Exit();
         }
         private void btnHome_ItemClick(object sender, ItemClickEventArgs e)
         {
             MainMenu main = new MainMenu();
             this.Hide();
             this.Close();
-            main.ShowDialog();  
+            main.ShowDialog();
         }
 
         private void btnAvailable_ItemClick(object sender, ItemClickEventArgs e)
@@ -55,7 +52,7 @@ namespace Hotel
 
         private void btnUnAvailable_ItemClick(object sender, ItemClickEventArgs e)
         {
-            HienThiPhong(true );
+            HienThiPhong(true);
         }
         private void HienThiPhong(bool status)
         {
@@ -92,35 +89,30 @@ namespace Hotel
                 galleryItem.Caption = t.Tentang;
                 galleryItem.CaptionAlignment = GalleryItemGroupCaptionAlignment.Stretch;
                 var lsPhong = _phong.getByTang(t.IDtang);
-                foreach(var p in lsPhong)
+                foreach (var p in lsPhong)
                 {
                     var gc_item = new GalleryItem();
                     gc_item.Caption = p.Tenphong;
                     gc_item.Value = p.IDphong;
                     if (p.Trangthai == false)
                         gc_item.ImageOptions.Image = imageList1.Images[0];
-                    else if(p.Trangthai == true)
+                    else if (p.Trangthai == true)
                         gc_item.ImageOptions.Image = imageList1.Images[1];
                     galleryItem.Items.Add(gc_item);
                 }
                 gControl.Gallery.Groups.Add(galleryItem);
             }
+
         }
-        private void MainMenu_Load(object sender, EventArgs e)  
+        private void MainMenu_Load(object sender, EventArgs e)
         {
             _tang = new Tang();
             _phong = new Phong();
             ShowRoom();
         }
-        private void popupMenu1_Popup(object sender, EventArgs e)
-        {
-            Point point = gControl.PointToClient(Control.MousePosition);
-            RibbonHitInfo hitInfo = gControl.CalcHitInfo(point);
-            if (hitInfo.InGalleryItem || hitInfo.HitTest == RibbonHitTest.GalleryImage)
-            {
-                item = hitInfo.GalleryItem;
-            }
-        }
+
+
+
 
         private void btnDatPhong_Click(object sender, EventArgs e)
         {
@@ -133,19 +125,34 @@ namespace Hotel
             HienThiPhong(true);
         }
 
-        private void gControl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void simpleButton3_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnThanhToan_ItemClick(object sender, ItemClickEventArgs e)
         {
 
+            if (item != null)
+            {
+
+                hoadonForm = new Hoadon(tenphong);
+                this.Hide();
+                hoadonForm.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một phòng trước khi thanh toán.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void popupMenu1_Popup_1(object sender, EventArgs e)
+        {
+            Point point = gControl.PointToClient(Control.MousePosition);
+            RibbonHitInfo hitInfo = gControl.CalcHitInfo(point);
+            if (hitInfo.InGalleryItem || hitInfo.HitTest == RibbonHitTest.GalleryImage)
+            {
+                item = hitInfo.GalleryItem;
+                tenphong = item.Caption.ToString();
+
+            }
         }
     }
 }

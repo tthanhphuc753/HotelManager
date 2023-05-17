@@ -1,24 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="StoreContainer" CdmEntityContainer="Entities">
-    <EntitySetMapping Name="DATPHONGs">
-      <EntityTypeMapping TypeName="HotelManagerModel.DATPHONG">
-        <MappingFragment StoreEntitySet="DATPHONG">
+    <EntitySetMapping Name="HOADONs">
+      <EntityTypeMapping TypeName="HotelManagerModel.HOADON">
+        <MappingFragment StoreEntitySet="HOADON">
+          <ScalarProperty Name="Trangthai" ColumnName="Trangthai" />
+          <ScalarProperty Name="Tongtien" ColumnName="Tongtien" />
           <ScalarProperty Name="Songayo" ColumnName="Songayo" />
           <ScalarProperty Name="Ngaytra" ColumnName="Ngaytra" />
           <ScalarProperty Name="Ngaydat" ColumnName="Ngaydat" />
           <ScalarProperty Name="IDphong" ColumnName="IDphong" />
           <ScalarProperty Name="IDkhachhang" ColumnName="IDkhachhang" />
-          <ScalarProperty Name="IDdatphong" ColumnName="IDdatphong" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="HOADONs">
-      <EntityTypeMapping TypeName="HotelManagerModel.HOADON">
-        <MappingFragment StoreEntitySet="HOADON">
-          <ScalarProperty Name="IDphong" ColumnName="IDphong" />
-          <ScalarProperty Name="IDkhachhang" ColumnName="IDkhachhang" />
-          <ScalarProperty Name="Thanhtien" ColumnName="Thanhtien" />
           <ScalarProperty Name="IDhoadon" ColumnName="IDhoadon" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -36,6 +28,7 @@
     <EntitySetMapping Name="LOAIPHONGs">
       <EntityTypeMapping TypeName="HotelManagerModel.LOAIPHONG">
         <MappingFragment StoreEntitySet="LOAIPHONG">
+          <ScalarProperty Name="Songuoimax" ColumnName="Songuoimax" />
           <ScalarProperty Name="Giatien" ColumnName="Giatien" />
           <ScalarProperty Name="IDloaiphong" ColumnName="IDloaiphong" />
         </MappingFragment>

@@ -1,9 +1,6 @@
 ﻿using DataLayer;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
@@ -18,12 +15,12 @@ namespace BusinessLayer
 
         public List<DataLayer.LOAIPHONG> getAll()
         {
-            return db.LOAIPHONGs.ToList(); 
+            return db.LOAIPHONGs.ToList();
         }
 
         public DataLayer.LOAIPHONG GetLoaiPhongById(string id)
         {
-            return db.LOAIPHONGs.FirstOrDefault(lp => lp.IDloaiphong == id); 
+            return db.LOAIPHONGs.FirstOrDefault(lp => lp.IDloaiphong == id);
         }
     }
 }

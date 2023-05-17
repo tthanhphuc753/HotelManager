@@ -37,10 +37,10 @@ namespace Hotel
             this.btnHome = new DevExpress.XtraBars.BarButtonItem();
             this.btnDangXuat = new DevExpress.XtraBars.BarButtonItem();
             this.barMenu = new DevExpress.XtraBars.BarSubItem();
-            this.btnAvailable = new DevExpress.XtraBars.BarButtonItem();
-            this.btnUnAvailable = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnUnAvailable = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAvailable = new DevExpress.XtraBars.BarButtonItem();
             this.btnTraPhong = new DevExpress.XtraBars.BarButtonItem();
             this.btnCapNhatPhong = new DevExpress.XtraBars.BarButtonItem();
             this.btnThanhToan = new DevExpress.XtraBars.BarButtonItem();
@@ -143,22 +143,6 @@ namespace Hotel
             this.barMenu.Name = "barMenu";
             this.barMenu.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
-            // btnAvailable
-            // 
-            this.btnAvailable.Caption = "Phòng trống";
-            this.btnAvailable.Id = 8;
-            this.btnAvailable.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAvailable.ImageOptions.Image")));
-            this.btnAvailable.Name = "btnAvailable";
-            this.btnAvailable.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAvailable_ItemClick);
-            // 
-            // btnUnAvailable
-            // 
-            this.btnUnAvailable.Caption = "Phòng đã thuê";
-            this.btnUnAvailable.Id = 7;
-            this.btnUnAvailable.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUnAvailable.ImageOptions.Image")));
-            this.btnUnAvailable.Name = "btnUnAvailable";
-            this.btnUnAvailable.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnUnAvailable_ItemClick);
-            // 
             // barButtonItem1
             // 
             this.barButtonItem1.Caption = "barButtonItem1";
@@ -169,6 +153,22 @@ namespace Hotel
             // 
             this.barButtonItem2.Id = 5;
             this.barButtonItem2.Name = "barButtonItem2";
+            // 
+            // btnUnAvailable
+            // 
+            this.btnUnAvailable.Caption = "Phòng đã thuê";
+            this.btnUnAvailable.Id = 7;
+            this.btnUnAvailable.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUnAvailable.ImageOptions.Image")));
+            this.btnUnAvailable.Name = "btnUnAvailable";
+            this.btnUnAvailable.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnUnAvailable_ItemClick);
+            // 
+            // btnAvailable
+            // 
+            this.btnAvailable.Caption = "Phòng trống";
+            this.btnAvailable.Id = 8;
+            this.btnAvailable.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAvailable.ImageOptions.Image")));
+            this.btnAvailable.Name = "btnAvailable";
+            this.btnAvailable.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAvailable_ItemClick);
             // 
             // btnTraPhong
             // 
@@ -225,7 +225,6 @@ namespace Hotel
             this.gControl.Size = new System.Drawing.Size(1020, 566);
             this.gControl.TabIndex = 16;
             this.gControl.Text = "Control";
-            this.gControl.Click += new System.EventHandler(this.gControl_Click);
             // 
             // galleryControlClient1
             // 
@@ -241,6 +240,7 @@ namespace Hotel
             this.popupMenu1.ItemLinks.Add(this.btnThanhToan);
             this.popupMenu1.Name = "popupMenu1";
             this.popupMenu1.Ribbon = this.ribbon;
+            this.popupMenu1.Popup += new System.EventHandler(this.popupMenu1_Popup_1);
             // 
             // btnDatPhong
             // 
@@ -269,7 +269,6 @@ namespace Hotel
             this.simpleButton3.Size = new System.Drawing.Size(140, 34);
             this.simpleButton3.TabIndex = 10;
             this.simpleButton3.Text = "Thay đổi quy định";
-            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // gridControl
             // 

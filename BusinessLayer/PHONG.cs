@@ -1,9 +1,6 @@
-﻿using System;
+﻿using DataLayer;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DataLayer;
 
 namespace BusinessLayer
 {
@@ -11,7 +8,7 @@ namespace BusinessLayer
     {
 
         Entities db;
-       public Phong ()
+        public Phong()
         {
             db = Entities.CreateEntities();
         }
@@ -22,6 +19,6 @@ namespace BusinessLayer
         public List<PHONG> getByTang(int idTang)
         {
             return db.PHONGs.Where(x => x.IDtang == idTang).ToList();
-        }  
+        }
     }
 }

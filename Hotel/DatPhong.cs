@@ -19,14 +19,14 @@ namespace Hotel
 
         private void DatPhong_Load(object sender, EventArgs e)
         {
-         
+
         }
 
         private void radioButtonA_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButtonA.Checked)
             {
-                HienThiPhong("A"); 
+                HienThiPhong("A");
             }
         }
 
@@ -34,10 +34,10 @@ namespace Hotel
         {
             if (radioButtonB.Checked)
             {
-                HienThiPhong("B"); 
+                HienThiPhong("B");
             }
         }
-            
+
         private void radioButtonC_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButtonC.Checked)
@@ -47,7 +47,7 @@ namespace Hotel
         }
         private void HienThiPhong(string loaiPhong)
         {
-            
+
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
@@ -66,13 +66,13 @@ namespace Hotel
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
-       
+
 
         private void TinhTongTien()
         {   // tính số ngày đặt phòng
             DateTime NgayDat = dtNgayDat.Value;
             DateTime NgayTra = dtNgayTra.Value;
-            int songay = (int)(NgayTra - NgayDat).TotalDays +1;
+            int songay = (int)(NgayTra - NgayDat).TotalDays + 1;
 
             int phong = gridView1.FocusedRowHandle;
             string loaiphong = gridView1.GetRowCellValue(phong, "IDloaiphong").ToString();
@@ -86,7 +86,7 @@ namespace Hotel
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@loaiphong", loaiphong);
                 decimal giaphong = (decimal)command.ExecuteScalar();
-                decimal tong = giaphong * songay ;
+                decimal tong = giaphong * songay;
 
                 if (quoctich == "Nội địa" && songuoi == 3)
                 {
@@ -98,7 +98,7 @@ namespace Hotel
                 }
                 txtTongTien.Text = tong.ToString();
             }
-            
+
 
         }
 
@@ -112,6 +112,7 @@ namespace Hotel
             DateTime NgayDat = dtNgayDat.Value;
             DateTime NgayTra = dtNgayTra.Value;
             int songay = (int)(NgayTra - NgayDat).TotalDays;
+            decimal Tongtien = decimal.Parse(txtTongTien.Text);
 
             int idphong = 0;
             int phong = gridView1.FocusedRowHandle;
@@ -131,31 +132,41 @@ namespace Hotel
                 getPhongIdCommand.Parameters.AddWithValue("@tenphong", tenphong);
                 idphong = Convert.ToInt32(getPhongIdCommand.ExecuteScalar());
 
-                string insertDatPhongQuery = "INSERT INTO DATPHONG (IDkhachhang, IDphong, Ngaydat, Ngaytra, Songayo) VALUES (@idkhachhang, @idphong, @NgayDat, @NgayTra, @songay);";
+                string insertDatPhongQuery = "INSERT INTO HOADON (IDkhachhang, IDphong, Ngaydat, Ngaytra, Songayo,Tongtien) VALUES (@idkhachhang, @idphong, @NgayDat, @NgayTra, @songay,@tongtien);";
                 SqlCommand insertDatPhongCommand = new SqlCommand(insertDatPhongQuery, connection);
                 insertDatPhongCommand.Parameters.AddWithValue("@idkhachhang", idkhachhang);
                 insertDatPhongCommand.Parameters.AddWithValue("@idphong", idphong);
                 insertDatPhongCommand.Parameters.AddWithValue("@NgayDat", NgayDat);
                 insertDatPhongCommand.Parameters.AddWithValue("@NgayTra", NgayTra);
                 insertDatPhongCommand.Parameters.AddWithValue("@songay", songay);
+                insertDatPhongCommand.Parameters.AddWithValue("@tongtien", Tongtien);
+                
+
                 insertDatPhongCommand.ExecuteNonQuery();
+                string updateHoadonquery = "UPDATE HOADON SET Trangthai = 0 WHERE IDphong = (SELECT IDphong FROM PHONG WHERE Tenphong = @tenphong)";
 
                 string updatePhongQuery = "UPDATE PHONG SET Trangthai = 1 WHERE Tenphong = @tenphong;";
+
                 SqlCommand updatePhongCommand = new SqlCommand(updatePhongQuery, connection);
+                SqlCommand updateHoadonCommand = new SqlCommand(updateHoadonquery, connection);
+
                 updatePhongCommand.Parameters.AddWithValue("@tenphong", tenphong);
+                updateHoadonCommand.Parameters.AddWithValue("@tenphong", tenphong);
+
+                updateHoadonCommand.ExecuteNonQuery();
                 updatePhongCommand.ExecuteNonQuery();
 
                 connection.Close();
             }
             MessageBox.Show("Lưu thành công");
 
-           
+
         }
 
 
         private void txtTongTien_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void cbQuocTich_SelectedIndexChanged(object sender, EventArgs e)
