@@ -142,5 +142,10 @@ namespace Hotel
         {
 
         }
+
+        private void btnThanhToan_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
     }
 }

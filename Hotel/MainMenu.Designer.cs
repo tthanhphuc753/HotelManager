@@ -187,6 +187,7 @@ namespace Hotel
             this.btnThanhToan.Caption = "Thanh toán";
             this.btnThanhToan.Id = 16;
             this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThanhToan_ItemClick);
             // 
             // ribbonPageCategory1
             // 
@@ -198,7 +199,7 @@ namespace Hotel
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1});
             this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "ribbonPage1";
+            this.ribbonPage1.Text = "Page 1";
             // 
             // ribbonPageGroup1
             // 
