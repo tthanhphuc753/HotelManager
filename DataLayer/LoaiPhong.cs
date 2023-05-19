@@ -12,10 +12,19 @@ namespace DataLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class LoaiPhong
+    public partial class LOAIPHONG
     {
-        public int IDLoaiPhong { get; set; }
-        public string TenLoaiPhong { get; set; }
-        public Nullable<double> Gia { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public LOAIPHONG()
+        {
+            this.PHONGs = new HashSet<PHONG>();
+        }
+    
+        public int Songuoimax { get; set; }
+        public string IDloaiphong { get; set; }
+        public decimal Giatien { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PHONG> PHONGs { get; set; }
     }
 }

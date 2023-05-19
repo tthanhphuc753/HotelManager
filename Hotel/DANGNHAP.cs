@@ -21,7 +21,7 @@ namespace Hotel
         }
         private void btn_login_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-LAUNSSS;Initial Catalog=HotelManager;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=SORA\PHUCTT;Initial Catalog=HotelManager;Integrated Security=True");
             try
             {
                 conn.Open();
@@ -35,7 +35,7 @@ namespace Hotel
                 {
                     thoat = false;
                     MainMenu menu = new MainMenu();
-                    this.Hide() ;
+                    this.Hide();
                     menu.ShowDialog();
                 }
                 else
@@ -44,12 +44,12 @@ namespace Hotel
                 }
 
             }
-            catch (Exception )
+            catch (Exception)
             {
                 MessageBox.Show("Đăng nhập thất bại ");
             }
 
-            
+
         }
 
         private void DANGNHAP_FormClosing(object sender, FormClosingEventArgs e)

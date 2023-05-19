@@ -14,11 +14,16 @@ namespace DataLayer
     
     public partial class HOADON
     {
-        public int IDHoadon { get; set; }
-        public string Thanhtien { get; set; }
-        public int IDKhachhang { get; set; }
-        public int IDPhong { get; set; }
-    
+        public int IDhoadon { get; set; }
+
+  
+        public int IDkhachhang { get; set; }
+        public int IDphong { get; set; }
+        public Nullable<System.DateTime> Ngaydat { get; set; }
+        public Nullable<System.DateTime> Ngaytra { get; set; }
+        public Nullable<int> Songayo { get; set; }
+        public Nullable<Boolean> Trangthai { get; set; }
+        public decimal Tongtien { get; set; }
         public virtual KHACHHANG KHACHHANG { get; set; }
         public virtual PHONG PHONG { get; set; }
     }

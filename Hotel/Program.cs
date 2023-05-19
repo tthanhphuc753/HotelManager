@@ -14,7 +14,7 @@ namespace Hotel
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-// Application
+            // Application
             Application.Run(new MainMenu());
 
         }

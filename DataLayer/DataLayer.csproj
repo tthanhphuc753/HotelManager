@@ -55,10 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="connect.cs" />
-    <Compile Include="DatPhong.cs">
-      <DependentUpon>Hotel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DICHVU.cs">
+    <Compile Include="DATPHONG.cs">
       <DependentUpon>Hotel.tt</DependentUpon>
     </Compile>
     <Compile Include="Encryptor.cs" />
@@ -84,10 +81,7 @@
     <Compile Include="KHACHHANG.cs">
       <DependentUpon>Hotel.tt</DependentUpon>
     </Compile>
-    <Compile Include="LoaiPhong.cs">
-      <DependentUpon>Hotel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="NHANVIEN.cs">
+    <Compile Include="LOAIPHONG.cs">
       <DependentUpon>Hotel.tt</DependentUpon>
     </Compile>
     <Compile Include="PHONG.cs">
@@ -121,6 +115,7 @@
       <DependentUpon>Hotel.edmx</DependentUpon>
       <LastGenOutput>Hotel.Context.cs</LastGenOutput>
     </Content>
+    <Content Include="Hotel.edmx.sql" />
     <Content Include="Hotel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Hotel.edmx</DependentUpon>

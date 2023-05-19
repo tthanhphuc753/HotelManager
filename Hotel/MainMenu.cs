@@ -1,17 +1,13 @@
-﻿using DevExpress.XtraBars;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using BusinessLayer;
-using System.Data.SqlClient;
+﻿using BusinessLayer;
 using DevExpress.Utils.Drawing;
+using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
+using DevExpress.XtraBars.Ribbon.ViewInfo;
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace Hotel
 {
@@ -21,9 +17,12 @@ namespace Hotel
         {
             InitializeComponent();
         }
+        private Hoadon hoadonForm;
+        public string tenphong;
         Tang _tang;
         Phong _phong;
         bool thoat = true;
+        GalleryItem item = null;
         private void btnDangXuat_ItemClick(object sender, ItemClickEventArgs e)
         {
             thoat = false;
@@ -35,35 +34,35 @@ namespace Hotel
 
         private void MainMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if( thoat)
-            Application.Exit();
+            if (thoat)
+                Application.Exit();
         }
         private void btnHome_ItemClick(object sender, ItemClickEventArgs e)
         {
             MainMenu main = new MainMenu();
             this.Hide();
             this.Close();
-            main.ShowDialog();  
+            main.ShowDialog();
         }
 
         private void btnAvailable_ItemClick(object sender, ItemClickEventArgs e)
         {
-            HienThiPhong("Trống");
+            HienThiPhong(false);
         }
 
         private void btnUnAvailable_ItemClick(object sender, ItemClickEventArgs e)
         {
-            HienThiPhong("Đang thuê");
+            HienThiPhong(true);
         }
-        private void HienThiPhong(string status)
+        private void HienThiPhong(bool status)
         {
-            string connectionString = "Data Source=DESKTOP-LAUNSSS;Initial Catalog=HotelManager;Integrated Security=True;";
+            string connectionString = "Data Source=SORA\\PHUCTT;Initial Catalog=HotelManager;Integrated Security=True;";
             try
             {
                 gridControl.Visible = true;
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    string query = "SELECT * FROM PHONG WHERE TrangThai = @status";
+                    string query = "SELECT * FROM PHONG WHERE Trangthai = @status";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@status", status);
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -80,29 +79,30 @@ namespace Hotel
         void ShowRoom()
         {
             var lsTang = _tang.getAll();
-            Control.Gallery.ItemImageLayout = ImageLayoutMode.ZoomInside;
-            Control.Gallery.ImageSize = new Size(64, 64);
-            Control.Gallery.ShowItemText = true;
-            Control.Gallery.ShowGroupCaption = true;
+            gControl.Gallery.ItemImageLayout = ImageLayoutMode.ZoomInside;
+            gControl.Gallery.ImageSize = new Size(64, 64);
+            gControl.Gallery.ShowItemText = true;
+            gControl.Gallery.ShowGroupCaption = true;
             foreach (var t in lsTang)
             {
                 var galleryItem = new GalleryItemGroup();
-                galleryItem.Caption = t.TenTang;
+                galleryItem.Caption = t.Tentang;
                 galleryItem.CaptionAlignment = GalleryItemGroupCaptionAlignment.Stretch;
-                var lsPhong = _phong.getByTang(t.IDTang);
-                foreach(var p in lsPhong)
+                var lsPhong = _phong.getByTang(t.IDtang);
+                foreach (var p in lsPhong)
                 {
                     var gc_item = new GalleryItem();
-                    gc_item.Caption = p.TenPhong;
-                    gc_item.Value = p.IDPhong;
-                    if (p.TrangThai == "Trống")
+                    gc_item.Caption = p.Tenphong;
+                    gc_item.Value = p.IDphong;
+                    if (p.Trangthai == false)
                         gc_item.ImageOptions.Image = imageList1.Images[0];
-                    else if(p.TrangThai == "Đang thuê")
+                    else if (p.Trangthai == true)
                         gc_item.ImageOptions.Image = imageList1.Images[1];
                     galleryItem.Items.Add(gc_item);
                 }
-                Control.Gallery.Groups.Add(galleryItem);
+                gControl.Gallery.Groups.Add(galleryItem);
             }
+
         }
         private void MainMenu_Load(object sender, EventArgs e)
         {
@@ -112,5 +112,47 @@ namespace Hotel
         }
 
 
+
+
+        private void btnDatPhong_Click(object sender, EventArgs e)
+        {
+            DatPhong datphong = new DatPhong();
+            datphong.ShowDialog();
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            HienThiPhong(true);
+        }
+
+
+        private void btnThanhToan_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+            if (item != null)
+            {
+
+                hoadonForm = new Hoadon(tenphong);
+                this.Hide();
+                hoadonForm.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một phòng trước khi thanh toán.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void popupMenu1_Popup_1(object sender, EventArgs e)
+        {
+            Point point = gControl.PointToClient(Control.MousePosition);
+            RibbonHitInfo hitInfo = gControl.CalcHitInfo(point);
+            if (hitInfo.InGalleryItem || hitInfo.HitTest == RibbonHitTest.GalleryImage)
+            {
+                item = hitInfo.GalleryItem;
+                tenphong = item.Caption.ToString();
+
+            }
+        }
     }
 }

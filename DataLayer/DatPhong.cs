@@ -12,15 +12,16 @@ namespace DataLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class DatPhong
+    public partial class DATPHONG
     {
-        public int ID { get; set; }
-        public int IDKH { get; set; }
-        public int IDPhong { get; set; }
-        public Nullable<System.DateTime> NGAYDAT { get; set; }
-        public Nullable<System.DateTime> NGAYTRA { get; set; }
-        public Nullable<int> SONGAYO { get; set; }
-        public Nullable<int> IDDVu { get; set; }
-        public Nullable<int> IDU { get; set; }
+        public int IDdatphong { get; set; }
+        public Nullable<int> IDkhachhang { get; set; }
+        public Nullable<int> IDphong { get; set; }
+        public Nullable<System.DateTime> Ngaydat { get; set; }
+        public Nullable<System.DateTime> Ngaytra { get; set; }
+        public Nullable<int> Songayo { get; set; }
+    
+        public virtual KHACHHANG KHACHHANG { get; set; }
+        public virtual PHONG PHONG { get; set; }
     }
 }

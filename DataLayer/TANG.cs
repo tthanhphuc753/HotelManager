@@ -14,7 +14,16 @@ namespace DataLayer
     
     public partial class TANG
     {
-        public int IDTang { get; set; }
-        public string TenTang { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public TANG()
+        {
+            this.PHONGs = new HashSet<PHONG>();
+        }
+    
+        public int IDtang { get; set; }
+        public string Tentang { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PHONG> PHONGs { get; set; }
     }
 }
