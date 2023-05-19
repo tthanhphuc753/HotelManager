@@ -140,7 +140,7 @@ namespace Hotel
                 insertDatPhongCommand.Parameters.AddWithValue("@NgayTra", NgayTra);
                 insertDatPhongCommand.Parameters.AddWithValue("@songay", songay);
                 insertDatPhongCommand.Parameters.AddWithValue("@tongtien", Tongtien);
-                
+                insertDatPhongCommand.Parameters.AddWithValue("@songayo", songay);
 
                 insertDatPhongCommand.ExecuteNonQuery();
                 string updateHoadonquery = "UPDATE HOADON SET Trangthai = 0 WHERE IDphong = (SELECT IDphong FROM PHONG WHERE Tenphong = @tenphong)";

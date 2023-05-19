@@ -1,4 +1,4 @@
-﻿using BusinessLayer;
+using BusinessLayer;
 using DevExpress.Utils.Drawing;
 using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
@@ -104,7 +104,7 @@ namespace Hotel
             }
 
         }
-        private void MainMenu_Load(object sender, EventArgs e)
+        public void MainMenu_Load(object sender, EventArgs e)
         {
             _tang = new Tang();
             _phong = new Phong();

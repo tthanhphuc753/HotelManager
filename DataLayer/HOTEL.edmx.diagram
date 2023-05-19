@@ -5,13 +5,13 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
 <<<<<<< HEAD
-      <Diagram DiagramId="81ac01538f1e40a995e75244c5f93308" Name="Diagram1" ZoomLevel="75">
-        <EntityTypeShape EntityType="HotelManagerModel.HOADON" Width="1.5" PointX="8.25" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="HotelManagerModel.KHACHHANG" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="HotelManagerModel.LOAIPHONG" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="HotelManagerModel.PHONG" Width="1.5" PointX="4.25" PointY="3" IsExpanded="true" />
-        <EntityTypeShape EntityType="HotelManagerModel.TAIKHOAN" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="HotelManagerModel.TANG" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="81ac01538f1e40a995e75244c5f93308" Name="Diagram1" ZoomLevel="49">
+        <EntityTypeShape EntityType="HotelManagerModel.HOADON" Width="1.5" PointX="13" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagerModel.KHACHHANG" Width="1.5" PointX="7.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagerModel.LOAIPHONG" Width="1.5" PointX="5.5" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagerModel.PHONG" Width="1.5" PointX="9" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagerModel.TAIKHOAN" Width="1.5" PointX="10.5" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagerModel.TANG" Width="1.5" PointX="5.5" PointY="2.375" IsExpanded="true" />
         <AssociationConnector Association="HotelManagerModel.FK_HOADON_KHACHHANG" ManuallyRouted="false" />
         <AssociationConnector Association="HotelManagerModel.FK_HOADON_PHONG" ManuallyRouted="false" />
         <AssociationConnector Association="HotelManagerModel.FK_PHONG_LOAIPHONG" ManuallyRouted="false" />

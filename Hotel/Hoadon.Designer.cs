@@ -58,7 +58,7 @@ namespace Hotel
             // 
             // btn_xuathoadon
             // 
-            this.btn_xuathoadon.Location = new System.Drawing.Point(201, 489);
+            this.btn_xuathoadon.Location = new System.Drawing.Point(240, 535);
             this.btn_xuathoadon.Name = "btn_xuathoadon";
             this.btn_xuathoadon.Size = new System.Drawing.Size(114, 39);
             this.btn_xuathoadon.TabIndex = 1;
@@ -137,7 +137,7 @@ namespace Hotel
             // 
             // txtThanhtien
             // 
-            this.txtThanhtien.Location = new System.Drawing.Point(221, 389);
+            this.txtThanhtien.Location = new System.Drawing.Point(274, 388);
             this.txtThanhtien.Name = "txtThanhtien";
             this.txtThanhtien.ReadOnly = true;
             this.txtThanhtien.Size = new System.Drawing.Size(187, 27);
@@ -161,7 +161,7 @@ namespace Hotel
             // 
             // lblNgaydatphong
             // 
-            this.lblNgaydatphong.Location = new System.Drawing.Point(265, 266);
+            this.lblNgaydatphong.Location = new System.Drawing.Point(274, 266);
             this.lblNgaydatphong.Name = "lblNgaydatphong";
             this.lblNgaydatphong.Size = new System.Drawing.Size(103, 19);
             this.lblNgaydatphong.TabIndex = 12;
@@ -169,7 +169,7 @@ namespace Hotel
             // 
             // lblNgaytraphong
             // 
-            this.lblNgaytraphong.Location = new System.Drawing.Point(265, 305);
+            this.lblNgaytraphong.Location = new System.Drawing.Point(274, 305);
             this.lblNgaytraphong.Name = "lblNgaytraphong";
             this.lblNgaytraphong.Size = new System.Drawing.Size(103, 19);
             this.lblNgaytraphong.TabIndex = 13;
@@ -177,7 +177,7 @@ namespace Hotel
             // 
             // lblTongsongaydat
             // 
-            this.lblTongsongaydat.Location = new System.Drawing.Point(265, 344);
+            this.lblTongsongaydat.Location = new System.Drawing.Point(274, 344);
             this.lblTongsongaydat.Name = "lblTongsongaydat";
             this.lblTongsongaydat.Size = new System.Drawing.Size(103, 19);
             this.lblTongsongaydat.TabIndex = 14;
@@ -185,7 +185,7 @@ namespace Hotel
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(336, 489);
+            this.btnThoat.Location = new System.Drawing.Point(375, 535);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(114, 39);
             this.btnThoat.TabIndex = 15;
@@ -214,7 +214,7 @@ namespace Hotel
             // 
             // lblLoaiphong
             // 
-            this.lblLoaiphong.Location = new System.Drawing.Point(265, 227);
+            this.lblLoaiphong.Location = new System.Drawing.Point(274, 227);
             this.lblLoaiphong.Name = "lblLoaiphong";
             this.lblLoaiphong.Size = new System.Drawing.Size(103, 19);
             this.lblLoaiphong.TabIndex = 18;
@@ -222,7 +222,7 @@ namespace Hotel
             // 
             // lblIDhoadon
             // 
-            this.lblIDhoadon.Location = new System.Drawing.Point(221, 443);
+            this.lblIDhoadon.Location = new System.Drawing.Point(274, 445);
             this.lblIDhoadon.Name = "lblIDhoadon";
             this.lblIDhoadon.Size = new System.Drawing.Size(94, 19);
             this.lblIDhoadon.TabIndex = 19;

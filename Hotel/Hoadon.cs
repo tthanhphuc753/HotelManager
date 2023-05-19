@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data.SqlClient;
+
 namespace Hotel
 {
     public partial class Hoadon : DevExpress.XtraEditors.XtraForm
@@ -48,8 +49,8 @@ namespace Hotel
                             lblNgaydatphong.Text = reader["NgayDat"].ToString();
                             lblNgaytraphong.Text = reader["NgayTra"].ToString();
                             lblLoaiphong.Text = reader["IDloaiphong"].ToString();
-                            txtThanhtien.Text = reader["Tongtien"].ToString(); 
-
+                            txtThanhtien.Text = reader["Tongtien"].ToString();
+                            lblTongsongaydat.Text = reader["Songayo"].ToString();
                         }
                     }
                 }
