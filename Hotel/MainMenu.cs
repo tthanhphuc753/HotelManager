@@ -57,7 +57,7 @@ namespace Hotel
         }
         private void HienThiPhong(bool status)
         {
-            string connectionString = "Data Source=DESKTOP-GUVFKN1\\SQLNGHIA;Initial Catalog=HotelManager;Integrated Security=True;";
+            string connectionString = @"Data Source=SORA\PHUCTT;Initial Catalog=HotelManager;Integrated Security=True;";
             try
             {
                 gridControl.Visible = true;
@@ -174,7 +174,7 @@ namespace Hotel
 
         private void srcPhong_EditValueChanged(object sender, EventArgs e)
         {
-            string srcphong = srcPhong.EditValue?.ToString();
+            string srcphong = srcPhong.EditValue?.ToString();       
             gControl.Gallery.Groups.Clear();
             if( string.IsNullOrEmpty(srcphong))
             {
@@ -182,7 +182,7 @@ namespace Hotel
             }
             else
             {
-                HienThiPhongTimKiem(srcphong);
+                BeginInvoke(new Action(() => HienThiPhongTimKiem(srcphong)));
             }
 
         }

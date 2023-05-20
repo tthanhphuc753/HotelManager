@@ -144,3 +144,36 @@ C:\Users\TTC\Source\Repos\HotelManager\BusinessLayer\obj\Debug\BusinessLayer.csp
 C:\Users\TTC\Source\Repos\HotelManager\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
 C:\Users\TTC\Source\Repos\HotelManager\BusinessLayer\obj\Debug\BusinessLayer.dll
 C:\Users\TTC\Source\Repos\HotelManager\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\bin\Debug\BusinessLayer.dll.config
+C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\bin\Debug\DataLayer.dll
+C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\bin\Debug\DevExpress.DataAccess.v22.2.dll
+C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\bin\Debug\EntityFramework.dll
+C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\bin\Debug\DevExpress.Data.v22.2.dll
+C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\bin\Debug\DevExpress.Xpo.v22.2.dll
+C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\bin\Debug\DevExpress.Printing.v22.2.Core.dll
+C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\bin\Debug\DevExpress.CodeParser.v22.2.dll
+C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\bin\Debug\DevExpress.RichEdit.v22.2.Core.dll
+C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\bin\Debug\DevExpress.Office.v22.2.Core.dll
+C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\bin\Debug\DevExpress.Drawing.v22.2.dll
+C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\bin\Debug\DevExpress.Pdf.v22.2.Core.dll
+C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\bin\Debug\DevExpress.Pdf.v22.2.Drawing.dll
+C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\bin\Debug\DataLayer.pdb
+C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\bin\Debug\DataLayer.dll.config
+C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\bin\Debug\DevExpress.DataAccess.v22.2.xml
+C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\bin\Debug\EntityFramework.xml
+C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\bin\Debug\DevExpress.Data.v22.2.xml
+C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\bin\Debug\DevExpress.Xpo.v22.2.xml
+C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\bin\Debug\DevExpress.Printing.v22.2.Core.xml
+C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\bin\Debug\DevExpress.RichEdit.v22.2.Core.xml
+C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\bin\Debug\DevExpress.Office.v22.2.Core.xml
+C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\bin\Debug\DevExpress.Pdf.v22.2.Core.xml
+C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\bin\Debug\DevExpress.Pdf.v22.2.Drawing.xml
+C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\obj\Debug\BusinessLayer.csproj.AssemblyReference.cache
+C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
+C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\obj\Debug\BusinessLayer.pdb
