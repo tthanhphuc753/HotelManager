@@ -1,19 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
 <Schema Namespace="HotelManagerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-=======
-<Schema Namespace="Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
->>>>>>> d7bba7d540189ab977fbb4f1e7f374c5768bd6d4
   <EntityType Name="HOADON">
     <Key>
       <PropertyRef Name="IDhoadon" />
     </Key>
     <Property Name="IDhoadon" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-<<<<<<< HEAD
-    <Property Name="Thanhtien" Type="float" />
-    <Property Name="IDkhachhang" Type="int" Nullable="false" />
-    <Property Name="IDphong" Type="int" Nullable="false" />
-=======
     <Property Name="IDkhachhang" Type="int" />
     <Property Name="IDphong" Type="int" />
     <Property Name="Ngaydat" Type="date" />
@@ -21,7 +12,6 @@
     <Property Name="Songayo" Type="int" />
     <Property Name="Tongtien" Type="decimal" Precision="18" Scale="0" />
     <Property Name="Trangthai" Type="bit" />
->>>>>>> d7bba7d540189ab977fbb4f1e7f374c5768bd6d4
   </EntityType>
   <EntityType Name="KHACHHANG">
     <Key>
@@ -31,8 +21,6 @@
     <Property Name="Tenkhachhang" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="CCCD/CMND" Type="nchar" MaxLength="12" Nullable="false" />
     <Property Name="Loaikhach" Type="bit" Nullable="false" />
-<<<<<<< HEAD
-=======
   </EntityType>
   <EntityType Name="LOAIPHONG">
     <Key>
@@ -41,19 +29,11 @@
     <Property Name="IDloaiphong" Type="nchar" MaxLength="10" Nullable="false" />
     <Property Name="Giatien" Type="decimal" Precision="18" Scale="0" />
     <Property Name="Songuoimax" Type="int" />
->>>>>>> d7bba7d540189ab977fbb4f1e7f374c5768bd6d4
   </EntityType>
   <EntityType Name="PHONG">
     <Key>
       <PropertyRef Name="IDphong" />
     </Key>
-<<<<<<< HEAD
-    <Property Name="IDtang" Type="int" Nullable="false" />
-    <Property Name="IDphong" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Tenphong" Type="nvarchar" MaxLength="50" />
-    <Property Name="Trangthai" Type="bit" />
-    <Property Name="IDloaiphong" Type="nchar" MaxLength="10" Nullable="false" />
-=======
     <Property Name="IDphong" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Tenphong" Type="nvarchar" MaxLength="50" />
     <Property Name="IDtang" Type="int" Nullable="false" />
@@ -69,7 +49,6 @@
     <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="version" Type="int" />
     <Property Name="definition" Type="varbinary(max)" />
->>>>>>> d7bba7d540189ab977fbb4f1e7f374c5768bd6d4
   </EntityType>
   <EntityType Name="TAIKHOAN">
     <Key>
@@ -107,26 +86,6 @@
       </Principal>
       <Dependent Role="HOADON">
         <PropertyRef Name="IDphong" />
-<<<<<<< HEAD
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_PHONG_TANG">
-    <End Role="TANG" Type="Self.TANG" Multiplicity="1" />
-    <End Role="PHONG" Type="Self.PHONG" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="TANG">
-        <PropertyRef Name="IDtang" />
-      </Principal>
-      <Dependent Role="PHONG">
-        <PropertyRef Name="IDtang" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <EntityContainer Name="HotelManagerModelStoreContainer">
-    <EntitySet Name="HOADON" EntityType="Self.HOADON" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="KHACHHANG" EntityType="Self.KHACHHANG" Schema="dbo" store:Type="Tables" />
-=======
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -154,11 +113,10 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="StoreContainer">
+  <EntityContainer Name="HotelManagerModelStoreContainer">
     <EntitySet Name="HOADON" EntityType="Self.HOADON" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="KHACHHANG" EntityType="Self.KHACHHANG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="LOAIPHONG" EntityType="Self.LOAIPHONG" Schema="dbo" store:Type="Tables" />
->>>>>>> d7bba7d540189ab977fbb4f1e7f374c5768bd6d4
     <EntitySet Name="PHONG" EntityType="Self.PHONG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TAIKHOAN" EntityType="Self.TAIKHOAN" Schema="dbo" store:Type="Tables" />
@@ -171,13 +129,10 @@
       <End Role="PHONG" EntitySet="PHONG" />
       <End Role="HOADON" EntitySet="HOADON" />
     </AssociationSet>
-<<<<<<< HEAD
-=======
     <AssociationSet Name="FK_PHONG_LOAIPHONG" Association="Self.FK_PHONG_LOAIPHONG">
       <End Role="LOAIPHONG" EntitySet="LOAIPHONG" />
       <End Role="PHONG" EntitySet="PHONG" />
     </AssociationSet>
->>>>>>> d7bba7d540189ab977fbb4f1e7f374c5768bd6d4
     <AssociationSet Name="FK_PHONG_TANG" Association="Self.FK_PHONG_TANG">
       <End Role="TANG" EntitySet="TANG" />
       <End Role="PHONG" EntitySet="PHONG" />

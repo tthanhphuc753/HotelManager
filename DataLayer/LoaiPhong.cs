@@ -20,9 +20,9 @@ namespace DataLayer
             this.PHONGs = new HashSet<PHONG>();
         }
     
-        public int Songuoimax { get; set; }
         public string IDloaiphong { get; set; }
-        public decimal Giatien { get; set; }
+        public Nullable<decimal> Giatien { get; set; }
+        public Nullable<int> Songuoimax { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PHONG> PHONGs { get; set; }

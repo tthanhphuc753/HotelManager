@@ -15,15 +15,14 @@ namespace DataLayer
     public partial class HOADON
     {
         public int IDhoadon { get; set; }
-
-  
-        public int IDkhachhang { get; set; }
-        public int IDphong { get; set; }
+        public Nullable<int> IDkhachhang { get; set; }
+        public Nullable<int> IDphong { get; set; }
         public Nullable<System.DateTime> Ngaydat { get; set; }
         public Nullable<System.DateTime> Ngaytra { get; set; }
         public Nullable<int> Songayo { get; set; }
-        public Nullable<Boolean> Trangthai { get; set; }
-        public decimal Tongtien { get; set; }
+        public Nullable<decimal> Tongtien { get; set; }
+        public Nullable<bool> Trangthai { get; set; }
+    
         public virtual KHACHHANG KHACHHANG { get; set; }
         public virtual PHONG PHONG { get; set; }
     }

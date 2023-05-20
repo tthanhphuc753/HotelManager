@@ -12,16 +12,12 @@ namespace DataLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class DATPHONG
+    public partial class sysdiagram
     {
-        public int IDdatphong { get; set; }
-        public Nullable<int> IDkhachhang { get; set; }
-        public Nullable<int> IDphong { get; set; }
-        public Nullable<System.DateTime> Ngaydat { get; set; }
-        public Nullable<System.DateTime> Ngaytra { get; set; }
-        public Nullable<int> Songayo { get; set; }
-    
-        public virtual KHACHHANG KHACHHANG { get; set; }
-        public virtual PHONG PHONG { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

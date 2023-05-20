@@ -7,7 +7,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 namespace DataLayer
 {
     [Serializable]
-    public partial class Entities
+    public partial class Entities 
     {
         private Entities(DbConnection connectionString, bool contextOwnsConnection = true)
             : base(connectionString, contextOwnsConnection) { }
