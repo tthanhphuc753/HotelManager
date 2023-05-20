@@ -20,6 +20,7 @@
     <Property Name="IDKhachhang" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Tenkhachhang" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="CCCD/CMND" Type="nchar" MaxLength="12" Nullable="false" />
+    <Property Name="Diachi" Type="nvarchar" MaxLength="50" />
     <Property Name="Loaikhach" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="LOAIPHONG">
@@ -39,16 +40,6 @@
     <Property Name="IDtang" Type="int" Nullable="false" />
     <Property Name="Trangthai" Type="bit" />
     <Property Name="IDloaiphong" Type="nchar" MaxLength="10" Nullable="false" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <EntityType Name="TAIKHOAN">
     <Key>
@@ -118,7 +109,6 @@
     <EntitySet Name="KHACHHANG" EntityType="Self.KHACHHANG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="LOAIPHONG" EntityType="Self.LOAIPHONG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PHONG" EntityType="Self.PHONG" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TAIKHOAN" EntityType="Self.TAIKHOAN" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TANG" EntityType="Self.TANG" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_DATPHONG_KHACHHANG" Association="Self.FK_DATPHONG_KHACHHANG">

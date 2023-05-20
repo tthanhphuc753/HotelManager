@@ -4,6 +4,7 @@ using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraBars.Ribbon.ViewInfo;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -56,7 +57,7 @@ namespace Hotel
         }
         private void HienThiPhong(bool status)
         {
-            string connectionString = "Data Source=SORA\\PHUCTT;Initial Catalog=HotelManager;Integrated Security=True;";
+            string connectionString = "Data Source=DESKTOP-LAUNSSS;Initial Catalog=HotelManager;Integrated Security=True;";
             try
             {
                 gridControl.Visible = true;
@@ -170,5 +171,65 @@ namespace Hotel
             _phong = new Phong();
             ShowRoom();
         }
+
+        private void srcPhong_EditValueChanged(object sender, EventArgs e)
+        {
+            string srcphong = srcPhong.EditValue?.ToString();
+            gControl.Gallery.Groups.Clear();
+            if( string.IsNullOrEmpty(srcphong))
+            {
+                ShowRoom();
+            }
+            else
+            {
+                HienThiPhongTimKiem(srcphong);
+            }
+
+        }
+        void HienThiPhongTimKiem(string srcphong)
+        {
+
+            List<GalleryItemGroup> filteredGroups = new List<GalleryItemGroup>();
+            var lsTang = _tang.getAll();
+
+            foreach (var t in lsTang)
+            {
+                var galleryItem = new GalleryItemGroup();
+                galleryItem.Caption = t.Tentang;
+                galleryItem.CaptionAlignment = GalleryItemGroupCaptionAlignment.Stretch;
+
+                var lsPhong = _phong.getByTang(t.IDtang);
+
+                foreach (var p in lsPhong)
+                {
+                    if (p.Tenphong.Contains(srcphong))
+                    {
+                        var gc_item = new GalleryItem();
+                        gc_item.Caption = p.Tenphong;
+                        gc_item.Value = p.IDphong;
+
+                        if (p.Trangthai == false)
+                            gc_item.ImageOptions.Image = imageList1.Images[0];
+                        else if (p.Trangthai == true)
+                            gc_item.ImageOptions.Image = imageList1.Images[1];
+
+                        galleryItem.Items.Add(gc_item);
+                    }
+                }
+                if (galleryItem.Items.Count > 0)
+                    filteredGroups.Add(galleryItem);
+            }
+            gControl.Gallery.Groups.AddRange(filteredGroups.ToArray());
+        }
+
+
+
+
+
+
+
+
+
     }
 }
+

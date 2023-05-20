@@ -23,6 +23,7 @@ namespace DataLayer
         public int IDKhachhang { get; set; }
         public string Tenkhachhang { get; set; }
         public string CCCD_CMND { get; set; }
+        public string Diachi { get; set; }
         public bool Loaikhach { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

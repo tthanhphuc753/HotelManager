@@ -172,7 +172,6 @@ C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.XtraBars.v22.
 C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.XtraTreeList.v22.2.xml
 C:\Users\Asus\source\repos\HotelManager\Hotel\obj\Debug\Hotel.csproj.AssemblyReference.cache
 C:\Users\Asus\source\repos\HotelManager\Hotel\obj\Debug\Hotel.DANGNHAP.resources
-C:\Users\Asus\source\repos\HotelManager\Hotel\obj\Debug\Hotel.Form1.resources
 C:\Users\Asus\source\repos\HotelManager\Hotel\obj\Debug\Hotel.frmketnoidb.resources
 C:\Users\Asus\source\repos\HotelManager\Hotel\obj\Debug\Hotel.Properties.Resources.resources
 C:\Users\Asus\source\repos\HotelManager\Hotel\obj\Debug\Hotel.csproj.GenerateResource.cache
@@ -284,3 +283,36 @@ C:\Games\GAME\HOTELMANAGER\New folder\Hotel\bin\Debug\DevExpress.XtraPivotGrid.v
 C:\Games\GAME\HOTELMANAGER\New folder\Hotel\bin\Debug\DevExpress.XtraDiagram.v22.2.xml
 C:\Games\GAME\HOTELMANAGER\New folder\Hotel\bin\Debug\DevExpress.Diagram.v22.2.Core.xml
 C:\Games\GAME\HOTELMANAGER\New folder\Hotel\obj\Debug\Hotel.Hoadon.resources
+C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.Charts.v22.2.Core.dll
+C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.PivotGrid.v22.2.Core.dll
+C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.RichEdit.v22.2.Export.dll
+C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.Utils.v22.2.UI.dll
+C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.XtraCharts.v22.2.dll
+C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.XtraGauges.v22.2.Core.dll
+C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.XtraReports.v22.2.dll
+C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.XtraReports.v22.2.Extensions.dll
+C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.XtraRichEdit.v22.2.dll
+C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.DataVisualization.v22.2.Core.dll
+C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.DataAccess.v22.2.UI.dll
+C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.XtraNavBar.v22.2.dll
+C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.XtraCharts.v22.2.Wizard.dll
+C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.XtraPivotGrid.v22.2.dll
+C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.XtraCharts.v22.2.Extensions.dll
+C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.Images.v22.2.dll
+C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.XtraDiagram.v22.2.dll
+C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.Diagram.v22.2.Core.dll
+C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.Charts.v22.2.Core.xml
+C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.PivotGrid.v22.2.Core.xml
+C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.Utils.v22.2.UI.xml
+C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.XtraCharts.v22.2.xml
+C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.XtraGauges.v22.2.Core.xml
+C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.XtraReports.v22.2.xml
+C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.XtraReports.v22.2.Extensions.xml
+C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.XtraRichEdit.v22.2.xml
+C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.DataAccess.v22.2.UI.xml
+C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.XtraNavBar.v22.2.xml
+C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.XtraCharts.v22.2.Wizard.xml
+C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.XtraPivotGrid.v22.2.xml
+C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.XtraDiagram.v22.2.xml
+C:\Users\Asus\source\repos\HotelManager\Hotel\bin\Debug\DevExpress.Diagram.v22.2.Core.xml
+C:\Users\Asus\source\repos\HotelManager\Hotel\obj\Debug\Hotel.Hoadon.resources

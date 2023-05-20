@@ -15,7 +15,7 @@ namespace Hotel
             InitializeComponent();
         }
 
-        string connectionString = "Data Source=SORA\\PHUCTT;Initial Catalog=HotelManager;Integrated Security=True;";
+        string connectionString = "Data Source=DESKTOP-LAUNSSS;Initial Catalog=HotelManager;Integrated Security=True;";
         private void btnHuy_Click(object sender, EventArgs e)
         {
             DatPhongCanceled?.Invoke(this, EventArgs.Empty);
