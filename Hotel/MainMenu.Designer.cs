@@ -58,6 +58,7 @@ namespace Hotel
             this.gridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gControl)).BeginInit();
@@ -66,6 +67,7 @@ namespace Hotel
             ((System.ComponentModel.ISupportInitialize)(this.virtualServerModeSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
@@ -235,8 +237,6 @@ namespace Hotel
             // 
             // popupMenu1
             // 
-            this.popupMenu1.ItemLinks.Add(this.btnTraPhong);
-            this.popupMenu1.ItemLinks.Add(this.btnCapNhatPhong);
             this.popupMenu1.ItemLinks.Add(this.btnThanhToan);
             this.popupMenu1.Name = "popupMenu1";
             this.popupMenu1.Ribbon = this.ribbon;
@@ -322,6 +322,7 @@ namespace Hotel
             ((System.ComponentModel.ISupportInitialize)(this.virtualServerModeSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -356,5 +357,6 @@ namespace Hotel
         private DevExpress.XtraBars.BarButtonItem btnTraPhong;
         private DevExpress.XtraBars.BarButtonItem btnCapNhatPhong;
         private DevExpress.XtraBars.BarButtonItem btnThanhToan;
+        private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
     }
 }

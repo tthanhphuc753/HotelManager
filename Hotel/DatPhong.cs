@@ -7,13 +7,18 @@ namespace Hotel
 {
     public partial class DatPhong : Form
     {
+
+        public event EventHandler DatPhongCanceled;
+
         public DatPhong()
         {
             InitializeComponent();
         }
+
         string connectionString = "Data Source=SORA\\PHUCTT;Initial Catalog=HotelManager;Integrated Security=True;";
         private void btnHuy_Click(object sender, EventArgs e)
         {
+            DatPhongCanceled?.Invoke(this, EventArgs.Empty);
             this.Close();
         }
 
@@ -27,6 +32,7 @@ namespace Hotel
             if (radioButtonA.Checked)
             {
                 HienThiPhong("A");
+                cbSoNguoi.Visible = true; 
             }
         }
 
@@ -35,6 +41,7 @@ namespace Hotel
             if (radioButtonB.Checked)
             {
                 HienThiPhong("B");
+                cbSoNguoi.Visible = true;
             }
         }
 
@@ -43,6 +50,7 @@ namespace Hotel
             if (radioButtonC.Checked)
             {
                 HienThiPhong("C");
+                cbSoNguoi.Visible = true;
             }
         }
         private void HienThiPhong(string loaiPhong)
@@ -50,7 +58,7 @@ namespace Hotel
 
             try
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     string query = "SELECT * FROM PHONG WHERE IDloaiphong = @loaiPhong AND Trangthai = 0";
                     SqlCommand cmd = new SqlCommand(query, conn);
@@ -163,16 +171,6 @@ namespace Hotel
 
         }
 
-
-        private void txtTongTien_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbQuocTich_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
         private void cbSoNguoi_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             TinhTongTien();

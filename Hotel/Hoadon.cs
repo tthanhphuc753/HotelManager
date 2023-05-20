@@ -5,6 +5,7 @@ namespace Hotel
 {
     public partial class Hoadon : DevExpress.XtraEditors.XtraForm
     {
+        public event EventHandler HoadonCompleted;
 
         public Hoadon(string tenphong)
         {
@@ -116,7 +117,9 @@ namespace Hotel
                 updatePhongCommand.Parameters.AddWithValue("@tenphong", Tenphong);
                 updatePhongCommand.ExecuteNonQuery();
                 this.Hide();
+
             }
+            HoadonCompleted?.Invoke(this, EventArgs.Empty);
         }
     }
 }

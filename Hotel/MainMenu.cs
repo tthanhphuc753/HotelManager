@@ -1,4 +1,4 @@
-using BusinessLayer;
+﻿using BusinessLayer;
 using DevExpress.Utils.Drawing;
 using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
@@ -104,7 +104,7 @@ namespace Hotel
             }
 
         }
-        public void MainMenu_Load(object sender, EventArgs e)
+        private void MainMenu_Load(object sender, EventArgs e)
         {
             _tang = new Tang();
             _phong = new Phong();
@@ -112,11 +112,10 @@ namespace Hotel
         }
 
 
-
-
         private void btnDatPhong_Click(object sender, EventArgs e)
         {
             DatPhong datphong = new DatPhong();
+            datphong.DatPhongCanceled += DatPhongCanceledHandler;
             datphong.ShowDialog();
         }
 
@@ -133,13 +132,14 @@ namespace Hotel
             {
 
                 hoadonForm = new Hoadon(tenphong);
+                hoadonForm.HoadonCompleted += HoadonCompletedHandler;
                 this.Hide();
                 hoadonForm.ShowDialog();
                 this.Show();
             }
             else
             {
-                MessageBox.Show("Vui lòng chọn một phòng trước khi thanh toán.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Thanh toán lỗi.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -153,6 +153,22 @@ namespace Hotel
                 tenphong = item.Caption.ToString();
 
             }
+        }
+ 
+        private void DatPhongCanceledHandler(object sender, EventArgs e)
+        {
+            UpdateRoomStatus();
+        }
+        private void HoadonCompletedHandler(object sender, EventArgs e)
+        {
+            UpdateRoomStatus();
+        }
+        private void UpdateRoomStatus()
+        {
+            gControl.Gallery.Groups.Clear();
+            _tang = new Tang();
+            _phong = new Phong();
+            ShowRoom();
         }
     }
 }
