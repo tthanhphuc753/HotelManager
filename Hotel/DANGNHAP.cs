@@ -21,7 +21,7 @@ namespace Hotel
         }
         private void btn_login_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-LAUNSSS;Initial Catalog=HotelManager;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-GUVFKN1\SQLNGHIA;Initial Catalog=HotelManager;Integrated Security=True");
             try
             {
                 conn.Open();

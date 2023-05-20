@@ -57,7 +57,7 @@ namespace Hotel
         }
         private void HienThiPhong(bool status)
         {
-            string connectionString = "Data Source=DESKTOP-LAUNSSS;Initial Catalog=HotelManager;Integrated Security=True;";
+            string connectionString = "Data Source=DESKTOP-GUVFKN1\\SQLNGHIA;Initial Catalog=HotelManager;Integrated Security=True;";
             try
             {
                 gridControl.Visible = true;

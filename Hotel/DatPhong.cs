@@ -15,7 +15,7 @@ namespace Hotel
             InitializeComponent();
         }
 
-        string connectionString = "Data Source=DESKTOP-LAUNSSS;Initial Catalog=HotelManager;Integrated Security=True;";
+        string connectionString = "Data Source=DESKTOP-GUVFKN1\\SQLNGHIA;Initial Catalog=HotelManager;Integrated Security=True;";
         private void btnHuy_Click(object sender, EventArgs e)
         {
             DatPhongCanceled?.Invoke(this, EventArgs.Empty);
@@ -114,6 +114,7 @@ namespace Hotel
         {
             string hoten = txtHoTen.Text;
             string cccd = txtCCCD.Text;
+            string diachi = txtDiaChi.Text;
             string quoctich = cbQuocTich.SelectedItem.ToString();
             bool Isnuocngoai = (cbQuocTich.SelectedItem.ToString() == "Nước ngoài");
 
@@ -128,10 +129,11 @@ namespace Hotel
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string insertKhachHangQuery = "INSERT INTO KHACHHANG (Tenkhachhang, [CCCD/CMND], Loaikhach) VALUES (@hoten, @cccd, @Isnuocngoai); SELECT SCOPE_IDENTITY();";
+                string insertKhachHangQuery = "INSERT INTO KHACHHANG (Tenkhachhang, [CCCD/CMND], Diachi, Loaikhach) VALUES (@hoten, @cccd, @diachi, @Isnuocngoai); SELECT SCOPE_IDENTITY();";
                 SqlCommand insertKhachHangCommand = new SqlCommand(insertKhachHangQuery, connection);
                 insertKhachHangCommand.Parameters.AddWithValue("@hoten", hoten);
                 insertKhachHangCommand.Parameters.AddWithValue("@cccd", cccd);
+                insertKhachHangCommand.Parameters.AddWithValue("@diachi", diachi);
                 insertKhachHangCommand.Parameters.AddWithValue("@Isnuocngoai", Isnuocngoai);
                 int idkhachhang = Convert.ToInt32(insertKhachHangCommand.ExecuteScalar());
 
@@ -175,5 +177,7 @@ namespace Hotel
         {
             TinhTongTien();
         }
+
+       
     }
 }
