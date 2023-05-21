@@ -57,7 +57,7 @@ namespace Hotel
         }
         private void HienThiPhong(bool status)
         {
-            string connectionString = @"Data Source=SORA\PHUCTT;Initial Catalog=HotelManager;Integrated Security=True;";
+            string connectionString = @"Data Source=DESKTOP-N744942\SQLANH;Initial Catalog=HotelManager;Integrated Security=True;";
             try
             {
                 gridControl.Visible = true;
@@ -222,14 +222,11 @@ namespace Hotel
             gControl.Gallery.Groups.AddRange(filteredGroups.ToArray());
         }
 
-
-
-
-
-
-
-
-
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            Thaydoi td = new Thaydoi();
+            td.ShowDialog();
+        }
     }
 }
 

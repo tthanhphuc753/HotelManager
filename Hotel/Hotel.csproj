@@ -128,6 +128,12 @@
     <Compile Include="Hoadon.Designer.cs">
       <DependentUpon>Hoadon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Thaydoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Thaydoi.Designer.cs">
+      <DependentUpon>Thaydoi.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DANGNHAP.resx">
       <DependentUpon>DANGNHAP.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,6 +159,9 @@
     </Compile>
     <EmbeddedResource Include="Hoadon.resx">
       <DependentUpon>Hoadon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thaydoi.resx">
+      <DependentUpon>Thaydoi.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />

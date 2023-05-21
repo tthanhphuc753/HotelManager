@@ -15,7 +15,7 @@ namespace Hotel
         }
         string idHoadon = "";
         string Tenphong = ""; 
-        string connectionString = @"Data Source=SORA\PHUCTT;Initial Catalog=HotelManager;Integrated Security=True;";
+        string connectionString = @"Data Source=DESKTOP-N744942\SQLANH;Initial Catalog=HotelManager;Integrated Security=True;";
 
         private void laythongtin(string tenphong)
         {

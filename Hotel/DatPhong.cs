@@ -15,7 +15,8 @@ namespace Hotel
             InitializeComponent();
         }
 
-        string connectionString = @"Data Source=SORA\PHUCTT;Initial Catalog=HotelManager;Integrated Security=True;";
+        string connectionString = @"Data Source=DESKTOP-N744942\SQLANH;Initial Catalog=HotelManager;Integrated Security=True;";
+        SqlConnection sqlcon = null;
         private void btnHuy_Click(object sender, EventArgs e)
         {
             DatPhongCanceled?.Invoke(this, EventArgs.Empty);
@@ -34,7 +35,36 @@ namespace Hotel
                 HienThiPhong("A");
                 cbSoNguoi.Visible = true; 
             }
-        }
+            if (sqlcon == null)
+            {
+                sqlcon = new SqlConnection(connectionString);
+            }
+            if (sqlcon.State == ConnectionState.Closed)
+            {
+                sqlcon.Open();
+            }
+
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "select * from LOAIPHONG where IDloaiphong = 'A'";
+
+            command.Connection = sqlcon;
+
+            cbSoNguoi.Items.Clear();
+            SqlDataReader reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                int songmax = reader.GetInt32(2);
+
+                for (int i = 0; i < songmax; i++)
+                {
+                    cbSoNguoi.Items.Add(i + 1);
+                }
+            }
+            reader.Close();
+
+        
+    }
 
         private void radioButtonB_CheckedChanged(object sender, EventArgs e)
         {
@@ -43,6 +73,33 @@ namespace Hotel
                 HienThiPhong("B");
                 cbSoNguoi.Visible = true;
             }
+            if (sqlcon == null)
+            {
+                sqlcon = new SqlConnection(connectionString);
+            }
+            if (sqlcon.State == ConnectionState.Closed)
+            {
+                sqlcon.Open();
+            }
+
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "select * from LOAIPHONG where IDloaiphong = 'B'";
+
+            command.Connection = sqlcon;
+
+            cbSoNguoi.Items.Clear();
+            SqlDataReader reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                int songmax = reader.GetInt32(2);
+
+                for (int i = 0; i < songmax; i++)
+                {
+                    cbSoNguoi.Items.Add(i + 1);
+                }
+            }
+            reader.Close();
         }
 
         private void radioButtonC_CheckedChanged(object sender, EventArgs e)
@@ -52,6 +109,33 @@ namespace Hotel
                 HienThiPhong("C");
                 cbSoNguoi.Visible = true;
             }
+            if (sqlcon == null)
+            {
+                sqlcon = new SqlConnection(connectionString);
+            }
+            if (sqlcon.State == ConnectionState.Closed)
+            {
+                sqlcon.Open();
+            }
+
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "select * from LOAIPHONG where IDloaiphong = 'C'";
+
+            command.Connection = sqlcon;
+
+            cbSoNguoi.Items.Clear();
+            SqlDataReader reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                int songmax = reader.GetInt32(2);
+
+                for (int i = 0; i < songmax; i++)
+                {
+                    cbSoNguoi.Items.Add(i + 1);
+                }
+            }
+            reader.Close();
         }
         private void HienThiPhong(string loaiPhong)
         {
@@ -81,10 +165,10 @@ namespace Hotel
             DateTime NgayDat = dtNgayDat.Value;
             DateTime NgayTra = dtNgayTra.Value;
             int songay = (int)(NgayTra - NgayDat).TotalDays + 1;
-
+            string quoctich ="";
             int phong = gridView1.FocusedRowHandle;
             string loaiphong = gridView1.GetRowCellValue(phong, "IDloaiphong").ToString();
-            string quoctich = cbQuocTich.SelectedItem.ToString();
+            quoctich = cbQuocTich.SelectedItem?.ToString();
             int songuoi = int.Parse(cbSoNguoi.SelectedItem.ToString());
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -126,6 +210,7 @@ namespace Hotel
             int idphong = 0;
             int phong = gridView1.FocusedRowHandle;
             string tenphong = gridView1.GetRowCellValue(phong, "Tenphong").ToString();
+            
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -175,7 +260,15 @@ namespace Hotel
 
         private void cbSoNguoi_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            TinhTongTien();
+            try
+            {
+
+                TinhTongTien();
+            }
+            catch(Exception exx)
+            {
+                MessageBox.Show("vui lòng chọn Quốc tịch");
+            }
         }
 
        

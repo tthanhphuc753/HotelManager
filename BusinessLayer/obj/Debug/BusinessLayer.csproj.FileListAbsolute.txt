@@ -177,3 +177,36 @@ C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\obj\Debug\BusinessLayer.
 C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
 C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\obj\Debug\BusinessLayer.dll
 C:\Games\GAME\HOTELMANAGER\New folder (2)\BusinessLayer\obj\Debug\BusinessLayer.pdb
+D:\Hotellf88\BusinessLayer\bin\Debug\BusinessLayer.dll.config
+D:\Hotellf88\BusinessLayer\bin\Debug\BusinessLayer.dll
+D:\Hotellf88\BusinessLayer\bin\Debug\BusinessLayer.pdb
+D:\Hotellf88\BusinessLayer\bin\Debug\DataLayer.dll
+D:\Hotellf88\BusinessLayer\bin\Debug\DevExpress.DataAccess.v22.2.dll
+D:\Hotellf88\BusinessLayer\bin\Debug\EntityFramework.dll
+D:\Hotellf88\BusinessLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\Hotellf88\BusinessLayer\bin\Debug\DevExpress.Data.v22.2.dll
+D:\Hotellf88\BusinessLayer\bin\Debug\DevExpress.Xpo.v22.2.dll
+D:\Hotellf88\BusinessLayer\bin\Debug\DevExpress.Printing.v22.2.Core.dll
+D:\Hotellf88\BusinessLayer\bin\Debug\DevExpress.CodeParser.v22.2.dll
+D:\Hotellf88\BusinessLayer\bin\Debug\DevExpress.RichEdit.v22.2.Core.dll
+D:\Hotellf88\BusinessLayer\bin\Debug\DevExpress.Office.v22.2.Core.dll
+D:\Hotellf88\BusinessLayer\bin\Debug\DevExpress.Drawing.v22.2.dll
+D:\Hotellf88\BusinessLayer\bin\Debug\DevExpress.Pdf.v22.2.Core.dll
+D:\Hotellf88\BusinessLayer\bin\Debug\DevExpress.Pdf.v22.2.Drawing.dll
+D:\Hotellf88\BusinessLayer\bin\Debug\DataLayer.pdb
+D:\Hotellf88\BusinessLayer\bin\Debug\DataLayer.dll.config
+D:\Hotellf88\BusinessLayer\bin\Debug\DevExpress.DataAccess.v22.2.xml
+D:\Hotellf88\BusinessLayer\bin\Debug\EntityFramework.xml
+D:\Hotellf88\BusinessLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Hotellf88\BusinessLayer\bin\Debug\DevExpress.Data.v22.2.xml
+D:\Hotellf88\BusinessLayer\bin\Debug\DevExpress.Xpo.v22.2.xml
+D:\Hotellf88\BusinessLayer\bin\Debug\DevExpress.Printing.v22.2.Core.xml
+D:\Hotellf88\BusinessLayer\bin\Debug\DevExpress.RichEdit.v22.2.Core.xml
+D:\Hotellf88\BusinessLayer\bin\Debug\DevExpress.Office.v22.2.Core.xml
+D:\Hotellf88\BusinessLayer\bin\Debug\DevExpress.Pdf.v22.2.Core.xml
+D:\Hotellf88\BusinessLayer\bin\Debug\DevExpress.Pdf.v22.2.Drawing.xml
+D:\Hotellf88\BusinessLayer\obj\Debug\BusinessLayer.csproj.AssemblyReference.cache
+D:\Hotellf88\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+D:\Hotellf88\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
+D:\Hotellf88\BusinessLayer\obj\Debug\BusinessLayer.dll
+D:\Hotellf88\BusinessLayer\obj\Debug\BusinessLayer.pdb
