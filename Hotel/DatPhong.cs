@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using BusinessLayer; 
 
 namespace Hotel
 {
@@ -14,8 +15,9 @@ namespace Hotel
         {
             InitializeComponent();
         }
+        
 
-        string connectionString = @"Data Source=DESKTOP-N744942\SQLANH;Initial Catalog=HotelManager;Integrated Security=True;";
+        string connectionString = @"Data Source=SORA\PHUCTT\SQLANH;Initial Catalog=HotelManager;Integrated Security=True;";
         SqlConnection sqlcon = null;
         private void btnHuy_Click(object sender, EventArgs e)
         {
@@ -214,7 +216,8 @@ namespace Hotel
                 string tenphong = gridView1.GetRowCellValue(phong, "Tenphong").ToString();
                 if (MessageBox.Show("Bạn có chắc thông tin chính xác chưa?", "Thông báo", MessageBoxButtons.YesNo) != DialogResult.No)
                 {
-                    using (SqlConnection connection = new SqlConnection(connectionString))
+                   
+                  using (SqlConnection connection = new SqlConnection(connectionString))
                     {
                         connection.Open();
                         string insertKhachHangQuery = "INSERT INTO KHACHHANG (Tenkhachhang, [CCCD/CMND], Diachi, Loaikhach) VALUES (@hoten, @cccd, @diachi, @Isnuocngoai); SELECT SCOPE_IDENTITY();";

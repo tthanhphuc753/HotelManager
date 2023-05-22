@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace BusinessLayer
 {
-    class KhachHang
+  public  class KhachHang
     {
         Entities db;
         public KhachHang()
@@ -14,6 +14,11 @@ namespace BusinessLayer
         public List<KHACHHANG> getAll()
         {
             return db.KHACHHANGs.ToList();
+        }
+
+        public void SaveAll(List<KHACHHANG> khachhangs)
+        {
+            db.SaveChanges();
         }
     }
 }

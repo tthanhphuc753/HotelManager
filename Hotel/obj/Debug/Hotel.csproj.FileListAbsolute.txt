@@ -576,3 +576,4 @@ D:\Hotellf88\Hotel\obj\Debug\Hotel.csproj.CopyComplete
 D:\Hotellf88\Hotel\obj\Debug\Hotel.exe
 D:\Hotellf88\Hotel\obj\Debug\Hotel.pdb
 D:\Hotellf88\Hotel\obj\Debug\Hotel.Thaydoi.resources
+C:\Games\GAME\HOTELMANAGER\New folder (2)\Hotel\obj\Debug\Hotel.Thaydoi.resources

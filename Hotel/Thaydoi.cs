@@ -16,7 +16,7 @@ namespace Hotel
     {
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source = DESKTOP-N744942\SQLANH;Initial Catalog = HotelManager; Integrated Security = True";
+        string str = @"Data Source = SORA\PHUCTT;Initial Catalog = HotelManager; Integrated Security = True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
 
