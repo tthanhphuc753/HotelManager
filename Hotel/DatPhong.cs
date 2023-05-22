@@ -17,7 +17,7 @@ namespace Hotel
         }
         
 
-        string connectionString = @"Data Source=SORA\PHUCTT\SQLANH;Initial Catalog=HotelManager;Integrated Security=True;";
+        string connectionString = @"Data Source=DESKTOP-GUVFKN1\SQLNGHIA;Initial Catalog=HotelManager;Integrated Security=True;";
         SqlConnection sqlcon = null;
         private void btnHuy_Click(object sender, EventArgs e)
         {
