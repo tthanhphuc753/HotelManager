@@ -196,65 +196,72 @@ namespace Hotel
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            string hoten = txtHoTen.Text;
-            string cccd = txtCCCD.Text;
-            string diachi = txtDiaChi.Text;
-            string quoctich = cbQuocTich.SelectedItem.ToString();
-            bool Isnuocngoai = (cbQuocTich.SelectedItem.ToString() == "Nước ngoài");
-
-            DateTime NgayDat = dtNgayDat.Value;
-            DateTime NgayTra = dtNgayTra.Value;
-            int songay = (int)(NgayTra - NgayDat).TotalDays;
-            decimal Tongtien = decimal.Parse(txtTongTien.Text);
-
-            int idphong = 0;
-            int phong = gridView1.FocusedRowHandle;
-            string tenphong = gridView1.GetRowCellValue(phong, "Tenphong").ToString();
-            
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            if (txtHoTen.Text != "" && txtCCCD.Text != "" && txtDiaChi.Text != "" && cbQuocTich.Text != "" && cbGioiTinh.Text != "" && cbSoNguoi.Text != "")
             {
-                connection.Open();
-                string insertKhachHangQuery = "INSERT INTO KHACHHANG (Tenkhachhang, [CCCD/CMND], Diachi, Loaikhach) VALUES (@hoten, @cccd, @diachi, @Isnuocngoai); SELECT SCOPE_IDENTITY();";
-                SqlCommand insertKhachHangCommand = new SqlCommand(insertKhachHangQuery, connection);
-                insertKhachHangCommand.Parameters.AddWithValue("@hoten", hoten);
-                insertKhachHangCommand.Parameters.AddWithValue("@cccd", cccd);
-                insertKhachHangCommand.Parameters.AddWithValue("@diachi", diachi);
-                insertKhachHangCommand.Parameters.AddWithValue("@Isnuocngoai", Isnuocngoai);
-                int idkhachhang = Convert.ToInt32(insertKhachHangCommand.ExecuteScalar());
+                string hoten = txtHoTen.Text;
+                string cccd = txtCCCD.Text;
+                string diachi = txtDiaChi.Text;
+                string quoctich = cbQuocTich.SelectedItem.ToString();
+                bool Isnuocngoai = (cbQuocTich.SelectedItem.ToString() == "Nước ngoài");
 
-                string getPhongIdQuery = "SELECT IDphong FROM PHONG WHERE Tenphong = @tenphong;";
-                SqlCommand getPhongIdCommand = new SqlCommand(getPhongIdQuery, connection);
-                getPhongIdCommand.Parameters.AddWithValue("@tenphong", tenphong);
-                idphong = Convert.ToInt32(getPhongIdCommand.ExecuteScalar());
+                DateTime NgayDat = dtNgayDat.Value;
+                DateTime NgayTra = dtNgayTra.Value;
+                int songay = (int)(NgayTra - NgayDat).TotalDays;
+                decimal Tongtien = decimal.Parse(txtTongTien.Text);
 
-                string insertDatPhongQuery = "INSERT INTO HOADON (IDkhachhang, IDphong, Ngaydat, Ngaytra, Songayo,Tongtien) VALUES (@idkhachhang, @idphong, @NgayDat, @NgayTra, @songay,@tongtien);";
-                SqlCommand insertDatPhongCommand = new SqlCommand(insertDatPhongQuery, connection);
-                insertDatPhongCommand.Parameters.AddWithValue("@idkhachhang", idkhachhang);
-                insertDatPhongCommand.Parameters.AddWithValue("@idphong", idphong);
-                insertDatPhongCommand.Parameters.AddWithValue("@NgayDat", NgayDat);
-                insertDatPhongCommand.Parameters.AddWithValue("@NgayTra", NgayTra);
-                insertDatPhongCommand.Parameters.AddWithValue("@songay", songay);
-                insertDatPhongCommand.Parameters.AddWithValue("@tongtien", Tongtien);
-                insertDatPhongCommand.Parameters.AddWithValue("@songayo", songay);
+                int idphong = 0;
+                int phong = gridView1.FocusedRowHandle;
+                string tenphong = gridView1.GetRowCellValue(phong, "Tenphong").ToString();
+                if (MessageBox.Show("Bạn có chắc thông tin chính xác chưa?", "Thông báo", MessageBoxButtons.YesNo) != DialogResult.No)
+                {
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
+                        string insertKhachHangQuery = "INSERT INTO KHACHHANG (Tenkhachhang, [CCCD/CMND], Diachi, Loaikhach) VALUES (@hoten, @cccd, @diachi, @Isnuocngoai); SELECT SCOPE_IDENTITY();";
+                        SqlCommand insertKhachHangCommand = new SqlCommand(insertKhachHangQuery, connection);
+                        insertKhachHangCommand.Parameters.AddWithValue("@hoten", hoten);
+                        insertKhachHangCommand.Parameters.AddWithValue("@cccd", cccd);
+                        insertKhachHangCommand.Parameters.AddWithValue("@diachi", diachi);
+                        insertKhachHangCommand.Parameters.AddWithValue("@Isnuocngoai", Isnuocngoai);
+                        int idkhachhang = Convert.ToInt32(insertKhachHangCommand.ExecuteScalar());
 
-                insertDatPhongCommand.ExecuteNonQuery();
-                string updateHoadonquery = "UPDATE HOADON SET Trangthai = 0 WHERE IDphong = (SELECT IDphong FROM PHONG WHERE Tenphong = @tenphong)";
+                        string getPhongIdQuery = "SELECT IDphong FROM PHONG WHERE Tenphong = @tenphong;";
+                        SqlCommand getPhongIdCommand = new SqlCommand(getPhongIdQuery, connection);
+                        getPhongIdCommand.Parameters.AddWithValue("@tenphong", tenphong);
+                        idphong = Convert.ToInt32(getPhongIdCommand.ExecuteScalar());
 
-                string updatePhongQuery = "UPDATE PHONG SET Trangthai = 1 WHERE Tenphong = @tenphong;";
+                        string insertDatPhongQuery = "INSERT INTO HOADON (IDkhachhang, IDphong, Ngaydat, Ngaytra, Songayo,Tongtien) VALUES (@idkhachhang, @idphong, @NgayDat, @NgayTra, @songay,@tongtien);";
+                        SqlCommand insertDatPhongCommand = new SqlCommand(insertDatPhongQuery, connection);
+                        insertDatPhongCommand.Parameters.AddWithValue("@idkhachhang", idkhachhang);
+                        insertDatPhongCommand.Parameters.AddWithValue("@idphong", idphong);
+                        insertDatPhongCommand.Parameters.AddWithValue("@NgayDat", NgayDat);
+                        insertDatPhongCommand.Parameters.AddWithValue("@NgayTra", NgayTra);
+                        insertDatPhongCommand.Parameters.AddWithValue("@songay", songay);
+                        insertDatPhongCommand.Parameters.AddWithValue("@tongtien", Tongtien);
+                        insertDatPhongCommand.Parameters.AddWithValue("@songayo", songay);
 
-                SqlCommand updatePhongCommand = new SqlCommand(updatePhongQuery, connection);
-                SqlCommand updateHoadonCommand = new SqlCommand(updateHoadonquery, connection);
+                        insertDatPhongCommand.ExecuteNonQuery();
+                        string updateHoadonquery = "UPDATE HOADON SET Trangthai = 0 WHERE IDphong = (SELECT IDphong FROM PHONG WHERE Tenphong = @tenphong)";
 
-                updatePhongCommand.Parameters.AddWithValue("@tenphong", tenphong);
-                updateHoadonCommand.Parameters.AddWithValue("@tenphong", tenphong);
+                        string updatePhongQuery = "UPDATE PHONG SET Trangthai = 1 WHERE Tenphong = @tenphong;";
 
-                updateHoadonCommand.ExecuteNonQuery();
-                updatePhongCommand.ExecuteNonQuery();
+                        SqlCommand updatePhongCommand = new SqlCommand(updatePhongQuery, connection);
+                        SqlCommand updateHoadonCommand = new SqlCommand(updateHoadonquery, connection);
 
-                connection.Close();
+                        updatePhongCommand.Parameters.AddWithValue("@tenphong", tenphong);
+                        updateHoadonCommand.Parameters.AddWithValue("@tenphong", tenphong);
+
+                        updateHoadonCommand.ExecuteNonQuery();
+                        updatePhongCommand.ExecuteNonQuery();
+
+                        connection.Close();
+                    }
+                    MessageBox.Show("Lưu thành công");
+                }
+                
             }
-            MessageBox.Show("Lưu thành công");
-
+            else { MessageBox.Show("Cần điền đầy đủ thông tin", "Thông báo"); }
+            
 
         }
 
@@ -271,6 +278,9 @@ namespace Hotel
             }
         }
 
-       
+        private void gControl1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
