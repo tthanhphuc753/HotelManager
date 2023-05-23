@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace BusinessLayer
 {
-    class LoaiPhong
+    public class LoaiPhong
     {
         private Entities db;
 

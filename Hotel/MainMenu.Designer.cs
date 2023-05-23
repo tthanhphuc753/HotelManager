@@ -72,8 +72,9 @@ namespace Hotel
             // 
             // ribbon
             // 
-            this.ribbon.CaptionBarItemLinks.Add(this.srcPhong);
-            this.ribbon.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(35, 37, 35, 37);
+            // 
+            // 
+            // 
             this.ribbon.ExpandCollapseItem.Id = 0;
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.srcPhong,
@@ -90,17 +91,16 @@ namespace Hotel
             this.btnCapNhatPhong,
             this.btnThanhToan});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
+            this.ribbon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ribbon.MaxItemId = 18;
             this.ribbon.Name = "ribbon";
-            this.ribbon.OptionsMenuMinWidth = 385;
             this.ribbon.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbon.QuickToolbarItemLinks.Add(this.btnHome);
             this.ribbon.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemSearchControl1});
-            this.ribbon.Size = new System.Drawing.Size(1062, 193);
+            this.ribbon.Size = new System.Drawing.Size(910, 158);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // srcPhong
@@ -205,24 +205,25 @@ namespace Hotel
             // 
             // ribbonPageGroup1
             // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.barMenu);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 671);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 546);
+            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1062, 30);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(910, 24);
             // 
             // gControl
             // 
             this.gControl.Controls.Add(this.galleryControlClient1);
             this.gControl.Dock = System.Windows.Forms.DockStyle.Right;
-            this.gControl.Location = new System.Drawing.Point(269, 193);
+            this.gControl.Location = new System.Drawing.Point(230, 158);
+            this.gControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gControl.Name = "gControl";
             this.ribbon.SetPopupContextMenu(this.gControl, this.popupMenu1);
-            this.gControl.Size = new System.Drawing.Size(793, 478);
+            this.gControl.Size = new System.Drawing.Size(680, 388);
             this.gControl.TabIndex = 16;
             this.gControl.Text = "Control";
             // 
@@ -230,37 +231,41 @@ namespace Hotel
             // 
             this.galleryControlClient1.GalleryControl = this.gControl;
             this.galleryControlClient1.Location = new System.Drawing.Point(2, 2);
-            this.galleryControlClient1.Size = new System.Drawing.Size(768, 474);
+            this.galleryControlClient1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.galleryControlClient1.Size = new System.Drawing.Size(659, 384);
             // 
             // popupMenu1
             // 
-            this.popupMenu1.ItemLinks.Add(this.btnThanhToan);
             this.popupMenu1.Name = "popupMenu1";
             this.popupMenu1.Ribbon = this.ribbon;
             this.popupMenu1.Popup += new System.EventHandler(this.popupMenu1_Popup_1);
             // 
             // btnDatPhong
             // 
-            this.btnDatPhong.Location = new System.Drawing.Point(30, 243);
+            this.btnDatPhong.Location = new System.Drawing.Point(26, 197);
+            this.btnDatPhong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDatPhong.Name = "btnDatPhong";
-            this.btnDatPhong.Size = new System.Drawing.Size(109, 29);
+            this.btnDatPhong.Size = new System.Drawing.Size(93, 24);
             this.btnDatPhong.TabIndex = 5;
             this.btnDatPhong.Text = "Đặt phòng";
             this.btnDatPhong.Click += new System.EventHandler(this.btnDatPhong_Click);
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(30, 333);
+            this.simpleButton2.Location = new System.Drawing.Point(26, 271);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(109, 29);
+            this.simpleButton2.Size = new System.Drawing.Size(93, 24);
             this.simpleButton2.TabIndex = 9;
             this.simpleButton2.Text = "Báo cáo tháng";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // simpleButton3
             // 
-            this.simpleButton3.Location = new System.Drawing.Point(30, 411);
+            this.simpleButton3.Location = new System.Drawing.Point(26, 334);
+            this.simpleButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(109, 29);
+            this.simpleButton3.Size = new System.Drawing.Size(93, 24);
             this.simpleButton3.TabIndex = 10;
             this.simpleButton3.Text = "Thay đổi quy định";
             this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
@@ -292,15 +297,16 @@ namespace Hotel
             // 
             // MainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1062, 701);
+            this.ClientSize = new System.Drawing.Size(910, 570);
             this.Controls.Add(this.gControl);
             this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.btnDatPhong);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainMenu";
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
