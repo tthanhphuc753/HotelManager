@@ -20,5 +20,10 @@ namespace BusinessLayer
         {
             return db.PHONGs.Where(x => x.IDtang == idTang).ToList();
         }
+        public List<PHONG> GetAllByStatus(bool status)
+        {
+            return db.PHONGs.Where(p => p.Trangthai == status).ToList();
+        }
+
     }
 }
