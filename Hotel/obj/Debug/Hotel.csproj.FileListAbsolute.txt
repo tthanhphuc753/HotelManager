@@ -644,3 +644,4 @@ E:\database\Hotel\obj\Debug\Hotel.csproj.CoreCompileInputs.cache
 E:\database\Hotel\obj\Debug\Hotel.csproj.CopyComplete
 E:\database\Hotel\obj\Debug\Hotel.exe
 E:\database\Hotel\obj\Debug\Hotel.pdb
+C:\Games\GAME\HOTELMANAGER\New folder (2)\Hotel\obj\Debug\Hotel.Baocao.resources
