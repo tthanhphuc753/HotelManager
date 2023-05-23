@@ -30,7 +30,9 @@ namespace Hotel
         private void InitializeComponent()
         {
             this.gControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,6 +42,7 @@ namespace Hotel
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.gControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.lblthongbao = new DevExpress.XtraEditors.LabelControl();
             this.radioButtonB = new System.Windows.Forms.RadioButton();
             this.radioButtonC = new System.Windows.Forms.RadioButton();
             this.radioButtonA = new System.Windows.Forms.RadioButton();
@@ -61,8 +64,6 @@ namespace Hotel
             this.label2 = new System.Windows.Forms.Label();
             this.dtNgayDat = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtDiaChi = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gControl1)).BeginInit();
             this.gControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gControl2)).BeginInit();
@@ -86,31 +87,50 @@ namespace Hotel
             this.gControl1.Controls.Add(this.label1);
             this.gControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.gControl1.Location = new System.Drawing.Point(0, 0);
-            this.gControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.gControl1.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
             this.gControl1.Name = "gControl1";
-            this.gControl1.Size = new System.Drawing.Size(487, 611);
+            this.gControl1.Size = new System.Drawing.Size(1095, 764);
             this.gControl1.TabIndex = 0;
-            this.gControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.gControl1_Paint);
+            //
+            // txtDiaChi
+            // 
+            this.txtDiaChi.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiaChi.Location = new System.Drawing.Point(420, 663);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(10, 12, 10, 12);
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(415, 27);
+            this.txtDiaChi.TabIndex = 3;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(58, 377);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(130, 849);
+            this.label8.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 22);
+            this.label8.Size = new System.Drawing.Size(97, 27);
             this.label8.TabIndex = 9;
             this.label8.Text = "Giới tính";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(159, 669);
+            this.label13.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(81, 27);
+            this.label13.TabIndex = 2;
+            this.label13.Text = "Địa chỉ";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(50, 337);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(112, 759);
+            this.label6.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 22);
+            this.label6.Size = new System.Drawing.Size(106, 27);
             this.label6.TabIndex = 8;
             this.label6.Text = "Quốc tịch";
             // 
@@ -118,10 +138,10 @@ namespace Hotel
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 257);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(27, 579);
+            this.label4.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(127, 22);
+            this.label4.Size = new System.Drawing.Size(155, 27);
             this.label4.TabIndex = 7;
             this.label4.Text = "CMND/CCCD";
             // 
@@ -129,10 +149,10 @@ namespace Hotel
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(77, 217);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(174, 489);
+            this.label3.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 22);
+            this.label3.Size = new System.Drawing.Size(77, 27);
             this.label3.TabIndex = 6;
             this.label3.Text = "Họ tên";
             // 
@@ -142,10 +162,10 @@ namespace Hotel
             this.cbGioiTinh.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.cbGioiTinh.Location = new System.Drawing.Point(187, 378);
-            this.cbGioiTinh.Margin = new System.Windows.Forms.Padding(4);
+            this.cbGioiTinh.Location = new System.Drawing.Point(420, 850);
+            this.cbGioiTinh.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
             this.cbGioiTinh.Name = "cbGioiTinh";
-            this.cbGioiTinh.Size = new System.Drawing.Size(156, 24);
+            this.cbGioiTinh.Size = new System.Drawing.Size(346, 27);
             this.cbGioiTinh.TabIndex = 4;
             // 
             // cbQuocTich
@@ -154,43 +174,44 @@ namespace Hotel
             this.cbQuocTich.Items.AddRange(new object[] {
             "Nội địa",
             "Nước ngoài"});
-            this.cbQuocTich.Location = new System.Drawing.Point(187, 337);
-            this.cbQuocTich.Margin = new System.Windows.Forms.Padding(4);
+            this.cbQuocTich.Location = new System.Drawing.Point(420, 759);
+            this.cbQuocTich.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
             this.cbQuocTich.Name = "cbQuocTich";
-            this.cbQuocTich.Size = new System.Drawing.Size(156, 24);
+            this.cbQuocTich.Size = new System.Drawing.Size(346, 27);
             this.cbQuocTich.TabIndex = 3;
             // 
             // txtCCCD
             // 
-            this.txtCCCD.Location = new System.Drawing.Point(187, 257);
-            this.txtCCCD.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCCCD.Location = new System.Drawing.Point(420, 579);
+            this.txtCCCD.Margin = new System.Windows.Forms.Padding(10, 12, 10, 12);
             this.txtCCCD.Multiline = true;
             this.txtCCCD.Name = "txtCCCD";
-            this.txtCCCD.Size = new System.Drawing.Size(197, 27);
+            this.txtCCCD.Size = new System.Drawing.Size(439, 67);
             this.txtCCCD.TabIndex = 2;
             // 
             // txtHoTen
             // 
-            this.txtHoTen.Location = new System.Drawing.Point(187, 217);
-            this.txtHoTen.Margin = new System.Windows.Forms.Padding(4);
+            this.txtHoTen.Location = new System.Drawing.Point(420, 489);
+            this.txtHoTen.Margin = new System.Windows.Forms.Padding(10, 12, 10, 12);
             this.txtHoTen.Multiline = true;
             this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(197, 27);
+            this.txtHoTen.Size = new System.Drawing.Size(439, 67);
             this.txtHoTen.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 84);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(21, 189);
+            this.label1.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(343, 40);
+            this.label1.Size = new System.Drawing.Size(417, 48);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thông Tin Khách hàng";
             // 
             // gControl2
             // 
+            this.gControl2.Controls.Add(this.lblthongbao);
             this.gControl2.Controls.Add(this.radioButtonB);
             this.gControl2.Controls.Add(this.radioButtonC);
             this.gControl2.Controls.Add(this.radioButtonA);
@@ -209,20 +230,33 @@ namespace Hotel
             this.gControl2.Controls.Add(this.dtNgayDat);
             this.gControl2.Controls.Add(this.label10);
             this.gControl2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.gControl2.Location = new System.Drawing.Point(486, 0);
-            this.gControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.gControl2.Location = new System.Drawing.Point(-464, 0);
+            this.gControl2.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
             this.gControl2.Name = "gControl2";
-            this.gControl2.Size = new System.Drawing.Size(899, 611);
+            this.gControl2.Size = new System.Drawing.Size(2022, 764);
             this.gControl2.TabIndex = 1;
+            // 
+            // lblthongbao
+            // 
+            this.lblthongbao.Appearance.Font = new System.Drawing.Font("Times New Roman", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblthongbao.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.lblthongbao.Appearance.Options.UseFont = true;
+            this.lblthongbao.Appearance.Options.UseForeColor = true;
+            this.lblthongbao.Location = new System.Drawing.Point(1395, 698);
+            this.lblthongbao.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.lblthongbao.Name = "lblthongbao";
+            this.lblthongbao.Size = new System.Drawing.Size(7, 16);
+            this.lblthongbao.TabIndex = 20;
+            this.lblthongbao.Text = "1";
             // 
             // radioButtonB
             // 
             this.radioButtonB.AutoSize = true;
             this.radioButtonB.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonB.Location = new System.Drawing.Point(275, 217);
-            this.radioButtonB.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButtonB.Location = new System.Drawing.Point(618, 489);
+            this.radioButtonB.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
             this.radioButtonB.Name = "radioButtonB";
-            this.radioButtonB.Size = new System.Drawing.Size(44, 26);
+            this.radioButtonB.Size = new System.Drawing.Size(53, 31);
             this.radioButtonB.TabIndex = 19;
             this.radioButtonB.TabStop = true;
             this.radioButtonB.Tag = "";
@@ -234,10 +268,10 @@ namespace Hotel
             // 
             this.radioButtonC.AutoSize = true;
             this.radioButtonC.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonC.Location = new System.Drawing.Point(380, 217);
-            this.radioButtonC.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButtonC.Location = new System.Drawing.Point(855, 489);
+            this.radioButtonC.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
             this.radioButtonC.Name = "radioButtonC";
-            this.radioButtonC.Size = new System.Drawing.Size(44, 26);
+            this.radioButtonC.Size = new System.Drawing.Size(53, 31);
             this.radioButtonC.TabIndex = 18;
             this.radioButtonC.TabStop = true;
             this.radioButtonC.Tag = "";
@@ -249,10 +283,10 @@ namespace Hotel
             // 
             this.radioButtonA.AutoSize = true;
             this.radioButtonA.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonA.Location = new System.Drawing.Point(169, 217);
-            this.radioButtonA.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButtonA.Location = new System.Drawing.Point(381, 489);
+            this.radioButtonA.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
             this.radioButtonA.Name = "radioButtonA";
-            this.radioButtonA.Size = new System.Drawing.Size(45, 26);
+            this.radioButtonA.Size = new System.Drawing.Size(54, 31);
             this.radioButtonA.TabIndex = 17;
             this.radioButtonA.TabStop = true;
             this.radioButtonA.Tag = "";
@@ -264,31 +298,31 @@ namespace Hotel
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(32, 222);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(72, 500);
+            this.label12.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(98, 22);
+            this.label12.Size = new System.Drawing.Size(121, 27);
             this.label12.TabIndex = 15;
             this.label12.Text = "Loại phòng";
             // 
             // txtTongTien
             // 
-            this.txtTongTien.Location = new System.Drawing.Point(595, 463);
-            this.txtTongTien.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTongTien.Location = new System.Drawing.Point(1338, 1041);
+            this.txtTongTien.Margin = new System.Windows.Forms.Padding(10, 12, 10, 12);
             this.txtTongTien.Multiline = true;
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.ReadOnly = true;
-            this.txtTongTien.Size = new System.Drawing.Size(156, 25);
+            this.txtTongTien.Size = new System.Drawing.Size(346, 64);
             this.txtTongTien.TabIndex = 14;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(492, 465);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(1107, 1047);
+            this.label11.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(84, 22);
+            this.label11.Size = new System.Drawing.Size(103, 27);
             this.label11.TabIndex = 13;
             this.label11.Text = "Tổng tiền";
             // 
@@ -296,20 +330,20 @@ namespace Hotel
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(497, 284);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(1119, 639);
+            this.label9.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(82, 22);
+            this.label9.Size = new System.Drawing.Size(97, 27);
             this.label9.TabIndex = 12;
             this.label9.Text = "Số người";
             // 
             // cbSoNguoi
             // 
             this.cbSoNguoi.FormattingEnabled = true;
-            this.cbSoNguoi.Location = new System.Drawing.Point(620, 285);
-            this.cbSoNguoi.Margin = new System.Windows.Forms.Padding(4);
+            this.cbSoNguoi.Location = new System.Drawing.Point(1395, 642);
+            this.cbSoNguoi.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
             this.cbSoNguoi.Name = "cbSoNguoi";
-            this.cbSoNguoi.Size = new System.Drawing.Size(156, 24);
+            this.cbSoNguoi.Size = new System.Drawing.Size(346, 27);
             this.cbSoNguoi.TabIndex = 10;
             this.cbSoNguoi.Visible = false;
             this.cbSoNguoi.SelectedIndexChanged += new System.EventHandler(this.cbSoNguoi_SelectedIndexChanged_1);
@@ -318,10 +352,10 @@ namespace Hotel
             // 
             this.btnHuy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHuy.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Location = new System.Drawing.Point(655, 537);
-            this.btnHuy.Margin = new System.Windows.Forms.Padding(4);
+            this.btnHuy.Location = new System.Drawing.Point(1473, 1209);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(108, 37);
+            this.btnHuy.Size = new System.Drawing.Size(243, 84);
             this.btnHuy.TabIndex = 11;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
@@ -331,10 +365,10 @@ namespace Hotel
             // 
             this.btnLuu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLuu.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Location = new System.Drawing.Point(501, 537);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLuu.Location = new System.Drawing.Point(1128, 1209);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(108, 37);
+            this.btnLuu.Size = new System.Drawing.Size(243, 84);
             this.btnLuu.TabIndex = 10;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
@@ -343,21 +377,21 @@ namespace Hotel
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(132, 265);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(297, 597);
+            this.label7.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(121, 17);
+            this.label7.Size = new System.Drawing.Size(137, 19);
             this.label7.TabIndex = 9;
             this.label7.Text = "Danh sách phòng ";
             // 
             // gControl
             // 
-            this.gControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.gControl.Location = new System.Drawing.Point(37, 284);
+            this.gControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.gControl.Location = new System.Drawing.Point(84, 639);
             this.gControl.MainView = this.gridView1;
-            this.gControl.Margin = new System.Windows.Forms.Padding(4);
+            this.gControl.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
             this.gControl.Name = "gControl";
-            this.gControl.Size = new System.Drawing.Size(429, 281);
+            this.gControl.Size = new System.Drawing.Size(966, 633);
             this.gControl.TabIndex = 8;
             this.gControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -368,7 +402,7 @@ namespace Hotel
             this.Tang,
             this.TenPhong,
             this.LoaiPhong});
-            this.gridView1.DetailHeight = 431;
+            this.gridView1.DetailHeight = 969;
             this.gridView1.GridControl = this.gControl;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
@@ -377,54 +411,54 @@ namespace Hotel
             // 
             this.Tang.Caption = "Tầng";
             this.Tang.FieldName = "IDtang";
-            this.Tang.MinWidth = 27;
+            this.Tang.MinWidth = 60;
             this.Tang.Name = "Tang";
             this.Tang.OptionsColumn.AllowEdit = false;
             this.Tang.OptionsColumn.AllowMove = false;
             this.Tang.Visible = true;
             this.Tang.VisibleIndex = 0;
-            this.Tang.Width = 100;
+            this.Tang.Width = 225;
             // 
             // TenPhong
             // 
             this.TenPhong.Caption = "Tên Phòng";
             this.TenPhong.FieldName = "Tenphong";
-            this.TenPhong.MinWidth = 27;
+            this.TenPhong.MinWidth = 60;
             this.TenPhong.Name = "TenPhong";
             this.TenPhong.OptionsColumn.AllowEdit = false;
             this.TenPhong.OptionsColumn.AllowMove = false;
             this.TenPhong.Visible = true;
             this.TenPhong.VisibleIndex = 1;
-            this.TenPhong.Width = 100;
+            this.TenPhong.Width = 225;
             // 
             // LoaiPhong
             // 
             this.LoaiPhong.Caption = "Loại Phòng";
             this.LoaiPhong.FieldName = "IDloaiphong";
-            this.LoaiPhong.MinWidth = 27;
+            this.LoaiPhong.MinWidth = 60;
             this.LoaiPhong.Name = "LoaiPhong";
             this.LoaiPhong.OptionsColumn.AllowEdit = false;
             this.LoaiPhong.OptionsColumn.AllowMove = false;
             this.LoaiPhong.Visible = true;
             this.LoaiPhong.VisibleIndex = 2;
-            this.LoaiPhong.Width = 100;
+            this.LoaiPhong.Width = 225;
             // 
             // dtNgayTra
             // 
-            this.dtNgayTra.Location = new System.Drawing.Point(546, 164);
-            this.dtNgayTra.Margin = new System.Windows.Forms.Padding(4);
+            this.dtNgayTra.Location = new System.Drawing.Point(1228, 369);
+            this.dtNgayTra.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
             this.dtNgayTra.Name = "dtNgayTra";
-            this.dtNgayTra.Size = new System.Drawing.Size(255, 23);
+            this.dtNgayTra.Size = new System.Drawing.Size(568, 27);
             this.dtNgayTra.TabIndex = 7;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(435, 165);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(978, 372);
+            this.label5.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 22);
+            this.label5.Size = new System.Drawing.Size(95, 27);
             this.label5.TabIndex = 6;
             this.label5.Text = "Ngày trả";
             // 
@@ -432,60 +466,40 @@ namespace Hotel
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(25, 165);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(57, 372);
+            this.label2.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 22);
+            this.label2.Size = new System.Drawing.Size(99, 27);
             this.label2.TabIndex = 5;
             this.label2.Text = "Ngày đặt";
             // 
             // dtNgayDat
             // 
-            this.dtNgayDat.Location = new System.Drawing.Point(135, 165);
-            this.dtNgayDat.Margin = new System.Windows.Forms.Padding(4);
+            this.dtNgayDat.Location = new System.Drawing.Point(303, 372);
+            this.dtNgayDat.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
             this.dtNgayDat.Name = "dtNgayDat";
-            this.dtNgayDat.Size = new System.Drawing.Size(255, 23);
+            this.dtNgayDat.Size = new System.Drawing.Size(568, 27);
             this.dtNgayDat.TabIndex = 4;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(143, 84);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(321, 189);
+            this.label10.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(357, 40);
+            this.label10.Size = new System.Drawing.Size(433, 48);
             this.label10.TabIndex = 3;
             this.label10.Text = "Thông tin chi tiết phòng";
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(71, 297);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(68, 22);
-            this.label13.TabIndex = 2;
-            this.label13.Text = "Địa chỉ";
-            // 
-            // txtDiaChi
-            // 
-            this.txtDiaChi.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi.Location = new System.Drawing.Point(187, 295);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(187, 24);
-            this.txtDiaChi.TabIndex = 3;
-            // 
             // DatPhong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1385, 611);
+            this.ClientSize = new System.Drawing.Size(1558, 764);
             this.Controls.Add(this.gControl2);
             this.Controls.Add(this.gControl1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "DatPhong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đặt Phòng";
@@ -538,5 +552,6 @@ namespace Hotel
         private DevExpress.XtraGrid.Columns.GridColumn LoaiPhong;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtDiaChi;
+        private DevExpress.XtraEditors.LabelControl lblthongbao;
     }
 }

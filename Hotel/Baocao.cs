@@ -109,7 +109,12 @@ namespace Hotel
                 bc = new Baocaomdsdp() { tenPhong = p.Tenphong, soNgayThue = songaythue, tyLe = songaythue / tong * 100 };
                 ds.Add(bc);
             }
-            dataGridView1.DataSource = ds;
+            if(ds.Count >0 )
+            {
+                dataGridView1.DataSource = ds;
+
+            }
+           
         }
        
 
