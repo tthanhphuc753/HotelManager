@@ -50,31 +50,37 @@ namespace Hotel
                     tong = tong + (decimal)hd1.Tongtien;
                 }
             }
-            List<Baocaodt> ds = new List<Baocaodt>();
-            foreach (var lp in lsloaiphong)
+            if (tong != 0)
             {
-                Baocaodt bc;
-                decimal doanhthu = 0;
-                foreach (var hd in lshoadon)
+                List<Baocaodt> ds = new List<Baocaodt>();
+                foreach (var lp in lsloaiphong)
                 {
-                    foreach (var p in lsphong)
+                    Baocaodt bc;
+                    decimal doanhthu = 0;
+                    foreach (var hd in lshoadon)
                     {
-                        if (hd.IDphong == p.IDphong)
+                        foreach (var p in lsphong)
                         {
-                            if (lp.IDloaiphong == p.IDloaiphong)
+                            if (hd.IDphong == p.IDphong)
                             {
-                                if (hd.Ngaydat >= tungay && hd.Ngaytra <= denngay)
+                                if (lp.IDloaiphong == p.IDloaiphong)
                                 {
-                                    doanhthu = doanhthu + (decimal)hd.Tongtien;
+                                    if (hd.Ngaydat >= tungay && hd.Ngaytra <= denngay)
+                                    {
+                                        doanhthu = doanhthu + (decimal)hd.Tongtien;
+                                    }
                                 }
                             }
                         }
                     }
+                    bc = new Baocaodt() { loaiPhong = lp.IDloaiphong, doanhThu = doanhthu, tyLe = doanhthu / tong * 100 };
+                    ds.Add(bc);
+
                 }
-                bc = new Baocaodt() { loaiPhong = lp.IDloaiphong, doanhThu = doanhthu, tyLe = doanhthu / tong * 100 };
-                ds.Add(bc);
+                dataGridView1.DataSource = ds;
+                dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
-            dataGridView1.DataSource = ds;
         }
         private void Baocaomatdosudungphong()
         {
@@ -82,7 +88,7 @@ namespace Hotel
             DateTime denngay = dtdenngay.Value;
             var lshoadon = _hoadon.getAll();
             var lsphong = _phong.getAll();
-
+            
             decimal tong = 0;
             foreach (var hd1 in lshoadon)
             {
@@ -91,28 +97,38 @@ namespace Hotel
                     tong = tong + (decimal)hd1.Songayo;
                 }
             }
-            List<Baocaomdsdp> ds = new List<Baocaomdsdp>();
-            foreach (var p in lsphong)
+            if (tong != 0)
             {
-                Baocaomdsdp bc;
-                int songaythue = 0;
-                foreach (var hd in lshoadon)
+                List<Baocaomdsdp> ds = new List<Baocaomdsdp>();
+                foreach (var p in lsphong)
                 {
-                    if (p.IDphong == hd.IDphong)
+                    Baocaomdsdp bc;
+                    int songaythue = 0;
+                    foreach (var hd in lshoadon)
                     {
-                        if (hd.Ngaydat >= tungay && hd.Ngaytra <= denngay)
+                        if (p.IDphong == hd.IDphong)
                         {
-                            songaythue = songaythue + (int)hd.Songayo;
+                            if (hd.Ngaydat >= tungay && hd.Ngaytra <= denngay)
+                            {
+                                songaythue = songaythue + (int)hd.Songayo;
+                            }
                         }
                     }
+                    bc = new Baocaomdsdp() { tenPhong = p.Tenphong, soNgayThue = songaythue, tyLe = songaythue / tong * 100 };
+                    ds.Add(bc);
                 }
-                bc = new Baocaomdsdp() { tenPhong = p.Tenphong, soNgayThue = songaythue, tyLe = songaythue / tong * 100 };
-                ds.Add(bc);
-            }
-            if(ds.Count >0 )
-            {
-                dataGridView1.DataSource = ds;
 
+                if (ds.Count > 0)
+                {
+                    dataGridView1.DataSource = ds;
+                    dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Không có hóa đơn nào trong khoảng thời gian mà bạn chọn");
+                
             }
            
         }
@@ -121,11 +137,13 @@ namespace Hotel
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             Baocaodoanhthutheoloaiphong();
+            
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             Baocaomatdosudungphong();
+
         }
 
         private void Baocao_Load_1(object sender, EventArgs e)

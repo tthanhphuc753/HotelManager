@@ -242,3 +242,35 @@ E:\database\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
 E:\database\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
 E:\database\BusinessLayer\obj\Debug\BusinessLayer.dll
 E:\database\BusinessLayer\obj\Debug\BusinessLayer.pdb
+E:\database\New folder\BusinessLayer\bin\Debug\BusinessLayer.dll.config
+E:\database\New folder\BusinessLayer\bin\Debug\BusinessLayer.dll
+E:\database\New folder\BusinessLayer\bin\Debug\BusinessLayer.pdb
+E:\database\New folder\BusinessLayer\bin\Debug\DataLayer.dll
+E:\database\New folder\BusinessLayer\bin\Debug\EntityFramework.dll
+E:\database\New folder\BusinessLayer\bin\Debug\EntityFramework.SqlServer.dll
+E:\database\New folder\BusinessLayer\bin\Debug\DevExpress.Data.v22.2.dll
+E:\database\New folder\BusinessLayer\bin\Debug\DevExpress.Xpo.v22.2.dll
+E:\database\New folder\BusinessLayer\bin\Debug\DevExpress.Printing.v22.2.Core.dll
+E:\database\New folder\BusinessLayer\bin\Debug\DevExpress.CodeParser.v22.2.dll
+E:\database\New folder\BusinessLayer\bin\Debug\DevExpress.RichEdit.v22.2.Core.dll
+E:\database\New folder\BusinessLayer\bin\Debug\DevExpress.Office.v22.2.Core.dll
+E:\database\New folder\BusinessLayer\bin\Debug\DevExpress.Drawing.v22.2.dll
+E:\database\New folder\BusinessLayer\bin\Debug\DevExpress.Pdf.v22.2.Core.dll
+E:\database\New folder\BusinessLayer\bin\Debug\DevExpress.Pdf.v22.2.Drawing.dll
+E:\database\New folder\BusinessLayer\bin\Debug\DataLayer.pdb
+E:\database\New folder\BusinessLayer\bin\Debug\DataLayer.dll.config
+E:\database\New folder\BusinessLayer\bin\Debug\DevExpress.DataAccess.v22.2.xml
+E:\database\New folder\BusinessLayer\bin\Debug\EntityFramework.xml
+E:\database\New folder\BusinessLayer\bin\Debug\EntityFramework.SqlServer.xml
+E:\database\New folder\BusinessLayer\bin\Debug\DevExpress.Data.v22.2.xml
+E:\database\New folder\BusinessLayer\bin\Debug\DevExpress.Xpo.v22.2.xml
+E:\database\New folder\BusinessLayer\bin\Debug\DevExpress.Printing.v22.2.Core.xml
+E:\database\New folder\BusinessLayer\bin\Debug\DevExpress.RichEdit.v22.2.Core.xml
+E:\database\New folder\BusinessLayer\bin\Debug\DevExpress.Office.v22.2.Core.xml
+E:\database\New folder\BusinessLayer\bin\Debug\DevExpress.Pdf.v22.2.Core.xml
+E:\database\New folder\BusinessLayer\bin\Debug\DevExpress.Pdf.v22.2.Drawing.xml
+E:\database\New folder\BusinessLayer\obj\Debug\BusinessLayer.csproj.AssemblyReference.cache
+E:\database\New folder\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+E:\database\New folder\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
+E:\database\New folder\BusinessLayer\obj\Debug\BusinessLayer.dll
+E:\database\New folder\BusinessLayer\obj\Debug\BusinessLayer.pdb
