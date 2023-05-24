@@ -23,13 +23,13 @@ namespace Hotel
         {
             public string loaiPhong { get; set; }
             public decimal doanhThu { get; set; }
-            public decimal tyLe { get; set; }
+            public string tyLe { get; set; }
         }
         public class Baocaomdsdp
         {
             public string tenPhong { get; set; }
             public decimal soNgayThue { get; set; }
-            public decimal tyLe { get; set; }
+            public string tyLe { get; set; }
         }
         Phong _phong;
         HoaDon _hoadon;
@@ -75,7 +75,10 @@ namespace Hotel
                             }
                         }
                     }
-                    bc = new Baocaodt() { loaiPhong = lp.IDloaiphong, doanhThu = doanhthu, tyLe = doanhthu / tong * 100 };
+                    decimal tyLe;
+                    tyLe = decimal.Truncate((doanhthu / tong * 100));
+                    string result = tyLe.ToString("F2");    
+                    bc = new Baocaodt() { loaiPhong = lp.IDloaiphong, doanhThu = doanhthu, tyLe = result };
                     ds.Add(bc);
 
                 }
@@ -129,7 +132,9 @@ namespace Hotel
                             }
                         }
                     }
-                    bc = new Baocaomdsdp() { tenPhong = p.Tenphong, soNgayThue = songaythue, tyLe = songaythue / tong * 100 };
+                    decimal tyLe = songaythue / tong * 100;
+                    string result = tyLe.ToString("F2");
+                    bc = new Baocaomdsdp() { tenPhong = p.Tenphong, soNgayThue = songaythue, tyLe= result };
                     ds.Add(bc);
                 }
 

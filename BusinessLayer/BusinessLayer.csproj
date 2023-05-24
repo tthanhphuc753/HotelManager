@@ -53,7 +53,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account.cs" />
-    <Compile Include="DatPhong.cs" />
     <Compile Include="HoaDon.cs" />
     <Compile Include="KhachHang.cs" />
     <Compile Include="LoaiPhong.cs" />

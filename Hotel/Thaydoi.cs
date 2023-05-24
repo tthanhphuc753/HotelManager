@@ -16,6 +16,7 @@ namespace Hotel
     {
         SqlConnection connection;
         SqlCommand command;
+        SqlCommand commandGiatien; 
         string str = @"Data Source = SORA\PHUCTT;Initial Catalog = HotelManager; Integrated Security = True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
@@ -53,10 +54,19 @@ namespace Hotel
         private void them_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
+            
             command.CommandText = "insert into LOAIPHONG values('" + txtloaiphong.Text + "', '" + txtgiatien.Text + "','" + txtsonguoi.Text + "')";
-            command.ExecuteNonQuery();
+            try
+            {
+
+                command.ExecuteNonQuery();
+                MessageBox.Show("Thêm thành công", "Thông báo");
+            }
+            catch(SqlException ex)
+            {
+                MessageBox.Show("thiếu dữ liệu ");
+            }
             loading();
-            MessageBox.Show("Thêm thành công", "Thông báo");
         }
 
         private void xoa_Click(object sender, EventArgs e)
@@ -65,19 +75,48 @@ namespace Hotel
             {
                 command = connection.CreateCommand();
                 command.CommandText = "delete from LOAIPHONG where IDloaiphong= '" + txtloaiphong.Text + "'";
-                command.ExecuteNonQuery();
+                try
+                {
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Xóa thành công", "Thông báo");
+
+                }
+                catch(SqlException)
+                {
+                    MessageBox.Show("thiếu dữ liệu ");
+                }
                 loading();
-                MessageBox.Show("Xóa thành công", "Thông báo");
             }
         }
-
+       
         private void sua_Click(object sender, EventArgs e)
         {
+            commandGiatien = connection.CreateCommand();
             command = connection.CreateCommand();
-            command.CommandText = "update LOAIPHONG set Giatien = '" + txtgiatien.Text + "', Songuoimax = '" + txtsonguoi.Text + "' where IDloaiphong = '" + txtloaiphong.Text + "' ";
-            command.ExecuteNonQuery();
+            commandGiatien.CommandText = "update LOAIPHONG set Giatien = '" + txtgiatien.Text + "' where IDloaiphong = '" + txtloaiphong.Text + "' ";
+            command.CommandText = "update LOAIPHONG set Songuoimax = '" + txtsonguoi.Text + "' where IDloaiphong = '" + txtloaiphong.Text + "' ";
+           
+            if(txtgiatien.Text != "" && txtloaiphong.Text!="" || txtsonguoi.Text != "" && txtloaiphong.Text!="")
+            {
+
+                if(txtgiatien.Text!="")
+                {
+                    commandGiatien.ExecuteNonQuery();
+                }
+
+                if(txtsonguoi.Text!="")
+                {
+                    command.ExecuteNonQuery();
+                }
+
+                MessageBox.Show("Sửa thành công", "Thông báo");
+            }
+            else if(txtgiatien.Text == "" && txtsonguoi.Text == "" || txtloaiphong.Text== "")
+            {
+                MessageBox.Show("dữ liệu trống");
+            }
+            
             loading();
-            MessageBox.Show("Sữa thành công", "Thông báo");
         }
 
         private void khoitao_Click(object sender, EventArgs e)

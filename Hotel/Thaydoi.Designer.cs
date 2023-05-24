@@ -53,7 +53,7 @@ namespace Hotel
             this.dvg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dvg.Location = new System.Drawing.Point(4, 24);
-            this.dvg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dvg.Margin = new System.Windows.Forms.Padding(4);
             this.dvg.Name = "dvg";
             this.dvg.RowHeadersWidth = 51;
             this.dvg.RowTemplate.Height = 24;
@@ -64,7 +64,7 @@ namespace Hotel
             // txtgiatien
             // 
             this.txtgiatien.Location = new System.Drawing.Point(143, 101);
-            this.txtgiatien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtgiatien.Margin = new System.Windows.Forms.Padding(4);
             this.txtgiatien.Name = "txtgiatien";
             this.txtgiatien.Size = new System.Drawing.Size(127, 27);
             this.txtgiatien.TabIndex = 1;
@@ -72,7 +72,7 @@ namespace Hotel
             // txtloaiphong
             // 
             this.txtloaiphong.Location = new System.Drawing.Point(143, 26);
-            this.txtloaiphong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtloaiphong.Margin = new System.Windows.Forms.Padding(4);
             this.txtloaiphong.Name = "txtloaiphong";
             this.txtloaiphong.Size = new System.Drawing.Size(127, 27);
             this.txtloaiphong.TabIndex = 1;
@@ -80,7 +80,7 @@ namespace Hotel
             // txtsonguoi
             // 
             this.txtsonguoi.Location = new System.Drawing.Point(143, 185);
-            this.txtsonguoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtsonguoi.Margin = new System.Windows.Forms.Padding(4);
             this.txtsonguoi.Name = "txtsonguoi";
             this.txtsonguoi.Size = new System.Drawing.Size(127, 27);
             this.txtsonguoi.TabIndex = 1;
@@ -122,9 +122,9 @@ namespace Hotel
             // 
             this.groupBox1.Controls.Add(this.dvg);
             this.groupBox1.Location = new System.Drawing.Point(30, 31);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(626, 267);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
@@ -134,7 +134,7 @@ namespace Hotel
             // 
             this.them.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("them.ImageOptions.Image")));
             this.them.Location = new System.Drawing.Point(483, 327);
-            this.them.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.them.Margin = new System.Windows.Forms.Padding(4);
             this.them.Name = "them";
             this.them.Size = new System.Drawing.Size(121, 34);
             this.them.TabIndex = 4;
@@ -145,7 +145,7 @@ namespace Hotel
             // 
             this.xoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xoa.ImageOptions.Image")));
             this.xoa.Location = new System.Drawing.Point(483, 386);
-            this.xoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.xoa.Margin = new System.Windows.Forms.Padding(4);
             this.xoa.Name = "xoa";
             this.xoa.Size = new System.Drawing.Size(121, 34);
             this.xoa.TabIndex = 4;
@@ -156,7 +156,7 @@ namespace Hotel
             // 
             this.sua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sua.ImageOptions.Image")));
             this.sua.Location = new System.Drawing.Point(483, 445);
-            this.sua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sua.Margin = new System.Windows.Forms.Padding(4);
             this.sua.Name = "sua";
             this.sua.Size = new System.Drawing.Size(121, 34);
             this.sua.TabIndex = 4;
@@ -167,11 +167,11 @@ namespace Hotel
             // 
             this.khoitao.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("khoitao.ImageOptions.Image")));
             this.khoitao.Location = new System.Drawing.Point(483, 505);
-            this.khoitao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.khoitao.Margin = new System.Windows.Forms.Padding(4);
             this.khoitao.Name = "khoitao";
             this.khoitao.Size = new System.Drawing.Size(121, 34);
             this.khoitao.TabIndex = 4;
-            this.khoitao.Text = "Khởi tạo";
+            this.khoitao.Text = "Làm mới ";
             this.khoitao.Click += new System.EventHandler(this.khoitao_Click);
             // 
             // groupBox2
@@ -183,9 +183,9 @@ namespace Hotel
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Location = new System.Drawing.Point(30, 305);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(378, 260);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
@@ -202,7 +202,7 @@ namespace Hotel
             this.Controls.Add(this.them);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Thaydoi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thay đổi quy định";
