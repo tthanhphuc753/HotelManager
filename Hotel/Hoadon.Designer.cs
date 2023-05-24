@@ -147,41 +147,36 @@ namespace Hotel
             // 
             this.lblHovaten.Location = new System.Drawing.Point(274, 120);
             this.lblHovaten.Name = "lblHovaten";
-            this.lblHovaten.Size = new System.Drawing.Size(94, 19);
+            this.lblHovaten.Size = new System.Drawing.Size(0, 19);
             this.lblHovaten.TabIndex = 10;
-            this.lblHovaten.Text = "labelControl8";
             // 
             // lblCmnd
             // 
             this.lblCmnd.Location = new System.Drawing.Point(274, 188);
             this.lblCmnd.Name = "lblCmnd";
-            this.lblCmnd.Size = new System.Drawing.Size(94, 19);
+            this.lblCmnd.Size = new System.Drawing.Size(0, 19);
             this.lblCmnd.TabIndex = 11;
-            this.lblCmnd.Text = "labelControl9";
             // 
             // lblNgaydatphong
             // 
             this.lblNgaydatphong.Location = new System.Drawing.Point(274, 266);
             this.lblNgaydatphong.Name = "lblNgaydatphong";
-            this.lblNgaydatphong.Size = new System.Drawing.Size(103, 19);
+            this.lblNgaydatphong.Size = new System.Drawing.Size(0, 19);
             this.lblNgaydatphong.TabIndex = 12;
-            this.lblNgaydatphong.Text = "labelControl10";
             // 
             // lblNgaytraphong
             // 
             this.lblNgaytraphong.Location = new System.Drawing.Point(274, 305);
             this.lblNgaytraphong.Name = "lblNgaytraphong";
-            this.lblNgaytraphong.Size = new System.Drawing.Size(103, 19);
+            this.lblNgaytraphong.Size = new System.Drawing.Size(0, 19);
             this.lblNgaytraphong.TabIndex = 13;
-            this.lblNgaytraphong.Text = "labelControl11";
             // 
             // lblTongsongaydat
             // 
             this.lblTongsongaydat.Location = new System.Drawing.Point(274, 344);
             this.lblTongsongaydat.Name = "lblTongsongaydat";
-            this.lblTongsongaydat.Size = new System.Drawing.Size(103, 19);
+            this.lblTongsongaydat.Size = new System.Drawing.Size(0, 19);
             this.lblTongsongaydat.TabIndex = 14;
-            this.lblTongsongaydat.Text = "labelControl12";
             // 
             // btnThoat
             // 
@@ -198,9 +193,8 @@ namespace Hotel
             this.lblPhong.Appearance.Options.UseFont = true;
             this.lblPhong.Location = new System.Drawing.Point(204, 68);
             this.lblPhong.Name = "lblPhong";
-            this.lblPhong.Size = new System.Drawing.Size(114, 23);
+            this.lblPhong.Size = new System.Drawing.Size(0, 23);
             this.lblPhong.TabIndex = 16;
-            this.lblPhong.Text = "labelControl8";
             // 
             // lbllLoaiphong1
             // 
@@ -216,17 +210,15 @@ namespace Hotel
             // 
             this.lblLoaiphong.Location = new System.Drawing.Point(274, 227);
             this.lblLoaiphong.Name = "lblLoaiphong";
-            this.lblLoaiphong.Size = new System.Drawing.Size(103, 19);
+            this.lblLoaiphong.Size = new System.Drawing.Size(0, 19);
             this.lblLoaiphong.TabIndex = 18;
-            this.lblLoaiphong.Text = "labelControl10";
             // 
             // lblIDhoadon
             // 
             this.lblIDhoadon.Location = new System.Drawing.Point(274, 445);
             this.lblIDhoadon.Name = "lblIDhoadon";
-            this.lblIDhoadon.Size = new System.Drawing.Size(94, 19);
+            this.lblIDhoadon.Size = new System.Drawing.Size(0, 19);
             this.lblIDhoadon.TabIndex = 19;
-            this.lblIDhoadon.Text = "labelControl8";
             // 
             // labelControl8
             // 
@@ -252,15 +244,14 @@ namespace Hotel
             // 
             this.lblIdkhachhang.Location = new System.Drawing.Point(274, 157);
             this.lblIdkhachhang.Name = "lblIdkhachhang";
-            this.lblIdkhachhang.Size = new System.Drawing.Size(94, 19);
+            this.lblIdkhachhang.Size = new System.Drawing.Size(0, 19);
             this.lblIdkhachhang.TabIndex = 22;
-            this.lblIdkhachhang.Text = "labelControl8";
             // 
             // Hoadon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(503, 631);
+            this.ClientSize = new System.Drawing.Size(514, 631);
             this.Controls.Add(this.lblIdkhachhang);
             this.Controls.Add(this.labelControl9);
             this.Controls.Add(this.labelControl8);
