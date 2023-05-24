@@ -185,7 +185,7 @@ namespace Hotel
             {
                 BeginInvoke(new Action(() => HienThiPhongTimKiem(srcphong)));
             }
-
+        
         }
         void HienThiPhongTimKiem(string srcphong)
         {

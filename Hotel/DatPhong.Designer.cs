@@ -91,7 +91,6 @@ namespace Hotel
             this.gControl1.Name = "gControl1";
             this.gControl1.Size = new System.Drawing.Size(548, 764);
             this.gControl1.TabIndex = 0;
-            this.gControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.gControl1_Paint);
             // 
             // txtDiaChi
             // 

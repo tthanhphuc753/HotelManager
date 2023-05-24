@@ -166,6 +166,7 @@ namespace Hotel
         {   // tính số ngày đặt phòng
             DateTime NgayDat = dtNgayDat.Value;
             DateTime NgayTra = dtNgayTra.Value;
+            bool isnull = true; 
             int songay = (int)(NgayTra - NgayDat).TotalDays + 1;
             string quoctich ="";
             int phong = gridView1.FocusedRowHandle;
@@ -275,20 +276,13 @@ namespace Hotel
 
         private void cbSoNguoi_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            try
-            {
+           
 
                 TinhTongTien();
-            }
-            catch(Exception exx)
-            {
-                MessageBox.Show("vui lòng chọn Quốc tịch");
-            }
+            
         }
 
-        private void gControl1_Paint(object sender, PaintEventArgs e)
-        {
+    
 
-        }
     }
 }

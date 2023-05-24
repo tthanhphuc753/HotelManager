@@ -98,7 +98,6 @@ namespace Hotel
             this.ribbonPageCategory1});
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbon.QuickToolbarItemLinks.Add(this.btnHome);
             this.ribbon.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemSearchControl1});
             this.ribbon.Size = new System.Drawing.Size(1365, 231);
@@ -206,7 +205,6 @@ namespace Hotel
             // 
             // ribbonPageGroup1
             // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.barMenu);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
             // ribbonStatusBar
@@ -238,7 +236,6 @@ namespace Hotel
             // 
             // popupMenu1
             // 
-            this.popupMenu1.ItemLinks.Add(this.btnThanhToan);
             this.popupMenu1.Name = "popupMenu1";
             this.popupMenu1.Ribbon = this.ribbon;
             this.popupMenu1.Popup += new System.EventHandler(this.popupMenu1_Popup_1);

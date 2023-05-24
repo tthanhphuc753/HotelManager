@@ -240,3 +240,61 @@ D:\Hotellf88\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
 D:\Hotellf88\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
 D:\Hotellf88\DataLayer\obj\Debug\DataLayer.dll
 D:\Hotellf88\DataLayer\obj\Debug\DataLayer.pdb
+E:\database\DataLayer\bin\Debug\DataLayer.dll.config
+E:\database\DataLayer\bin\Debug\DataLayer.dll
+E:\database\DataLayer\bin\Debug\DataLayer.pdb
+E:\database\DataLayer\bin\Debug\EntityFramework.dll
+E:\database\DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+E:\database\DataLayer\bin\Debug\DevExpress.Data.v22.2.dll
+E:\database\DataLayer\bin\Debug\DevExpress.Xpo.v22.2.dll
+E:\database\DataLayer\bin\Debug\DevExpress.Printing.v22.2.Core.dll
+E:\database\DataLayer\bin\Debug\DevExpress.CodeParser.v22.2.dll
+E:\database\DataLayer\bin\Debug\DevExpress.RichEdit.v22.2.Core.dll
+E:\database\DataLayer\bin\Debug\DevExpress.Office.v22.2.Core.dll
+E:\database\DataLayer\bin\Debug\DevExpress.Drawing.v22.2.dll
+E:\database\DataLayer\bin\Debug\DevExpress.Pdf.v22.2.Core.dll
+E:\database\DataLayer\bin\Debug\DevExpress.Pdf.v22.2.Drawing.dll
+E:\database\DataLayer\bin\Debug\DevExpress.DataAccess.v22.2.xml
+E:\database\DataLayer\bin\Debug\EntityFramework.xml
+E:\database\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+E:\database\DataLayer\bin\Debug\DevExpress.Data.v22.2.xml
+E:\database\DataLayer\bin\Debug\DevExpress.Xpo.v22.2.xml
+E:\database\DataLayer\bin\Debug\DevExpress.Printing.v22.2.Core.xml
+E:\database\DataLayer\bin\Debug\DevExpress.RichEdit.v22.2.Core.xml
+E:\database\DataLayer\bin\Debug\DevExpress.Office.v22.2.Core.xml
+E:\database\DataLayer\bin\Debug\DevExpress.Pdf.v22.2.Core.xml
+E:\database\DataLayer\bin\Debug\DevExpress.Pdf.v22.2.Drawing.xml
+E:\database\DataLayer\obj\Debug\DataLayer.csproj.AssemblyReference.cache
+E:\database\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
+E:\database\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
+E:\database\DataLayer\obj\Debug\DataLayer.dll
+E:\database\DataLayer\obj\Debug\DataLayer.pdb
+E:\database\New folder\DataLayer\bin\Debug\DataLayer.dll.config
+E:\database\New folder\DataLayer\bin\Debug\DataLayer.dll
+E:\database\New folder\DataLayer\bin\Debug\DataLayer.pdb
+E:\database\New folder\DataLayer\bin\Debug\EntityFramework.dll
+E:\database\New folder\DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+E:\database\New folder\DataLayer\bin\Debug\DevExpress.Data.v22.2.dll
+E:\database\New folder\DataLayer\bin\Debug\DevExpress.Xpo.v22.2.dll
+E:\database\New folder\DataLayer\bin\Debug\DevExpress.Printing.v22.2.Core.dll
+E:\database\New folder\DataLayer\bin\Debug\DevExpress.CodeParser.v22.2.dll
+E:\database\New folder\DataLayer\bin\Debug\DevExpress.RichEdit.v22.2.Core.dll
+E:\database\New folder\DataLayer\bin\Debug\DevExpress.Office.v22.2.Core.dll
+E:\database\New folder\DataLayer\bin\Debug\DevExpress.Drawing.v22.2.dll
+E:\database\New folder\DataLayer\bin\Debug\DevExpress.Pdf.v22.2.Core.dll
+E:\database\New folder\DataLayer\bin\Debug\DevExpress.Pdf.v22.2.Drawing.dll
+E:\database\New folder\DataLayer\bin\Debug\DevExpress.DataAccess.v22.2.xml
+E:\database\New folder\DataLayer\bin\Debug\EntityFramework.xml
+E:\database\New folder\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+E:\database\New folder\DataLayer\bin\Debug\DevExpress.Data.v22.2.xml
+E:\database\New folder\DataLayer\bin\Debug\DevExpress.Xpo.v22.2.xml
+E:\database\New folder\DataLayer\bin\Debug\DevExpress.Printing.v22.2.Core.xml
+E:\database\New folder\DataLayer\bin\Debug\DevExpress.RichEdit.v22.2.Core.xml
+E:\database\New folder\DataLayer\bin\Debug\DevExpress.Office.v22.2.Core.xml
+E:\database\New folder\DataLayer\bin\Debug\DevExpress.Pdf.v22.2.Core.xml
+E:\database\New folder\DataLayer\bin\Debug\DevExpress.Pdf.v22.2.Drawing.xml
+E:\database\New folder\DataLayer\obj\Debug\DataLayer.csproj.AssemblyReference.cache
+E:\database\New folder\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
+E:\database\New folder\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
+E:\database\New folder\DataLayer\obj\Debug\DataLayer.dll
+E:\database\New folder\DataLayer\obj\Debug\DataLayer.pdb

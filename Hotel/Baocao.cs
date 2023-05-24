@@ -84,11 +84,11 @@ namespace Hotel
                 }
                 if (ds.Count > 0)
                 {
-                    dataGridView1.DataSource = ds;
-                    dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                    dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                }
+                dataGridView1.DataSource = ds;
+                dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
+        }
             else
             {
                  
@@ -148,21 +148,22 @@ namespace Hotel
             }
             else
             {
-               
+                MessageBox.Show("Không có hóa đơn nào trong khoảng thời gian mà bạn chọn");
+                
                 if (radioButton2.Checked)
                 {
                     MessageBox.Show("Không có phòng nào được thuê trong khoảng thời gian mà bạn chọn");
                     radioButton2.Checked = false;
                 }
             }
-
+           
         }
-
+       
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             Baocaodoanhthutheoloaiphong();
-
+            
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
