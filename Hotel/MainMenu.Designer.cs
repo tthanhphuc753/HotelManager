@@ -44,6 +44,7 @@ namespace Hotel
             this.btnTraPhong = new DevExpress.XtraBars.BarButtonItem();
             this.btnCapNhatPhong = new DevExpress.XtraBars.BarButtonItem();
             this.btnThanhToan = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -59,7 +60,7 @@ namespace Hotel
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnlogout = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gControl)).BeginInit();
@@ -135,7 +136,6 @@ namespace Hotel
             this.btnDangXuat.Id = 2;
             this.btnDangXuat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDangXuat.ImageOptions.Image")));
             this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDangXuat_ItemClick);
             // 
             // barMenu
             // 
@@ -192,6 +192,13 @@ namespace Hotel
             this.btnThanhToan.Id = 16;
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThanhToan_ItemClick);
+            // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "Thanh toán";
+            this.barButtonItem3.Id = 18;
+            this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThanhToan_ItemClick);
             // 
             // ribbonPageCategory1
             // 
@@ -298,18 +305,22 @@ namespace Hotel
             this.imageList1.Images.SetKeyName(0, "Available.png");
             this.imageList1.Images.SetKeyName(1, "UnAvailable.png");
             // 
-            // barButtonItem3
+            // btnlogout
             // 
-            this.barButtonItem3.Caption = "Thanh toán";
-            this.barButtonItem3.Id = 18;
-            this.barButtonItem3.Name = "barButtonItem3";
-            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThanhToan_ItemClick);
+            this.btnlogout.Location = new System.Drawing.Point(38, 696);
+            this.btnlogout.Name = "btnlogout";
+            this.btnlogout.Size = new System.Drawing.Size(140, 67);
+            this.btnlogout.TabIndex = 19;
+            this.btnlogout.Text = "Đăng xuất";
+            this.btnlogout.UseVisualStyleBackColor = true;
+            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
             // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1365, 832);
+            this.Controls.Add(this.btnlogout);
             this.Controls.Add(this.gControl);
             this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.btnBaocao);
@@ -369,5 +380,6 @@ namespace Hotel
         private DevExpress.XtraBars.BarButtonItem btnThanhToan;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private System.Windows.Forms.Button btnlogout;
     }
 }

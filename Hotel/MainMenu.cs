@@ -24,15 +24,8 @@ namespace Hotel
         Phong _phong;
         bool thoat = true;
         GalleryItem item = null;
-        private void btnDangXuat_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            MessageBox.Show("Bạn có chắc chưa ?", "thông báo", MessageBoxButtons.YesNo);
-            thoat = false;
-            DANGNHAP login = new DANGNHAP();
-            this.Hide();
-            //this.Close();
-            login.ShowDialog();
-        }
+         
+        
 
         private void MainMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -232,6 +225,16 @@ namespace Hotel
         {
             Baocao bc = new Baocao();
             bc.ShowDialog();
+        }
+
+        private void btnlogout_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Bạn có chắc chưa ?", "thông báo", MessageBoxButtons.YesNo);
+            thoat = false;
+            DANGNHAP login = new DANGNHAP();
+            this.Hide();
+            //this.Close();
+            login.ShowDialog();
         }
     }
 }
