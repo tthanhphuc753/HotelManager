@@ -26,10 +26,11 @@ namespace Hotel
         GalleryItem item = null;
         private void btnDangXuat_ItemClick(object sender, ItemClickEventArgs e)
         {
+            MessageBox.Show("Bạn có chắc chưa ?", "thông báo", MessageBoxButtons.YesNo);
             thoat = false;
             DANGNHAP login = new DANGNHAP();
             this.Hide();
-            this.Close();
+            //this.Close();
             login.ShowDialog();
         }
 
@@ -226,6 +227,11 @@ namespace Hotel
         {
             Thaydoi td = new Thaydoi();
             td.ShowDialog();
+        }
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            Baocao bc = new Baocao();
+            bc.ShowDialog();
         }
     }
 }

@@ -96,6 +96,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Baocao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Baocao.Designer.cs">
+      <DependentUpon>Baocao.cs</DependentUpon>
+    </Compile>
     <Compile Include="DANGNHAP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     <Compile Include="Thaydoi.Designer.cs">
       <DependentUpon>Thaydoi.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Baocao.resx">
+      <DependentUpon>Baocao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DANGNHAP.resx">
       <DependentUpon>DANGNHAP.cs</DependentUpon>
     </EmbeddedResource>

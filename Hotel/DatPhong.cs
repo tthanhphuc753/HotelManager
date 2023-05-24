@@ -17,7 +17,7 @@ namespace Hotel
         }
         
 
-        string connectionString = @"Data Source=SORA\PHUCTT\SQLANH;Initial Catalog=HotelManager;Integrated Security=True;";
+        string connectionString = @"Data Source=SORA\PHUCTT;Initial Catalog=HotelManager;Integrated Security=True;";
         SqlConnection sqlcon = null;
         private void btnHuy_Click(object sender, EventArgs e)
         {
@@ -171,6 +171,11 @@ namespace Hotel
             int phong = gridView1.FocusedRowHandle;
             string loaiphong = gridView1.GetRowCellValue(phong, "IDloaiphong").ToString();
             quoctich = cbQuocTich.SelectedItem?.ToString();
+
+            if(quoctich == null)
+            {
+                lblthongbao.Text = "Vui lòng chọn quốc tịch";
+            }
             int songuoi = int.Parse(cbSoNguoi.SelectedItem.ToString());
 
             using (SqlConnection connection = new SqlConnection(connectionString))
