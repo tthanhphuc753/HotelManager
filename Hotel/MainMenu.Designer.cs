@@ -59,6 +59,7 @@ namespace Hotel
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gControl)).BeginInit();
@@ -88,10 +89,11 @@ namespace Hotel
             this.btnAvailable,
             this.btnTraPhong,
             this.btnCapNhatPhong,
-            this.btnThanhToan});
+            this.btnThanhToan,
+            this.barButtonItem3});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbon.MaxItemId = 18;
+            this.ribbon.MaxItemId = 19;
             this.ribbon.Name = "ribbon";
             this.ribbon.OptionsMenuMinWidth = 495;
             this.ribbon.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
@@ -236,6 +238,7 @@ namespace Hotel
             // 
             // popupMenu1
             // 
+            this.popupMenu1.ItemLinks.Add(this.barButtonItem3);
             this.popupMenu1.Name = "popupMenu1";
             this.popupMenu1.Ribbon = this.ribbon;
             this.popupMenu1.Popup += new System.EventHandler(this.popupMenu1_Popup_1);
@@ -294,6 +297,13 @@ namespace Hotel
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "Available.png");
             this.imageList1.Images.SetKeyName(1, "UnAvailable.png");
+            // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "Thanh toán";
+            this.barButtonItem3.Id = 18;
+            this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThanhToan_ItemClick);
             // 
             // MainMenu
             // 
@@ -358,5 +368,6 @@ namespace Hotel
         private DevExpress.XtraBars.BarButtonItem btnCapNhatPhong;
         private DevExpress.XtraBars.BarButtonItem btnThanhToan;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
     }
 }
