@@ -87,11 +87,11 @@ namespace Hotel
             this.gControl1.Controls.Add(this.label1);
             this.gControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.gControl1.Location = new System.Drawing.Point(0, 0);
-            this.gControl1.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.gControl1.Margin = new System.Windows.Forms.Padding(9);
             this.gControl1.Name = "gControl1";
             this.gControl1.Size = new System.Drawing.Size(1095, 764);
             this.gControl1.TabIndex = 0;
-            //
+            // 
             // txtDiaChi
             // 
             this.txtDiaChi.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -163,7 +163,7 @@ namespace Hotel
             "Nam",
             "Nữ"});
             this.cbGioiTinh.Location = new System.Drawing.Point(420, 850);
-            this.cbGioiTinh.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.cbGioiTinh.Margin = new System.Windows.Forms.Padding(9);
             this.cbGioiTinh.Name = "cbGioiTinh";
             this.cbGioiTinh.Size = new System.Drawing.Size(346, 27);
             this.cbGioiTinh.TabIndex = 4;
@@ -175,7 +175,7 @@ namespace Hotel
             "Nội địa",
             "Nước ngoài"});
             this.cbQuocTich.Location = new System.Drawing.Point(420, 759);
-            this.cbQuocTich.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.cbQuocTich.Margin = new System.Windows.Forms.Padding(9);
             this.cbQuocTich.Name = "cbQuocTich";
             this.cbQuocTich.Size = new System.Drawing.Size(346, 27);
             this.cbQuocTich.TabIndex = 3;
@@ -231,7 +231,7 @@ namespace Hotel
             this.gControl2.Controls.Add(this.label10);
             this.gControl2.Dock = System.Windows.Forms.DockStyle.Right;
             this.gControl2.Location = new System.Drawing.Point(-464, 0);
-            this.gControl2.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.gControl2.Margin = new System.Windows.Forms.Padding(9);
             this.gControl2.Name = "gControl2";
             this.gControl2.Size = new System.Drawing.Size(2022, 764);
             this.gControl2.TabIndex = 1;
@@ -243,7 +243,7 @@ namespace Hotel
             this.lblthongbao.Appearance.Options.UseFont = true;
             this.lblthongbao.Appearance.Options.UseForeColor = true;
             this.lblthongbao.Location = new System.Drawing.Point(1395, 698);
-            this.lblthongbao.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.lblthongbao.Margin = new System.Windows.Forms.Padding(6);
             this.lblthongbao.Name = "lblthongbao";
             this.lblthongbao.Size = new System.Drawing.Size(7, 16);
             this.lblthongbao.TabIndex = 20;
@@ -254,7 +254,7 @@ namespace Hotel
             this.radioButtonB.AutoSize = true;
             this.radioButtonB.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonB.Location = new System.Drawing.Point(618, 489);
-            this.radioButtonB.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.radioButtonB.Margin = new System.Windows.Forms.Padding(9);
             this.radioButtonB.Name = "radioButtonB";
             this.radioButtonB.Size = new System.Drawing.Size(53, 31);
             this.radioButtonB.TabIndex = 19;
@@ -269,7 +269,7 @@ namespace Hotel
             this.radioButtonC.AutoSize = true;
             this.radioButtonC.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonC.Location = new System.Drawing.Point(855, 489);
-            this.radioButtonC.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.radioButtonC.Margin = new System.Windows.Forms.Padding(9);
             this.radioButtonC.Name = "radioButtonC";
             this.radioButtonC.Size = new System.Drawing.Size(53, 31);
             this.radioButtonC.TabIndex = 18;
@@ -284,7 +284,7 @@ namespace Hotel
             this.radioButtonA.AutoSize = true;
             this.radioButtonA.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonA.Location = new System.Drawing.Point(381, 489);
-            this.radioButtonA.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.radioButtonA.Margin = new System.Windows.Forms.Padding(9);
             this.radioButtonA.Name = "radioButtonA";
             this.radioButtonA.Size = new System.Drawing.Size(54, 31);
             this.radioButtonA.TabIndex = 17;
@@ -341,7 +341,7 @@ namespace Hotel
             // 
             this.cbSoNguoi.FormattingEnabled = true;
             this.cbSoNguoi.Location = new System.Drawing.Point(1395, 642);
-            this.cbSoNguoi.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.cbSoNguoi.Margin = new System.Windows.Forms.Padding(9);
             this.cbSoNguoi.Name = "cbSoNguoi";
             this.cbSoNguoi.Size = new System.Drawing.Size(346, 27);
             this.cbSoNguoi.TabIndex = 10;
@@ -353,7 +353,7 @@ namespace Hotel
             this.btnHuy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHuy.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.Location = new System.Drawing.Point(1473, 1209);
-            this.btnHuy.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(9);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(243, 84);
             this.btnHuy.TabIndex = 11;
@@ -366,7 +366,7 @@ namespace Hotel
             this.btnLuu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLuu.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.Location = new System.Drawing.Point(1128, 1209);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(9);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(243, 84);
             this.btnLuu.TabIndex = 10;
@@ -386,10 +386,10 @@ namespace Hotel
             // 
             // gControl
             // 
-            this.gControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.gControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(9);
             this.gControl.Location = new System.Drawing.Point(84, 639);
             this.gControl.MainView = this.gridView1;
-            this.gControl.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.gControl.Margin = new System.Windows.Forms.Padding(9);
             this.gControl.Name = "gControl";
             this.gControl.Size = new System.Drawing.Size(966, 633);
             this.gControl.TabIndex = 8;
@@ -446,7 +446,7 @@ namespace Hotel
             // dtNgayTra
             // 
             this.dtNgayTra.Location = new System.Drawing.Point(1228, 369);
-            this.dtNgayTra.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.dtNgayTra.Margin = new System.Windows.Forms.Padding(9);
             this.dtNgayTra.Name = "dtNgayTra";
             this.dtNgayTra.Size = new System.Drawing.Size(568, 27);
             this.dtNgayTra.TabIndex = 7;
@@ -476,7 +476,7 @@ namespace Hotel
             // dtNgayDat
             // 
             this.dtNgayDat.Location = new System.Drawing.Point(303, 372);
-            this.dtNgayDat.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.dtNgayDat.Margin = new System.Windows.Forms.Padding(9);
             this.dtNgayDat.Name = "dtNgayDat";
             this.dtNgayDat.Size = new System.Drawing.Size(568, 27);
             this.dtNgayDat.TabIndex = 4;

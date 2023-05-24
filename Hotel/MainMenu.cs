@@ -184,7 +184,7 @@ namespace Hotel
             {
                 BeginInvoke(new Action(() => HienThiPhongTimKiem(srcphong)));
             }
-
+        
         }
         void HienThiPhongTimKiem(string srcphong)
         {
@@ -229,8 +229,8 @@ namespace Hotel
         }
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            Baocao bc = new Baocao();
-            bc.ShowDialog();
+            //Baocao bc = new Baocao();
+            //bc.ShowDialog();
         }
     }
 }
