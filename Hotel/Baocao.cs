@@ -84,9 +84,9 @@ namespace Hotel
                 }
                 if (ds.Count > 0)
                 {
-                dataGridView1.DataSource = ds;
-                dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridView2.DataSource = ds;
+                dataGridView2.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
         }
             else
@@ -140,8 +140,8 @@ namespace Hotel
 
                 if (ds.Count > 0)
                 {
-                    dataGridView1.DataSource = ds;
-                    dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dataGridView2.DataSource = ds;
+                    dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
                 }
                
