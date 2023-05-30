@@ -143,12 +143,10 @@ namespace Hotel
                     dataGridView2.DataSource = ds;
                     dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-                }
-               
+                }              
             }
             else
-            {
-                MessageBox.Show("Không có hóa đơn nào trong khoảng thời gian mà bạn chọn");
+            {              
                 
                 if (radioButton2.Checked)
                 {

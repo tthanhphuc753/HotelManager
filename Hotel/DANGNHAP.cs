@@ -12,7 +12,7 @@ namespace Hotel
         }
        
         bool thoat = true;
-        
+       
         private void btn_exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -35,12 +35,12 @@ namespace Hotel
                     this.Hide();
                     menu.ShowDialog();
                 }
+
                 if(!flag)
                 {                   
                     MessageBox.Show("Đăng nhập thất bại. Sai mật khẩu hoặc tài khoản !!");                 
                 }
-            }
-            
+            }            
         }
         private void DANGNHAP_FormClosing(object sender, FormClosingEventArgs e)
         {
