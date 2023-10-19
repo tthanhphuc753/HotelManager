@@ -1,3 +1,2 @@
 # HotelManager 
-###  NÀY LÀ T LÀM tạo 3 TẦNG DATALAYER , BUSINESSLAYER , APPLICATION(Hotel) r nha. T MỚI LÀM TẦNG DATALAYER TH NHA TỤI BÂY(LIÊN KẾT DATABASE VỚI DATALAYER
-BẰNG ENTITIES )
+###  phần mềm quản lý khách sạn dùng winform, C#, SQL Server  )
